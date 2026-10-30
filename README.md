@@ -1,83 +1,55 @@
 # Calendar completed-task review
 
-Review screenshots for OpenTodoApp/OpenTodo#624 and the `calendar-completed-tasks` OpenSpec change. The feature implementation is on `feat/calendar-completed-tasks` in this fork. Images are kept on this separate review-assets branch so the implementation does not add documentation screenshots to the app bundle.
+Feature comparison for [OpenTodoApp/OpenTodo#626](https://github.com/OpenTodoApp/OpenTodo/pull/626), captured from implementation commit `c53c1ea7ad8eec2a0fdbd528fc9c042245b43633`.
 
-## Before and after: default calendar
+## Before: Show completed off → After: Show completed on
 
-The same seeded demo fixture, with completed tasks hidden by default. Before: upstream `e8688280`; after: the feature branch. Desktop: 1280 × 800; phone: 390 × 844 (device scale factor 2). Both themes. The moving now line and cursor position reflect capture time.
+**Both columns use the same build and the same three tasks.** The only change is the Show completed setting. The two completed tasks exist in both states: they are hidden in Before and visible with struck-through titles in After.
 
-### Day
+- Open: **Review the launch checklist**, scheduled for 10:00, estimated at 1 hour.
+- Completed: **Send the project update**, scheduled for 09:00, and **Book the train tickets**, with a date but no time.
+- Remaining capacity stays **1h / 8h** in both states. Task data is not changed.
+- Same account, date, viewport, theme and fixed clock within each pair. Desktop: 1280 × 800; phone: 390 × 844 with touch input and device scale factor 2.
+- On phones, the setting is in **More actions**; the menu is closed for each screenshot.
 
-| View | Before | After |
+There are **16 off/on pairs (32 screenshots)** below.
+
+## Day
+
+| View | Before — completed tasks hidden | After — completed tasks shown, struck through |
 | --- | --- | --- |
-| Desktop, light | ![Before day, desktop, light](before/calendar-day-desktop-light.png) | ![After day, desktop, light](after/calendar-day-desktop-light.png) |
-| Desktop, dark | ![Before day, desktop, dark](before/calendar-day-desktop-dark.png) | ![After day, desktop, dark](after/calendar-day-desktop-dark.png) |
-| Phone, light | ![Before day, phone, light](before/calendar-day-phone-light.png) | ![After day, phone, light](after/calendar-day-phone-light.png) |
-| Phone, dark | ![Before day, phone, dark](before/calendar-day-phone-dark.png) | ![After day, phone, dark](after/calendar-day-phone-dark.png) |
+| Desktop, light | ![Show completed off: day, desktop, light](comparison-before/calendar-day-desktop-light.png) | ![Show completed on: day, desktop, light](comparison-after/calendar-day-desktop-light.png) |
+| Desktop, dark | ![Show completed off: day, desktop, dark](comparison-before/calendar-day-desktop-dark.png) | ![Show completed on: day, desktop, dark](comparison-after/calendar-day-desktop-dark.png) |
+| Phone, light | ![Show completed off: day, phone, light](comparison-before/calendar-day-phone-light.png) | ![Show completed on: day, phone, light](comparison-after/calendar-day-phone-light.png) |
+| Phone, dark | ![Show completed off: day, phone, dark](comparison-before/calendar-day-phone-dark.png) | ![Show completed on: day, phone, dark](comparison-after/calendar-day-phone-dark.png) |
 
-### Week
+## Week
 
-| View | Before | After |
+| View | Before — completed tasks hidden | After — completed tasks shown, struck through |
 | --- | --- | --- |
-| Desktop, light | ![Before week, desktop, light](before/calendar-week-desktop-light.png) | ![After week, desktop, light](after/calendar-week-desktop-light.png) |
-| Desktop, dark | ![Before week, desktop, dark](before/calendar-week-desktop-dark.png) | ![After week, desktop, dark](after/calendar-week-desktop-dark.png) |
-| Phone, light | ![Before week, phone, light](before/calendar-week-phone-light.png) | ![After week, phone, light](after/calendar-week-phone-light.png) |
-| Phone, dark | ![Before week, phone, dark](before/calendar-week-phone-dark.png) | ![After week, phone, dark](after/calendar-week-phone-dark.png) |
+| Desktop, light | ![Show completed off: week, desktop, light](comparison-before/calendar-week-desktop-light.png) | ![Show completed on: week, desktop, light](comparison-after/calendar-week-desktop-light.png) |
+| Desktop, dark | ![Show completed off: week, desktop, dark](comparison-before/calendar-week-desktop-dark.png) | ![Show completed on: week, desktop, dark](comparison-after/calendar-week-desktop-dark.png) |
+| Phone, light | ![Show completed off: week, phone, light](comparison-before/calendar-week-phone-light.png) | ![Show completed on: week, phone, light](comparison-after/calendar-week-phone-light.png) |
+| Phone, dark | ![Show completed off: week, phone, dark](comparison-before/calendar-week-phone-dark.png) | ![Show completed on: week, phone, dark](comparison-after/calendar-week-phone-dark.png) |
 
-### Month
+## Month
 
-| View | Before | After |
+| View | Before — completed tasks hidden | After — completed tasks shown, struck through |
 | --- | --- | --- |
-| Desktop, light | ![Before month, desktop, light](before/calendar-month-desktop-light.png) | ![After month, desktop, light](after/calendar-month-desktop-light.png) |
-| Desktop, dark | ![Before month, desktop, dark](before/calendar-month-desktop-dark.png) | ![After month, desktop, dark](after/calendar-month-desktop-dark.png) |
-| Phone, light | ![Before month, phone, light](before/calendar-month-phone-light.png) | ![After month, phone, light](after/calendar-month-phone-light.png) |
-| Phone, dark | ![Before month, phone, dark](before/calendar-month-phone-dark.png) | ![After month, phone, dark](after/calendar-month-phone-dark.png) |
+| Desktop, light | ![Show completed off: month, desktop, light](comparison-before/calendar-month-desktop-light.png) | ![Show completed on: month, desktop, light](comparison-after/calendar-month-desktop-light.png) |
+| Desktop, dark | ![Show completed off: month, desktop, dark](comparison-before/calendar-month-desktop-dark.png) | ![Show completed on: month, desktop, dark](comparison-after/calendar-month-desktop-dark.png) |
+| Phone, light | ![Show completed off: month, phone, light](comparison-before/calendar-month-phone-light.png) | ![Show completed on: month, phone, light](comparison-after/calendar-month-phone-light.png) |
+| Phone, dark | ![Show completed off: month, phone, dark](comparison-before/calendar-month-phone-dark.png) | ![Show completed on: month, phone, dark](comparison-after/calendar-month-phone-dark.png) |
 
-### Plan
+## Plan
 
-| View | Before | After |
+| View | Before — completed tasks hidden | After — completed tasks shown, struck through |
 | --- | --- | --- |
-| Desktop, light | ![Before plan, desktop, light](before/calendar-plan-desktop-light.png) | ![After plan, desktop, light](after/calendar-plan-desktop-light.png) |
-| Desktop, dark | ![Before plan, desktop, dark](before/calendar-plan-desktop-dark.png) | ![After plan, desktop, dark](after/calendar-plan-desktop-dark.png) |
-| Phone, light | ![Before plan, phone, light](before/calendar-plan-phone-light.png) | ![After plan, phone, light](after/calendar-plan-phone-light.png) |
-| Phone, dark | ![Before plan, phone, dark](before/calendar-plan-phone-dark.png) | ![After plan, phone, dark](after/calendar-plan-phone-dark.png) |
+| Desktop, light | ![Show completed off: plan, desktop, light](comparison-before/calendar-plan-desktop-light.png) | ![Show completed on: plan, desktop, light](comparison-after/calendar-plan-desktop-light.png) |
+| Desktop, dark | ![Show completed off: plan, desktop, dark](comparison-before/calendar-plan-desktop-dark.png) | ![Show completed on: plan, desktop, dark](comparison-after/calendar-plan-desktop-dark.png) |
+| Phone, light | ![Show completed off: plan, phone, light](comparison-before/calendar-plan-phone-light.png) | ![Show completed on: plan, phone, light](comparison-after/calendar-plan-phone-light.png) |
+| Phone, dark | ![Show completed off: plan, phone, dark](comparison-before/calendar-plan-phone-dark.png) | ![Show completed on: plan, phone, dark](comparison-after/calendar-plan-phone-dark.png) |
 
-## Show completed enabled
+## Separate layout regression screenshots
 
-A separate small fixture with two completed tasks (one timed and one all-day) and two open tasks. The remaining daily capacity stays **1h 45m / 8h**. On smaller screens the checked control lives in **More actions**.
-
-### Day with completed tasks
-
-| View | Screenshot |
-| --- | --- |
-| Desktop, light | ![day with completed tasks, desktop, light](completed/calendar-day-desktop-light.png) |
-| Desktop, dark | ![day with completed tasks, desktop, dark](completed/calendar-day-desktop-dark.png) |
-| Phone, light | ![day with completed tasks, phone, light](completed/calendar-day-phone-light.png) |
-| Phone, dark | ![day with completed tasks, phone, dark](completed/calendar-day-phone-dark.png) |
-
-### Week with completed tasks
-
-| View | Screenshot |
-| --- | --- |
-| Desktop, light | ![week with completed tasks, desktop, light](completed/calendar-week-desktop-light.png) |
-| Desktop, dark | ![week with completed tasks, desktop, dark](completed/calendar-week-desktop-dark.png) |
-| Phone, light | ![week with completed tasks, phone, light](completed/calendar-week-phone-light.png) |
-| Phone, dark | ![week with completed tasks, phone, dark](completed/calendar-week-phone-dark.png) |
-
-### Month with completed tasks
-
-| View | Screenshot |
-| --- | --- |
-| Desktop, light | ![month with completed tasks, desktop, light](completed/calendar-month-desktop-light.png) |
-| Desktop, dark | ![month with completed tasks, desktop, dark](completed/calendar-month-desktop-dark.png) |
-| Phone, light | ![month with completed tasks, phone, light](completed/calendar-month-phone-light.png) |
-| Phone, dark | ![month with completed tasks, phone, dark](completed/calendar-month-phone-dark.png) |
-
-### Plan with completed tasks
-
-| View | Screenshot |
-| --- | --- |
-| Desktop, light | ![plan with completed tasks, desktop, light](completed/calendar-plan-desktop-light.png) |
-| Desktop, dark | ![plan with completed tasks, desktop, dark](completed/calendar-plan-desktop-dark.png) |
-| Phone, light | ![plan with completed tasks, phone, light](completed/calendar-plan-phone-light.png) |
-| Phone, dark | ![plan with completed tasks, phone, dark](completed/calendar-plan-phone-dark.png) |
+[Upstream default vs feature default](layout-comparison.md) preserves the original code-before/code-after comparison required by CONTRIBUTING.md. **Show completed is off in both builds** in those pairs, so they primarily demonstrate the new header control and preserved layout. Use the off/on pairs above to review the completed-task behavior.
