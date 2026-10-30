@@ -1,10 +1,10 @@
 # Layout regression: completed tasks hidden in both builds
 
-Review screenshots for OpenTodoApp/OpenTodo#624 and the `calendar-completed-tasks` OpenSpec change. The feature implementation is on `feat/calendar-completed-tasks` in this fork. Images are kept on this separate review-assets branch so the implementation does not add documentation screenshots to the app bundle.
+Review screenshots for OpenTodoApp/OpenTodo#624 and the `calendar-completed-tasks` OpenSpec change. The feature implementation is on `feat/calendar-completed-tasks` in this fork. Review PNGs are kept on this separate review-assets branch so the gallery does not add to the app bundle.
 
-## Upstream default vs feature default: Show completed is off in both
+## Upstream default vs feature default: Show completed tasks is off in both
 
-**This is a layout comparison, not a demonstration of enabling the feature.** Completed tasks are hidden in both columns. The same seeded demo fixture is used. Before: upstream `e8688280`; after: the feature branch. Desktop: 1280 × 800; phone: 390 × 844 (device scale factor 2). Both themes. The moving now line and cursor position reflect capture time.
+**This is a layout comparison, not a demonstration of enabling the feature.** Completed tasks are hidden in both columns. The same seeded demo fixture is used. Before: upstream `860568fc`; after: feature implementation `66aa60d18e878ce61a663ff2395ffa42a0c6ec1b`. Desktop: 1280 × 800; phone: 390 × 844 (device scale factor 2). Both themes. The moving now line and cursor position reflect capture time.
 
 ### Day
 
@@ -42,7 +42,7 @@ Review screenshots for OpenTodoApp/OpenTodo#624 and the `calendar-completed-task
 | Phone, light | ![Before plan, phone, light](before/calendar-plan-phone-light.png) | ![After plan, phone, light](after/calendar-plan-phone-light.png) |
 | Phone, dark | ![Before plan, phone, dark](before/calendar-plan-phone-dark.png) | ![After plan, phone, dark](after/calendar-plan-phone-dark.png) |
 
-## Show completed enabled
+## Show completed tasks enabled
 
 A separate small fixture with two completed tasks (one timed and one all-day) and two open tasks. The remaining daily capacity stays **1h 45m / 8h**. On smaller screens the checked control lives in **More actions**.
 
