@@ -1,6 +1,6 @@
 # Calendar completed-task review
 
-Feature comparison for [OpenTodoApp/OpenTodo#626](https://github.com/OpenTodoApp/OpenTodo/pull/626), captured from implementation commit `66aa60d18e878ce61a663ff2395ffa42a0c6ec1b`.
+Feature comparison for [OpenTodoApp/OpenTodo#626](https://github.com/OpenTodoApp/OpenTodo/pull/626), captured from implementation commit `74be282e7032c70e57ef0a374a68dc5afa69e291`.
 
 ## Before: Show completed tasks off → After: Show completed tasks on
 

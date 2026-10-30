@@ -4,7 +4,7 @@ Review screenshots for OpenTodoApp/OpenTodo#624 and the `calendar-completed-task
 
 ## Upstream default vs feature default: Show completed tasks is off in both
 
-**This is a layout comparison, not a demonstration of enabling the feature.** Completed tasks are hidden in both columns. The same seeded demo fixture is used. Before: upstream `860568fc`; after: feature implementation `66aa60d18e878ce61a663ff2395ffa42a0c6ec1b`. Desktop: 1280 × 800; phone: 390 × 844 (device scale factor 2). Both themes. The moving now line and cursor position reflect capture time.
+**This is a layout comparison, not a demonstration of enabling the feature.** Completed tasks are hidden in both columns. The same seeded demo fixture is used. Before: upstream `b0a069a0`; after: feature implementation `74be282e7032c70e57ef0a374a68dc5afa69e291`. Desktop: 1280 × 800; phone: 390 × 844 (device scale factor 2). Both themes. The moving now line and cursor position reflect capture time.
 
 ### Day
 
