@@ -39,7 +39,7 @@ export function TabBar({ route, onSearch, minimised = false }: { route: Route; o
             className={`flex min-w-0 flex-1 flex-col items-center justify-center gap-0.5 px-1 text-hint transition-[min-height] duration-(--duration-ui) ${minimised ? 'min-h-10' : 'min-h-14'} ${active ? 'text-strong' : 'text-muted'}`}>
             <Icon name={item.icon} size="md" />
             {/* Minimised, the word stays the tab's name for assistive technology. */}
-            <span className={minimised ? 'sr-only' : 'truncate'}>{item.label}</span>
+            <span className={minimised ? 'sr-only' : 'max-w-full truncate'}>{item.label}</span>
           </button>
         )
       })}

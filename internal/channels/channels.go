@@ -311,7 +311,7 @@ func normalizeEvents(in []string) ([]string, error) {
 }
 
 // Languages are the message languages, English first (the app's languages).
-var Languages = []string{"en", "de", "fr", "es", "it", "pt", "zh"}
+var Languages = []string{"en", "de", "fr", "es", "it", "pt", "ru", "zh"}
 
 func normalizeLang(v string) string {
 	v = strings.ToLower(strings.TrimSpace(v))

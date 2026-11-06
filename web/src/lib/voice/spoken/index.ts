@@ -14,12 +14,13 @@ import { es } from './es'
 import { fr } from './fr'
 import { it } from './it'
 import { pt } from './pt'
+import { ru } from './ru'
 import type { SpokenTable } from './types'
 
 export type { SpokenTable } from './types'
 
 /** Every spoken table, keyed like the parser's vocabularies. */
-export const SPOKEN_TABLES: Record<string, SpokenTable> = { en, de, fr, it, es, pt }
+export const SPOKEN_TABLES: Record<string, SpokenTable> = { en, de, fr, it, es, pt, ru }
 
 export interface SpokenContext {
   /** Existing projects, for "project <name>" and multi-word "hashtag <name>". */
@@ -168,7 +169,7 @@ export function normalizeSpoken(text: string, languages: readonly string[], ctx:
       // Nothing spoken to convert ("at 9", "9 Uhr"): leave the words to the parser.
       if (!hour.spoken && minute === undefined && !pm && !am) return null
       const time = `${h}${minute !== undefined ? `:${String(minute).padStart(2, '0')}` : ''}${pm ? 'pm' : am ? 'am' : ''}`
-      const tail = hw && minute === undefined ? ` ${orig(i + at + hour.n, i + at + hour.n + hw)}` : ''
+      const tail = hw && minute === undefined && !pm && !am ? ` ${orig(i + at + hour.n, i + at + hour.n + hw)}` : ''
       return { n: k - i, out: `${at ? `${orig(i, i + at)} ` : ''}${time}${tail}` }
     },
     // in <number> <unit>: digits for the parser's "in 3 days"

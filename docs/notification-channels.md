@@ -32,7 +32,7 @@ With **Include task titles** off, the default, a message only says what happened
 
 With end-to-end encryption, messages never name a task or a person, whatever the switch says.
 
-Messages are written in the language your app used when you saved the channel.
+Messages are written in the language your app used when you saved the channel: English, German, French, Spanish, Italian, Portuguese, Russian or Simplified Chinese.
 
 ## Webhook, Apprise and Home Assistant
 

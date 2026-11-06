@@ -9,6 +9,7 @@ export const SHIPPED = [
   { code: 'es', name: 'Español' },
   { code: 'it', name: 'Italiano' },
   { code: 'pt', name: 'Português' },
+  { code: 'ru', name: 'Русский' },
   { code: 'zh', name: '简体中文' },
 ] as const
 

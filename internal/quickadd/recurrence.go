@@ -109,7 +109,7 @@ func ordinalAt(tokens []token, i int, v *Vocab) (int, int, bool) {
 		return 0, 0, false
 	}
 	if !digitsRE.MatchString(t.norm) {
-		if d := dayNumber(t); d > 0 {
+		if d := dayNumber(t, v.Code); d > 0 {
 			return 1, d, true
 		}
 	}
@@ -158,6 +158,9 @@ func patternAt(tokens []token, k int, v *Vocab) *recPattern {
 	}
 	if on, val, ok := ordinalAt(tokens, k, v); ok {
 		j := k + on
+		if wd := weekdayPluralAt(tokens, j, v); wd >= 0 && val > 4 {
+			return nil
+		}
 		if wd := weekdayPluralAt(tokens, j, v); wd >= 0 && val <= 4 {
 			return &recPattern{on + 1, ordinalEN[val] + " " + weekdayEN[wd], true}
 		}
@@ -204,15 +207,27 @@ func patternAt(tokens []token, k int, v *Vocab) *recPattern {
 	return nil
 }
 
-// countWeekdayAt is a bare count between the "every" word and a weekday ("every
-// 2 Mondays", "alle 2 Montage"): the grammar cannot express it, so the caller
+// unsupportedCountAt recognizes counts before unsupported hour/minute units or
+// weekdays ("every 2 Mondays"), and ordinal weekdays above four. The caller
 // returns a literal match over the phrase. It returns the token count, or 0.
-func countWeekdayAt(tokens []token, k int, v *Vocab) int {
-	if t := tok(tokens, k); t == nil || !count3RE.MatchString(t.norm) {
+func unsupportedCountAt(tokens []token, k int, v *Vocab) int {
+	t := tok(tokens, k)
+	if t == nil {
+		return 0
+	}
+	if !digitsRE.MatchString(t.norm) && dayNumber(t, v.Code) > 4 && weekdayPluralAt(tokens, k+1, v) >= 0 {
+		return 2
+	}
+	if !count3RE.MatchString(t.norm) {
 		return 0
 	}
 	if weekdayPluralAt(tokens, k+1, v) >= 0 {
 		return 2
+	}
+	for _, words := range [][]string{v.Units.Hour, v.Units.Minute} {
+		if n := phraseAt(tokens, k+1, words); n > 0 {
+			return 1 + n
+		}
 	}
 	return 0
 }
@@ -329,7 +344,7 @@ func matchRecurrenceAt(tokens []token, i int, ctx *dateCtx) *recMatch {
 		}
 		p := patternAt(tokens, i+ev, v)
 		if p == nil {
-			if n := countWeekdayAt(tokens, i+ev, v); n > 0 && (best == nil || i+ev+n > best.to) {
+			if n := unsupportedCountAt(tokens, i+ev, v); n > 0 && (best == nil || i+ev+n > best.to) {
 				best = &recMatch{from: i, to: i + ev + n, literal: true}
 			}
 			continue

@@ -4,6 +4,10 @@ All notable changes to OpenTodo are documented here. The format follows [Keep a 
 
 ## [Unreleased]
 
+### Added
+
+- **Russian.** Русский is available for the interface, reminder notifications, browser extension, Android and iPhone shells, emails and delivery channels. Quick add and spoken attributes understand Russian dates, repeats and reminders, such as `на 5 декабря`, `каждый день` and `напомни за 30 минут`, with matching browser and CLI parsing.
+
 ## [0.23.0] - 2026-11-06
 
 OpenTodo 0.23.0 is about **trust**. It publishes a [threat model, a security retrospective and a disclosure policy](docs/security/), with documented limits, and ships the hardening they called for: OAuth refresh tokens rotate, AI agents get per-account limits and can no longer build or run routines that send data out, first-run setup under a domain asks for the setup code, cookie writes need Fetch Metadata, and imports, backups and single sign-on are stricter (see Security). The MCP endpoint now speaks **OAuth**, so apps such as ChatGPT, claude.ai and Gemini connect by URL. Also new: **Simplified Chinese**, a **new logo**, calendar events in Upcoming, a subtask's full path, comment webhooks, keyboard grouping and sorting, every drag with a one-click alternative, and the 1.0 docs (self-hosting handbook, configuration reference, contributor guide, roadmap). Many fixes come from your reports, including imported tasks no longer showing their import id.

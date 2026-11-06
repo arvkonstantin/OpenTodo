@@ -59,6 +59,20 @@ describe('messages', () => {
     expect(formatList(['a', 'b', 'c'])).toBe('a, b y c')
   })
 
+  it('loads Russian offline and agrees nouns with integer and fractional counts', async () => {
+    const fetchSpy = vi.spyOn(globalThis, 'fetch').mockRejectedValue(new Error('offline'))
+    await applyLanguagePreference('ru', ['en-US'])
+    expect(fetchSpy).not.toHaveBeenCalled()
+    expect(document.documentElement.lang).toBe('ru')
+    expect(t('Inbox')).toBe('Входящие')
+    const counts = [0, 1, 2, 5, 11, 14, 21, 22, 25, 101, 111, 1.5]
+    expect(counts.map((n) => t('{n, plural, one {# task} other {# tasks}}', { n }))).toEqual([
+      '0 задач', '1 задача', '2 задачи', '5 задач', '11 задач', '14 задач',
+      '21 задача', '22 задачи', '25 задач', '101 задача', '111 задач', '1,5 задачи',
+    ])
+    expect(formatList(['а', 'б', 'в'])).toBe('а, б и в')
+  })
+
   it('every shipped catalog has every source message', async () => {
     const ids = Object.keys(messages)
     for (const { code } of SHIPPED) {
@@ -83,6 +97,14 @@ describe('locale resolution (D4)', () => {
   it('a browser language without a catalog falls back to English', () => {
     expect(resolveLanguage('system', ['ja'])).toBe('en')
     expect(resolveLanguage('xx', ['ja'])).toBe('en')
+  })
+
+  it('recognizes Russian browser regions and preserves the selected region', () => {
+    expect(resolveLanguage('system', ['ru-RU', 'en'])).toBe('ru')
+    expect(resolveLanguage('system', ['ru-BY', 'en'])).toBe('ru')
+    expect(resolveLanguage('ru', ['en-US'])).toBe('ru')
+    expect(intlLocale('ru', ['en-US', 'ru-BY'])).toBe('ru-BY')
+    expect(intlLocale('ru', ['en-US'])).toBe('ru')
   })
 
   it('classifies simplified Chinese and leaves traditional Chinese on English', () => {
@@ -126,6 +148,13 @@ describe('quick add and voice follow the interface language (D5)', () => {
     const langs = resolveLanguages(DEFAULT_QUICK_ADD_SETTINGS, browser)
     expect(recognitionTag(recognitionLanguage({ enabled: true, lang: null }, langs), browser)).toMatch(/^es/)
   })
+  it('Russian follows the interface for parsing and dictation, keeping a browser region', () => {
+    const browser = preferredLanguages('ru', ['en-US'])
+    const langs = resolveLanguages(DEFAULT_QUICK_ADD_SETTINGS, browser)
+    expect(langs).toEqual(['ru', 'en'])
+    expect(recognitionTag(recognitionLanguage({ enabled: true, lang: null }, langs), browser)).toBe('ru-RU')
+    expect(recognitionTag('ru', ['ru-BY', 'en-US'])).toBe('ru-BY')
+  })
   it('with system the browser order is unchanged', () => {
     expect(preferredLanguages('system', ['en-US', 'de'])).toEqual(['en-US', 'de'])
   })
@@ -147,6 +176,14 @@ describe('server errors by code (D6)', () => {
 })
 
 describe('dates in the interface language (D4)', () => {
+  it('Russian uses day-month order, a 24-hour clock and Russian weekday names', async () => {
+    await applyLanguagePreference('ru', ['en-US'])
+    setDateTime({ date_format: 'system', time_format: 'system', week_start: 'system' })
+    expect(currentLocale()).toBe('ru')
+    expect(formatDate('2026-11-06', 'numeric', undefined, '2026-01-01')).toBe('06.11.2026')
+    expect(formatDate('2026-11-06', 'full', undefined, '2026-01-01')).toMatch(/^пятница/i)
+    expect(formatTime('15:00')).toBe('15:00')
+  })
   it('German with an en-US browser: German order, 24-hour clock and German names', async () => {
     await applyLanguagePreference('de', ['en-US'])
     setDateTime({ date_format: 'system', time_format: 'system', week_start: 'system' })
@@ -173,7 +210,7 @@ describe('dates in the interface language (D4)', () => {
 // "Words for tasks that are late"): the interface says Earlier, never "overdue". The
 // filter query keyword `overdue` is a language keyword, not a message.
 describe('words for tasks that are late (page-rhythm D8)', () => {
-  const OLD: Record<string, RegExp> = { de: /überfällig/i, fr: /en retard/i, es: /vencid/i, it: /scadut/i, pt: /atrasad/i }
+  const OLD: Record<string, RegExp> = { de: /überfällig/i, fr: /en retard/i, es: /vencid/i, it: /scadut/i, pt: /atrasad/i, ru: /просроч/i }
 
   it('no message of the web app uses "overdue", except the project health word', () => {
     expect(Object.keys(messages).filter((m) => /overdue/i.test(m))).toEqual(['Overdue'])

@@ -32,5 +32,10 @@
   {"lang": "pt", "text": "toda segunda-feira", "ref": "2026-09-19", "rule": "every monday"},
   {"lang": "", "text": "2026-11-03", "ref": "2026-09-19", "date": "2026-11-03"},
   {"lang": "de", "text": "irgendwann bald", "ref": "2026-09-19", "error": true},
-  {"lang": "en", "text": "31 Feb", "ref": "2026-09-19", "error": true}
+  {"lang": "en", "text": "31 Feb", "ref": "2026-09-19", "error": true},
+  {"lang": "ru", "text": "Май 5 2027", "ref": "2026-11-06", "date": "2027-05-05"},
+  {"lang": "ru-RU", "text": "Май 5 2027", "ref": "2026-11-06", "date": "2027-05-05"},
+  {"lang": "ru", "text": "5 декабря 2026 в 15:30", "ref": "2026-11-06", "date": "2026-12-05", "time": "15:30"},
+  {"lang": "ru", "text": "ЗАВТРА", "ref": "2026-11-06", "date": "2026-11-07"},
+  {"lang": "ru", "text": "31 февраля", "ref": "2026-11-06", "error": true}
 ]

@@ -12,8 +12,8 @@ const read = (lang) => JSON.parse(readFileSync(new URL(`${lang}/messages.json`, 
 const en = read('en')
 const langs = readdirSync(dir)
 
-test('the six shipped languages are there', () => {
-  assert.deepEqual([...langs].sort(), ['de', 'en', 'es', 'fr', 'it', 'pt', 'zh'])
+test('the shipped languages are there', () => {
+  assert.deepEqual([...langs].sort(), ['de', 'en', 'es', 'fr', 'it', 'pt', 'ru', 'zh'])
 })
 
 for (const lang of langs) {

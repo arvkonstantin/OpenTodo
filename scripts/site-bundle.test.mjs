@@ -148,15 +148,18 @@ test('method.json: the app\'s own words in every shipped language (open-loops-me
   const m = methodVocabulary()
   assert.equal(m.schema, 1)
   assert.equal(m.name, 'Open Loops')
-  assert.deepEqual(m.languages, ['en', 'de', 'fr', 'es', 'it', 'pt', 'zh'])
+  assert.deepEqual(m.languages, ['en', 'de', 'fr', 'es', 'it', 'pt', 'ru', 'zh'])
   assert.deepEqual(m.moves.map((x) => x.id), ['catch', 'clarify', 'place', 'do', 'review'])
   const it = JSON.parse(read('web/src/locales/it.json'))
+  const ru = JSON.parse(read('web/src/locales/ru.json'))
   const vocabulary = JSON.parse(read('web/src/lib/method/vocabulary.json'))
   for (const [i, move] of vocabulary.moves.entries()) {
     // Same words on the website: the Italian name is the catalog's entry in the method context.
     assert.equal(m.moves[i].name.it, it[`${move.name}|method`], move.id)
     assert.equal(m.moves[i].name.en, move.name)
     assert.equal(m.moves[i].description.it, it[move.description], move.id)
+    assert.equal(m.moves[i].name.ru, ru[`${move.name}|method`], move.id)
+    assert.equal(m.moves[i].description.ru, ru[move.description], move.id)
     assert.equal(m.moves[i].route, move.route)
   }
   for (const group of ['principles', 'places', 'rhythms', 'horizons']) {

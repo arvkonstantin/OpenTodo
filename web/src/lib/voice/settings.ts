@@ -55,7 +55,7 @@ export function onVoiceSettingsChange(fn: () => void): () => void {
 }
 
 /** Region used when the browser's own languages name none for the chosen language. */
-const DEFAULT_REGION: Record<string, string> = { en: 'en-US', de: 'de-DE', fr: 'fr-FR', it: 'it-IT', es: 'es-ES', pt: 'pt-BR' }
+const DEFAULT_REGION: Record<string, string> = { en: 'en-US', de: 'de-DE', fr: 'fr-FR', it: 'it-IT', es: 'es-ES', pt: 'pt-BR', ru: 'ru-RU' }
 
 /** Primary subtag of the recognition language: the override, else the first quick-add language. */
 export function recognitionLanguage(s: Pick<VoiceSettings, 'lang'> & Partial<VoiceSettings>, quickAddLanguages: readonly string[]): string {

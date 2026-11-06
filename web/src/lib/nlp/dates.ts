@@ -197,11 +197,12 @@ function monthAt(tokens: readonly Token[], i: number, v: Vocabulary, allowAbbr: 
 }
 
 const DAY_RE = /^(\d{1,2})(?:st|nd|rd|th|er|o|a|º|°|ª|\.)?$/
+const RUSSIAN_DAY_RE = /^(\d{1,2})-(?:и|я|е|го|ю)$/
 const YEAR_RE = /^(\d{4})$/
 
-export function dayNumber(token: Token | undefined): number {
+export function dayNumber(token: Token | undefined, language: string): number {
   if (!token || token.quoted) return 0
-  const m = DAY_RE.exec(token.norm)
+  const m = DAY_RE.exec(token.norm) ?? (language === 'ru' ? RUSSIAN_DAY_RE.exec(token.norm) : null)
   if (!m) return 0
   const d = Number(m[1])
   return d >= 1 && d <= 31 ? d : 0
@@ -218,7 +219,10 @@ export function countAt(tokens: readonly Token[], i: number, v: Vocabulary): { n
   if (!t || t.quoted) return null
   if (/^\d{1,3}$/.test(t.norm)) return { n: 1, count: Number(t.norm) }
   const one = phraseAt(tokens, i, v.oneWords, `${v.code}:one`)
-  return one ? { n: one, count: 1 } : null
+  if (one) return { n: one, count: 1 }
+  // Russian omits ‘one’ in ‘через неделю’ and ‘напомни за час’.
+  if (v.code === 'ru' && Object.values(v.units).some((words) => phraseAt(tokens, i, words, `${v.code}:implicit:${words[0]}`))) return { n: 0, count: 1 }
+  return null
 }
 
 type Unit = 'hour' | 'day' | 'week' | 'month'
@@ -391,7 +395,7 @@ export function weekdayOrdinalAt(
   if (!t || t.quoted) return null
   // "segunda, quarta" and "3rd, Friday" are lists, not ordinal weekdays.
   const direct = (n: number) => !/[,;]$/.test(tokens[i + n - 1].text) && isWeekday(i + n)
-  const num = ORDINAL_RE.exec(t.norm)
+  const num = ORDINAL_RE.exec(t.norm) ?? (v.code === 'ru' ? /^([1-4])-(?:и|я|е|го|ю)$/.exec(t.norm) : null)
   if (num) return direct(1) ? { n: 1, value: Number(num[1]) } : null
   const word = lookupAt(tokens, i, v.ordinals, `${v.code}:ord`)
   if (word && direct(word.n)) return word
@@ -406,8 +410,8 @@ export function weekdayOrdinalAt(
  */
 export function ordinalOutOfRangeAt(tokens: readonly Token[], i: number, ctx: DateContext): number {
   const t = tokens[i]
-  if (!t || t.quoted || /^\d+$/.test(t.norm) || dayNumber(t) <= 4 || /[,;]$/.test(t.text)) return 0
-  return ctx.vocabs.some((v) => weekdayAt(tokens, i + 1, v) >= 0) ? 2 : 0
+  if (!t || t.quoted || /^\d+$/.test(t.norm) || /[,;]$/.test(t.text)) return 0
+  return ctx.vocabs.some((v) => dayNumber(t, v.code) > 4 && weekdayAt(tokens, i + 1, v) >= 0) ? 2 : 0
 }
 
 /** Tokens at k of an "of the month" phrase in any active language, or 0. */
@@ -463,6 +467,8 @@ function nextPeriodAt(tokens: readonly Token[], j: number, v: Vocabulary, ctx: D
 function inPeriodAt(tokens: readonly Token[], j: number, v: Vocabulary, ctx: DateContext): { date: string; n: number } | null {
   const inN = phraseAt(tokens, j, v.inWords, `${v.code}:in`)
   if (!inN) return null
+  // ‘Через день’ is the recurring every-other-day form, not an implicit one-day offset.
+  if (v.code === 'ru' && lookupAt(tokens, j, v.everyOne, `${v.code}:every1`)) return null
   const count = countAt(tokens, j + inN, v)
   if (!count) return null
   const unit = unitAt(tokens, j + inN + count.n, v)
@@ -480,7 +486,7 @@ function inPeriodAt(tokens: readonly Token[], j: number, v: Vocabulary, ctx: Dat
 
 function monthDayAt(tokens: readonly Token[], j: number, v: Vocabulary, ctx: DateContext): { date: string; n: number } | null {
   // D [of] MONTH [YEAR]
-  const d1 = dayNumber(tokens[j])
+  const d1 = dayNumber(tokens[j], v.code)
   if (d1) {
     let k = j + 1
     k += phraseAt(tokens, k, v.ofWords, `${v.code}:of`)
@@ -496,7 +502,7 @@ function monthDayAt(tokens: readonly Token[], j: number, v: Vocabulary, ctx: Dat
   // MONTH D [YEAR]  |  MONTH (full name alone → the 1st)
   const mAbbr = monthAt(tokens, j, v, true)
   if (mAbbr) {
-    const d2 = dayNumber(tokens[j + 1])
+    const d2 = dayNumber(tokens[j + 1], v.code)
     if (d2) {
       let k = j + 2
       const y = yearAt(tokens[k])
@@ -506,6 +512,9 @@ function monthDayAt(tokens: readonly Token[], j: number, v: Vocabulary, ctx: Dat
     }
     const mFull = monthAt(tokens, j, v, false)
     if (mFull) {
+      // An invalid Russian day-month date stays text, not the first of that month.
+      if (v.code === 'ru' && [tokens[j - 1], tokens[j + 1]].some((t) =>
+        t && !t.quoted && (DAY_RE.test(t.norm) || RUSSIAN_DAY_RE.test(t.norm)))) return null
       const date = resolveMonthDay(ctx.today, 0, mFull, 1)
       return date ? { date, n: 1 } : null
     }
@@ -594,9 +603,11 @@ const HH_RE = /^(\d{1,2})h(\d{2})?$/
 const H_RE = /^(\d{1,2})$/
 
 function meridiem(tokens: readonly Token[], k: number, v: Vocabulary): { n: number; pm: boolean } | null {
-  if (phraseAt(tokens, k, v.pm, `${v.code}:pm`)) return { n: 1, pm: true }
-  if (phraseAt(tokens, k, v.am, `${v.code}:am`)) return { n: 1, pm: false }
-  return null
+  const hw = v.code === 'ru' ? phraseAt(tokens, k, v.hourWords, `${v.code}:hw`) : 0
+  const pm = phraseAt(tokens, k + hw, v.pm, `${v.code}:pm`)
+  if (pm) return { n: hw + pm, pm: true }
+  const am = phraseAt(tokens, k + hw, v.am, `${v.code}:am`)
+  return am ? { n: hw + am, pm: false } : null
 }
 
 function to24(h: number, pm: boolean): number {

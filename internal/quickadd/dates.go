@@ -194,11 +194,16 @@ func tok(tokens []token, i int) *token {
 	return &tokens[i]
 }
 
-func dayNumber(t *token) int {
+var russianDayRE = regexp.MustCompile(`^(\d{1,2})-(?:и|я|е|го|ю)$`)
+
+func dayNumber(t *token, language string) int {
 	if t == nil {
 		return 0
 	}
 	m := dayRE.FindStringSubmatch(t.norm)
+	if m == nil && language == "ru" {
+		m = russianDayRE.FindStringSubmatch(t.norm)
+	}
 	if m == nil {
 		return 0
 	}
@@ -231,6 +236,13 @@ func countAt(tokens []token, i int, v *Vocab) (n, count int, ok bool) {
 	}
 	if one := phraseAt(tokens, i, v.OneWords); one > 0 {
 		return one, 1, true
+	}
+	if v.Code == "ru" {
+		for _, words := range [][]string{v.Units.Minute, v.Units.Hour, v.Units.Day, v.Units.Week, v.Units.Month, v.Units.Year} {
+			if phraseAt(tokens, i, words) > 0 {
+				return 0, 1, true
+			}
+		}
 	}
 	return 0, 0, false
 }
@@ -413,7 +425,14 @@ func weekdayOrdinalAt(tokens []token, i int, v *Vocab, isWeekday func(int) bool)
 		text := tokens[i+n-1].text
 		return !strings.HasSuffix(text, ",") && !strings.HasSuffix(text, ";") && isWeekday(i+n)
 	}
-	if m := ordinalRE.FindStringSubmatch(t.norm); m != nil {
+	m := ordinalRE.FindStringSubmatch(t.norm)
+	if m == nil && v.Code == "ru" {
+		m = russianDayRE.FindStringSubmatch(t.norm)
+		if m != nil && m[1] != "1" && m[1] != "2" && m[1] != "3" && m[1] != "4" {
+			m = nil
+		}
+	}
+	if m != nil {
 		val, _ := strconv.Atoi(m[1])
 		return 1, val, direct(1)
 	}
@@ -431,11 +450,11 @@ func weekdayOrdinalAt(tokens []token, i int, v *Vocab, isWeekday func(int) bool)
 // literal as a unit. It returns the token count, or 0.
 func ordinalOutOfRangeAt(tokens []token, i int, ctx *dateCtx) int {
 	t := tok(tokens, i)
-	if t == nil || digitsRE.MatchString(t.norm) || dayNumber(t) <= 4 || strings.HasSuffix(t.text, ",") || strings.HasSuffix(t.text, ";") {
+	if t == nil || digitsRE.MatchString(t.norm) || strings.HasSuffix(t.text, ",") || strings.HasSuffix(t.text, ";") {
 		return 0
 	}
 	for _, v := range ctx.vocabs {
-		if weekdayAt(tokens, i+1, v) >= 0 {
+		if dayNumber(t, v.Code) > 4 && weekdayAt(tokens, i+1, v) >= 0 {
 			return 2
 		}
 	}
@@ -519,6 +538,11 @@ func inPeriodAt(tokens []token, j int, v *Vocab, ctx *dateCtx) (string, int, boo
 	if inN == 0 {
 		return "", 0, false
 	}
+	if v.Code == "ru" {
+		if _, _, ok := lookupAt(tokens, j, v.EveryOne); ok {
+			return "", 0, false
+		}
+	}
 	cn, count, ok := countAt(tokens, j+inN, v)
 	if !ok {
 		return "", 0, false
@@ -563,7 +587,7 @@ func monthTextBefore(tokens []token, i int, ctx *dateCtx) bool {
 }
 
 func monthDayAt(tokens []token, j int, v *Vocab, ctx *dateCtx) (string, int, bool) {
-	if d1 := dayNumber(tok(tokens, j)); d1 > 0 {
+	if d1 := dayNumber(tok(tokens, j), v.Code); d1 > 0 {
 		k := j + 1
 		k += phraseAt(tokens, k, v.OfWords)
 		if m := monthAt(tokens, k, v, true); m > 0 {
@@ -577,7 +601,7 @@ func monthDayAt(tokens []token, j int, v *Vocab, ctx *dateCtx) (string, int, boo
 		}
 	}
 	if mAbbr := monthAt(tokens, j, v, true); mAbbr > 0 {
-		if d2 := dayNumber(tok(tokens, j+1)); d2 > 0 {
+		if d2 := dayNumber(tok(tokens, j+1), v.Code); d2 > 0 {
 			k := j + 2
 			y := yearAt(tok(tokens, k))
 			if y > 0 {
@@ -587,6 +611,14 @@ func monthDayAt(tokens []token, j int, v *Vocab, ctx *dateCtx) (string, int, boo
 			return date, k - j, date != ""
 		}
 		if mFull := monthAt(tokens, j, v, false); mFull > 0 {
+			// An invalid Russian day-month date stays text, not the first of that month.
+			if v.Code == "ru" {
+				for _, side := range []int{j - 1, j + 1} {
+					if t := tok(tokens, side); t != nil && (dayRE.MatchString(t.norm) || russianDayRE.MatchString(t.norm)) {
+						return "", 0, false
+					}
+				}
+			}
 			date := resolveMonthDay(ctx.today, 0, mFull, 1)
 			return date, 1, date != ""
 		}
@@ -711,11 +743,15 @@ var (
 )
 
 func meridiem(tokens []token, k int, v *Vocab) (n int, pm, ok bool) {
-	if phraseAt(tokens, k, v.Pm) > 0 {
-		return 1, true, true
+	hw := 0
+	if v.Code == "ru" {
+		hw = phraseAt(tokens, k, v.HourWords)
 	}
-	if phraseAt(tokens, k, v.Am) > 0 {
-		return 1, false, true
+	if n := phraseAt(tokens, k+hw, v.Pm); n > 0 {
+		return hw + n, true, true
+	}
+	if n := phraseAt(tokens, k+hw, v.Am); n > 0 {
+		return hw + n, false, true
 	}
 	return 0, false, false
 }

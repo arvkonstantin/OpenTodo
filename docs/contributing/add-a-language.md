@@ -9,7 +9,7 @@ order: 5
 ---
 # Add a language
 
-The app ships in seven languages. A new one is a catalog plus a handful of small tables, and a speaker of the language who reviews it. **Machine translation is not accepted.** How messages are written is in [Translating OpenTodo](../translating.md).
+The app ships in eight languages. A new one is a catalog plus a handful of small tables, and a speaker of the language who reviews it. **Machine translation is not accepted.** How messages are written is in [Translating OpenTodo](../translating.md).
 
 ## Before you start
 
@@ -21,15 +21,19 @@ Open an issue or a discussion naming the language and who will review it. Until 
 | --- | --- |
 | The interface catalog | `web/src/locales/<code>.json`: every key of `web/src/locales/messages.json`, translated |
 | The language list | `{ code, name }` in `SHIPPED`, `web/src/locales/index.ts`, with the name in the language itself |
+| Stored language values | `LANGUAGES` in `web/src/lib/userPrefs.ts` and `LanguagePref` in `web/src/lib/types.ts`, so a synced choice is recognized |
 | Browser tags that pick it | `web/src/lib/i18n/locale.ts`, only when the language has script or region variants (as Chinese does) |
 | Notification texts of the service worker | the table in `web/public/push-sw.js` |
 | The browser extension | `extension/_locales/<code>/messages.json` |
+| The iOS app | `mobile/ios/Shared/Localizable.xcstrings` and the project’s `knownRegions` |
 | The Android app | `mobile/android/app/src/main/res/values-<code>/strings.xml` |
 | Emails | `internal/mail/templates/*.<code>.txt`, and `<code>` in `mail.Languages` |
 | Delivery channel messages | the rows in `internal/channels/messages.go` |
 | The docs | the glossary column in [Translating OpenTodo](../translating.md#glossary), and the list in [Language](../language.md) |
 
 Quick add understands dates and priorities in a language only with a vocabulary in `web/src/lib/nlp/vocab/`. That is a separate contribution; without it, quick add keeps English.
+
+Russian also has quick-add and spoken-token vocabularies. Keep its explicit case forms and Cyrillic normalization identical in the browser and Go parser; cover dates, repeats and reminders with shared vectors.
 
 ## Check it
 
@@ -40,7 +44,7 @@ cd web && npm test -- i18n
 go test ./internal/mail/... ./internal/channels/...
 ```
 
-Use the plural categories of your language (`one`/`other`, or only `other` for languages without plurals), keep every placeholder and tag, and use `’` rather than `'` in translations.
+Use the plural categories of your language (`one`/`other`, Russian `one`/`few`/`many`/`other`, or only `other` for languages without plurals), keep every placeholder and tag, and use `’` rather than `'` in translations.
 
 ## In the pull request
 

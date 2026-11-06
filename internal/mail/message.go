@@ -60,7 +60,7 @@ type RoutineVars struct {
 }
 
 // Languages are the supported message languages, English first.
-var Languages = []string{"en", "de", "fr", "es", "it", "pt", "zh"}
+var Languages = []string{"en", "de", "fr", "es", "it", "pt", "ru", "zh"}
 
 // Vars are the only values a template sees: the server origin, the link and its
 // expiry, the recipient address, the inviter's display name and a project
@@ -166,6 +166,7 @@ var units = map[string][2][2]string{ // lang → {hours {one, many}, days {one, 
 	"es": {{"hora", "horas"}, {"día", "días"}},
 	"it": {{"ora", "ore"}, {"giorno", "giorni"}},
 	"pt": {{"hora", "horas"}, {"dia", "dias"}},
+	"ru": {{"час", "часов"}, {"день", "дней"}}, // few is selected by russianUnit.
 	"zh": {{"小时", "小时"}, {"天", "天"}},
 }
 
@@ -178,15 +179,32 @@ func formatExpiry(d time.Duration, lang string) string {
 	}
 	if h > 48 {
 		days := (h + 12) / 24
+		if lang == "ru" {
+			return strconv.Itoa(days) + " " + russianUnit(days, [3]string{"день", "дня", "дней"})
+		}
 		if days == 1 {
 			return "1 " + u[1][0]
 		}
 		return strconv.Itoa(days) + " " + u[1][1]
 	}
+	if lang == "ru" {
+		return strconv.Itoa(h) + " " + russianUnit(h, [3]string{"час", "часа", "часов"})
+	}
 	if h == 1 {
 		return "1 " + u[0][0]
 	}
 	return strconv.Itoa(h) + " " + u[0][1]
+}
+
+// russianUnit chooses the form for an integer duration, including the 11–14 exception.
+func russianUnit(n int, forms [3]string) string {
+	if n%10 == 1 && n%100 != 11 {
+		return forms[0]
+	}
+	if n%10 >= 2 && n%10 <= 4 && (n%100 < 12 || n%100 > 14) {
+		return forms[1]
+	}
+	return forms[2]
 }
 
 var roleNames = map[string]map[string]string{
@@ -196,11 +214,12 @@ var roleNames = map[string]map[string]string{
 	"es": {"admin": "administrador", "editor": "editor", "viewer": "lector", "member": "miembro"},
 	"it": {"admin": "amministratore", "editor": "editor", "viewer": "lettore", "member": "membro"},
 	"pt": {"admin": "administrador", "editor": "editor", "viewer": "leitor", "member": "membro"},
+	"ru": {"admin": "администратор", "editor": "редактор", "viewer": "наблюдатель", "member": "участник"},
 	"zh": {"admin": "管理员", "editor": "编辑者", "viewer": "查看者", "member": "成员"},
 }
 
 // someone stands in for an inviter without a display name (the address is never shown).
-var someone = map[string]string{"en": "Someone", "de": "Jemand", "fr": "Quelqu'un", "es": "Alguien", "it": "Qualcuno", "pt": "Alguém", "zh": "有人"}
+var someone = map[string]string{"en": "Someone", "de": "Jemand", "fr": "Quelqu'un", "es": "Alguien", "it": "Qualcuno", "pt": "Alguém", "ru": "Кто-то", "zh": "有人"}
 
 // langTag is the shipped language of one Accept-Language tag. Simplified Chinese
 // (zh, zh-Hans, zh-CN, zh-SG) is zh. Traditional Chinese and any other zh tag

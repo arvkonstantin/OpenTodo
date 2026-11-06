@@ -29,17 +29,26 @@ var unitMinutes = []struct {
 func offsetAt(tokens []token, k int, ctx *dateCtx) (int, int, bool) {
 	bestN, bestMin, found := 0, 0, false
 	for _, v := range ctx.vocabs {
+		preBefore, preAfter := 0, 0
+		if v.Code == "ru" {
+			preBefore = phraseAt(tokens, k, v.BeforeWords)
+			if preBefore == 0 {
+				preAfter = phraseAt(tokens, k, v.AfterWords)
+			}
+		}
+		prefix := preBefore + preAfter
+		j := k + prefix
 		an, amount := 0, 0
-		if cn, count, ok := countAt(tokens, k, v); ok {
+		if cn, count, ok := countAt(tokens, j, v); ok {
 			for _, u := range unitMinutes {
-				if n := phraseAt(tokens, k+cn, u.pick(v)); n > 0 {
+				if n := phraseAt(tokens, j+cn, u.pick(v)); n > 0 {
 					an, amount = cn+n, count*u.minutes
 					break
 				}
 			}
 		}
 		if an == 0 {
-			if t := tok(tokens, k); t != nil {
+			if t := tok(tokens, j); t != nil {
 				if m := matchDuration(t.text, false); m > 0 {
 					an, amount = 1, m
 				}
@@ -48,15 +57,20 @@ func offsetAt(tokens []token, k int, ctx *dateCtx) (int, int, bool) {
 		if an == 0 || amount <= 0 {
 			continue
 		}
-		before := phraseAt(tokens, k+an, v.BeforeWords)
-		after := 0
-		if before == 0 {
-			after = phraseAt(tokens, k+an, v.AfterWords)
+		before, after := preBefore, preAfter
+		if prefix == 0 {
+			before = phraseAt(tokens, j+an, v.BeforeWords)
+			if before == 0 {
+				after = phraseAt(tokens, j+an, v.AfterWords)
+			}
 		}
 		if before == 0 && after == 0 {
 			continue
 		}
-		n := an + before + after
+		n := prefix + an
+		if prefix == 0 {
+			n += before + after
+		}
 		if !found || n > bestN {
 			bestN, found = n, true
 			bestMin = amount

@@ -80,7 +80,7 @@ function ordinalAt(tokens: readonly Token[], i: number, v: Vocabulary): { n: num
   const t = tokens[i]
   if (!t || t.quoted) return null
   if (!/^\d+$/.test(t.norm)) {
-    const d = dayNumber(t)
+    const d = dayNumber(t, v.code)
     if (d) return { n: 1, value: d }
   }
   const word = lookupAt(tokens, i, v.ordinals, `${v.code}:ord`)
@@ -109,6 +109,7 @@ function patternAt(tokens: readonly Token[], k: number, v: Vocabulary): Pattern 
   if (ord) {
     const j = k + ord.n
     const wd = weekdayPluralAt(tokens, j, v)
+    if (wd >= 0 && ord.value > 4) return null
     if (wd >= 0 && ord.value <= 4) return { n: ord.n + 1, pattern: `${ORDINAL_EN[ord.value]} ${WEEKDAY_EN[wd]}`, monthly: true }
     // "1st weekday" … "last weekday": the n-th Monday-to-Friday day of the month.
     const wall = ord.value <= 4 ? phraseAt(tokens, j, v.weekdayAll, `${v.code}:wdall`) : 0
@@ -147,14 +148,18 @@ function patternAt(tokens: readonly Token[], k: number, v: Vocabulary): Pattern 
 }
 
 /**
- * A bare count between the "every" word and a weekday ("every 2 Mondays", "alle 2
+ * A bare count between the "every" word and an unsupported hourly/minutely unit or weekday ("every 2 Mondays", "alle 2
  * Montage"): a count the grammar cannot express, so a literal match over the
  * phrase keeps it whole in the title (quick-add-nth-weekday D3).
  */
-function countWeekdayAt(tokens: readonly Token[], k: number, v: Vocabulary): number {
+function unsupportedCountAt(tokens: readonly Token[], k: number, v: Vocabulary): number {
   const t = tokens[k]
-  if (!t || t.quoted || !/^\d{1,3}$/.test(t.norm)) return 0
-  return weekdayPluralAt(tokens, k + 1, v) >= 0 ? 2 : 0
+  if (!t || t.quoted) return 0
+  if (!/^\d+$/.test(t.norm) && dayNumber(t, v.code) > 4 && weekdayPluralAt(tokens, k + 1, v) >= 0) return 2
+  if (!/^\d{1,3}$/.test(t.norm)) return 0
+  if (weekdayPluralAt(tokens, k + 1, v) >= 0) return 2
+  const unit = phraseAt(tokens, k + 1, v.units.hour, `${v.code}:unit:hour`) || phraseAt(tokens, k + 1, v.units.minute, `${v.code}:unit:minute`)
+  return unit ? 1 + unit : 0
 }
 
 /**
@@ -242,7 +247,7 @@ export function matchRecurrenceAt(tokens: readonly Token[], i: number, ctx: Date
     if (!ev) continue
     const p = patternAt(tokens, i + ev, v)
     if (!p) {
-      const literal = countWeekdayAt(tokens, i + ev, v)
+      const literal = unsupportedCountAt(tokens, i + ev, v)
       if (literal && (!best || i + ev + literal > best.to)) best = { rule: '', from: i, to: i + ev + literal, literal: true }
       continue
     }

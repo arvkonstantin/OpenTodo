@@ -8,6 +8,7 @@ import (
 	"strconv"
 	"strings"
 	"time"
+	"unicode"
 )
 
 // Todoist writes a task's date into its CSV export as the text the user saw, in
@@ -61,20 +62,28 @@ var everyWords = map[string][]string{
 
 var englishWeekdays = []string{"monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"}
 
-// diacritics folds the accented letters of the six vocabularies (no Unicode
+// diacritics folds the accented letters of the bundled vocabularies (no Unicode
 // normalisation dependency; the vocabularies are written in these scripts only).
 var diacritics = strings.NewReplacer(
 	"à", "a", "á", "a", "â", "a", "ã", "a", "ä", "a", "å", "a", "ç", "c",
 	"è", "e", "é", "e", "ê", "e", "ë", "e", "ì", "i", "í", "i", "î", "i", "ï", "i",
 	"ñ", "n", "ò", "o", "ó", "o", "ô", "o", "õ", "o", "ö", "o",
 	"ù", "u", "ú", "u", "û", "u", "ü", "u", "ý", "y", "ÿ", "y", "ß", "ss",
+	"ё", "е", "й", "и",
 	"‘", "'", "’", "'", "ʼ", "'",
 )
 
 // foldWord matches web/src/lib/nlp/vocab normalize(): lower case, no diacritics,
 // "ß" → "ss", trailing commas and semicolons dropped.
 func foldWord(s string) string {
-	return strings.TrimRight(diacritics.Replace(strings.ToLower(s)), ",;")
+	s = diacritics.Replace(strings.ToLower(s))
+	s = strings.Map(func(r rune) rune {
+		if unicode.Is(unicode.Mn, r) {
+			return -1
+		}
+		return r
+	}, s)
+	return strings.TrimRight(s, ",;")
 }
 
 var (

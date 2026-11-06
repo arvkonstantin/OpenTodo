@@ -34,21 +34,26 @@ function offsetUnitAt(tokens: readonly Token[], i: number, v: Vocabulary): { n: 
 function offsetAt(tokens: readonly Token[], k: number, ctx: DateContext): { n: number; minutes: number } | null {
   let best: { n: number; minutes: number } | null = null
   for (const v of ctx.vocabs) {
+    // Russian puts the offset cue before the amount: «напомни за 30 минут».
+    const preBefore = v.code === 'ru' ? phraseAt(tokens, k, v.beforeWords, `${v.code}:rbefore`) : 0
+    const preAfter = v.code === 'ru' && !preBefore ? phraseAt(tokens, k, v.afterWords, `${v.code}:rafter`) : 0
+    const prefix = preBefore || preAfter
+    const j = k + prefix
     let amount: { n: number; minutes: number } | null = null
-    const count = countAt(tokens, k, v)
+    const count = countAt(tokens, j, v)
     if (count) {
-      const unit = offsetUnitAt(tokens, k + count.n, v)
+      const unit = offsetUnitAt(tokens, j + count.n, v)
       if (unit) amount = { n: count.n + unit.n, minutes: count.count * unit.minutes }
     }
-    if (!amount && tokens[k] && !tokens[k].quoted) {
-      const m = matchDuration(tokens[k].text, { bareHourIsTime: false })
+    if (!amount && tokens[j] && !tokens[j].quoted) {
+      const m = matchDuration(tokens[j].text, { bareHourIsTime: false })
       if (m !== null) amount = { n: 1, minutes: m }
     }
     if (!amount || amount.minutes <= 0) continue
-    const before = phraseAt(tokens, k + amount.n, v.beforeWords, `${v.code}:rbefore`)
-    const after = before ? 0 : phraseAt(tokens, k + amount.n, v.afterWords, `${v.code}:rafter`)
+    const before = prefix ? preBefore : phraseAt(tokens, j + amount.n, v.beforeWords, `${v.code}:rbefore`)
+    const after = prefix ? preAfter : before ? 0 : phraseAt(tokens, j + amount.n, v.afterWords, `${v.code}:rafter`)
     if (!before && !after) continue
-    const n = amount.n + (before || after)
+    const n = prefix + amount.n + (prefix ? 0 : before || after)
     if (!best || n > best.n) best = { n, minutes: before ? -amount.minutes : amount.minutes }
   }
   return best

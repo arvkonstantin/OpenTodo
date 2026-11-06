@@ -9,7 +9,7 @@ order: 32
 ---
 # Translating OpenTodo
 
-The web app ships in English, German, French, Spanish, Italian, Portuguese and Simplified Chinese. People pick the language in **Settings → Language and region → Language** (see [The app in your language](language.md)); the choice syncs to every device of the account. This page is for contributors who write text in the app or translate it. The documentation and the in-app Help guide stay in English.
+The web app ships in English, German, French, Spanish, Italian, Portuguese, Russian and Simplified Chinese. People pick the language in **Settings → Language and region → Language** (see [The app in your language](language.md)); the choice syncs to every device of the account. This page is for contributors who write text in the app or translate it. The documentation and the in-app Help guide stay in English.
 
 ## How text is written
 
@@ -47,7 +47,7 @@ Server errors keep their English JSON envelope. The client shows a translated me
 }
 ```
 
-A key ending in `|context` translates the message used with that `context`. Keep every placeholder, tag and plural argument of the source; use the plural categories of your language (`one`/`other` for the six shipped ones). Use the typographic apostrophe `’` in translations: a straight `'` starts quoted text in the message syntax. A missing entry falls back to English.
+A key ending in `|context` translates the message used with that `context`. Keep every placeholder, tag and plural argument of the source; use the plural categories of your language (`one`/`other` for English and the five other European languages, `other` for Simplified Chinese, and `one`/`few`/`many`/`other` for Russian). Use the typographic apostrophe `’` in translations: a straight `'` starts quoted text in the message syntax. A missing entry falls back to English.
 
 Each catalog becomes its own chunk of the build, loaded only when someone picks the language and precached for offline use. The browser extension has its own small catalogs in `extension/_locales/`, and the service worker keeps the few notification texts in a table in `web/public/push-sw.js`; both are pinned to the app's catalogs by tests.
 
@@ -69,29 +69,31 @@ Details are in [scripts/README.md](../scripts/README.md#i18n-checkmjs-and-i18n).
 
 ## Glossary
 
-Use these terms consistently; they match the quick-add vocabulary and the server's email templates. German uses *du*, French *vous*, Spanish *tú*, Italian *tu*, Portuguese (Brazil) *você* and Simplified Chinese 你. peilf reviews the Simplified Chinese catalog.
+Use these terms consistently; they match the quick-add vocabulary and the server's email templates. German uses *du*, French *vous*, Spanish *tú*, Italian *tu*, Portuguese (Brazil) *você* and Simplified Chinese 你. peilf reviews the Simplified Chinese catalog. Russian uses polite, neutral wording and infinitive action labels; avoid gender agreement with user-written names.
 
-| English | Deutsch | Français | Español | Italiano | Português | 简体中文 |
-| --- | --- | --- | --- | --- | --- | --- |
-| Task | Aufgabe | tâche | tarea | attività | tarefa | 任务 |
-| Subtask | Unteraufgabe | sous-tâche | subtarea | sottoattività | subtarefa | 子任务 |
-| Project | Projekt | projet | proyecto | progetto | projeto | 项目 |
-| Section | Abschnitt | section | sección | sezione | seção | 分组 |
-| Label | Label | étiquette | etiqueta | etichetta | etiqueta | 标签 |
-| Inbox | Eingang | Boîte de réception | Bandeja de entrada | In arrivo | Caixa de entrada | 收件箱 |
-| Today | Heute | Aujourd’hui | Hoy | Oggi | Hoje | 今天 |
-| Upcoming | Demnächst | À venir | Próximo | In programma | Em breve | 即将到来 |
-| Anytime | Jederzeit | N’importe quand | En cualquier momento | In qualsiasi momento | A qualquer hora | 随时 |
-| Someday | Irgendwann | Un jour | Algún día | Un giorno | Algum dia | 将来某天 |
-| This Evening | Heute Abend | Ce soir | Esta noche | Stasera | Hoje à noite | 今晚 |
-| Completed | Erledigt | Terminées | Completadas | Completate | Concluídas | 已完成 |
-| Trash | Papierkorb | Corbeille | Papelera | Cestino | Lixeira | 废纸篓 |
-| Due date | Fälligkeitsdatum | date d’échéance | fecha de vencimiento | data di scadenza | data de vencimento | 截止日期 |
-| Deadline | Frist | date limite | fecha límite | termine | prazo | 最后期限 |
-| Reminder | Erinnerung | rappel | recordatorio | promemoria | lembrete | 提醒 |
-| Quick add | Schnelleingabe | Ajout rapide | Añadido rápido | Aggiunta rapida | Adição rápida | 快速添加 |
-| Settings | Einstellungen | Réglages | Ajustes | Impostazioni | Configurações | 设置 |
-| Owner, admin, editor, viewer | Eigentümer, Admin, Bearbeiter, Betrachter | propriétaire, admin, éditeur, lecteur | propietario, admin, editor, lector | proprietario, admin, editor, visualizzatore | proprietário, admin, editor, leitor | 所有者、管理员、编辑者、查看者 |
-| Passkey | Passkey | clé d’accès | llave de acceso | passkey | chave de acesso | 通行密钥 |
-| Two-factor authentication | Zwei-Faktor-Authentifizierung | authentification à deux facteurs | autenticación en dos pasos | autenticazione a due fattori | autenticação de dois fatores | 双重验证 |
-| Weekly review | Wochenrückblick | revue hebdomadaire | revisión semanal | revisione settimanale | revisão semanal | 每周回顾 |
+| English | Deutsch | Français | Español | Italiano | Português | 简体中文 | Русский |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Task | Aufgabe | tâche | tarea | attività | tarefa | 任务 | Задача |
+| Subtask | Unteraufgabe | sous-tâche | subtarea | sottoattività | subtarefa | 子任务 | Подзадача |
+| Project | Projekt | projet | proyecto | progetto | projeto | 项目 | Проект |
+| Section | Abschnitt | section | sección | sezione | seção | 分组 | Раздел |
+| Label | Label | étiquette | etiqueta | etichetta | etiqueta | 标签 | Метка |
+| Inbox | Eingang | Boîte de réception | Bandeja de entrada | In arrivo | Caixa de entrada | 收件箱 | Входящие |
+| Today | Heute | Aujourd’hui | Hoy | Oggi | Hoje | 今天 | Сегодня |
+| Upcoming | Demnächst | À venir | Próximo | In programma | Em breve | 即将到来 | Предстоящие |
+| Anytime | Jederzeit | N’importe quand | En cualquier momento | In qualsiasi momento | A qualquer hora | 随时 | В любое время |
+| Someday | Irgendwann | Un jour | Algún día | Un giorno | Algum dia | 将来某天 | Когда-нибудь |
+| This Evening | Heute Abend | Ce soir | Esta noche | Stasera | Hoje à noite | 今晚 | Сегодня вечером |
+| Completed | Erledigt | Terminées | Completadas | Completate | Concluídas | 已完成 | Завершённые |
+| Trash | Papierkorb | Corbeille | Papelera | Cestino | Lixeira | 废纸篓 | Корзина |
+| Due date | Fälligkeitsdatum | date d’échéance | fecha de vencimiento | data di scadenza | data de vencimento | 截止日期 | Дата выполнения |
+| Deadline | Frist | date limite | fecha límite | termine | prazo | 最后期限 | Крайний срок |
+| Reminder | Erinnerung | rappel | recordatorio | promemoria | lembrete | 提醒 | Напоминание |
+| Quick add | Schnelleingabe | Ajout rapide | Añadido rápido | Aggiunta rapida | Adição rápida | 快速添加 | Быстрое добавление |
+| Settings | Einstellungen | Réglages | Ajustes | Impostazioni | Configurações | 设置 | Настройки |
+| Owner, admin, editor, viewer | Eigentümer, Admin, Bearbeiter, Betrachter | propriétaire, admin, éditeur, lecteur | propietario, admin, editor, lector | proprietario, admin, editor, visualizzatore | proprietário, admin, editor, leitor | 所有者、管理员、编辑者、查看者 | Владелец, администратор, редактор, наблюдатель |
+| Passkey | Passkey | clé d’accès | llave de acceso | passkey | chave de acesso | 通行密钥 | Ключ доступа |
+| Two-factor authentication | Zwei-Faktor-Authentifizierung | authentification à deux facteurs | autenticación en dos pasos | autenticazione a due fattori | autenticação de dois fatores | 双重验证 | Двухфакторная аутентификация |
+| Weekly review | Wochenrückblick | revue hebdomadaire | revisión semanal | revisione settimanale | revisão semanal | 每周回顾 | Еженедельный обзор |
+
+Russian count messages use `one` for 1 and 21, `few` for 2–4 and 22–24, `many` for 0, 5–20 and 25–30, and `other` for fractional values. Test 0, 1, 2, 5, 11, 14, 21, 22, 25, 101, 111 and 1.5. Translate the whole phrase, including any agreeing verb.

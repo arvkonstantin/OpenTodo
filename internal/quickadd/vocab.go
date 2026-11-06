@@ -1,6 +1,6 @@
 // Package quickadd is the Go port of the web app's quick-add parser
 // (web/src/lib/nlp, OpenSpec change quick-add-recurrence, design D5): dates and
-// times, #project @label p1 +30m, recurrence and reminder phrases, in six
+// times, #project @label p1 +30m, recurrence and reminder phrases, in seven
 // languages. Pure functions over strings and calendar days; the standard
 // library only. Shared vectors (web/src/lib/nlp/quickadd.vectors.json) and the
 // shared vocabulary file (vocab.json, written by `npm run nlp:vocab`) keep the
@@ -118,7 +118,7 @@ var Vocabularies = func() map[string]*Vocab {
 }()
 
 // Bundled lists the bundled language codes in the web app's order.
-var Bundled = []string{"en", "de", "fr", "it", "es", "pt"}
+var Bundled = []string{"en", "de", "fr", "it", "es", "pt", "ru"}
 
 // ActiveLanguages reduces preferred tags ("de-CH", "ja") to bundled codes in
 // order, always ending with English.
@@ -162,6 +162,7 @@ var fold = map[rune]string{
 	'ì': "i", 'í': "i", 'î': "i", 'ï': "i", 'ñ': "n",
 	'ò': "o", 'ó': "o", 'ô': "o", 'õ': "o", 'ö': "o", 'ō': "o",
 	'ù': "u", 'ú': "u", 'û': "u", 'ü': "u", 'ū': "u", 'ý': "y", 'ÿ': "y",
+	'ё': "е", 'й': "и",
 	'ß': "ss", '‘': "'", '’': "'", 'ʼ': "'",
 }
 

@@ -127,6 +127,18 @@ var texts = map[string]map[string]string{
 		txtPageDoneBy: "{name} concluiu a tarefa na página dela", txtPageReopenedBy: "{name} reabriu a tarefa na página dela",
 		txtTestTitle: "Teste do OpenTodo", txtTestBody: "Este canal funciona.", txtGuest: "Um convidado",
 	},
+	"ru": {
+		txtTurn: "Ваша очередь выполнять задачу", txtTurnWith: "Ваша очередь",
+		txtRoutine:       "Сценарий отправил вам уведомление",
+		txtRoutineFailed: "Ошибка сценария", txtRoutineFailedWith: "Выполнение не завершилось. Откройте журнал выполнения, чтобы узнать причину.",
+		txtReminder: "Настало время напоминания", txtAssigned: "Вам назначена задача", txtMentioned: "Вас упомянули",
+		txtUnblocked: "Назначенная вам задача готова к выполнению", txtPageReplied: "Гость ответил на странице задачи",
+		txtPageDone: "Гость завершил задачу на её странице", txtPageReopened: "Гость возобновил задачу на её странице",
+		txtReminderWith: "Напоминание", txtAssignedBy: "{name}: задача назначена вам", txtMentionedBy: "{name} упоминает вас",
+		txtUnblockedWith: "Можно приступать", txtPageRepliedBy: "{name}: ответ на странице задачи",
+		txtPageDoneBy: "{name}: задача завершена на её странице", txtPageReopenedBy: "{name}: задача возобновлена на её странице",
+		txtTestTitle: "Тест от OpenTodo", txtTestBody: "Этот канал работает.", txtGuest: "Гость",
+	},
 	"zh": {
 		txtTurn: "轮到你处理一项任务", txtTurnWith: "轮到你了",
 		txtRoutine:       "一个例程给你发来一条通知",

@@ -6106,6 +6106,2298 @@
     "reminders": [],
     "deadline": ""
    }
+  },
+  {
+   "name": "Russian: сегодня",
+   "line": "Сделать сегодня",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": {
+     "date": "2026-11-06"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: завтра",
+   "line": "Сделать завтра",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": {
+     "date": "2026-11-07"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: послезавтра",
+   "line": "Сделать послезавтра",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": {
+     "date": "2026-11-08"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: на 5 декабря",
+   "line": "Сделать на 5 декабря",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": {
+     "date": "2026-12-05"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: 5 декабря 2026",
+   "line": "Сделать 5 декабря 2026",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": {
+     "date": "2026-12-05"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: в декабре",
+   "line": "Сделать в декабре",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": {
+     "date": "2026-12-01"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: в мае",
+   "line": "Сделать в мае",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": {
+     "date": "2027-05-01"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: в пятницу",
+   "line": "Сделать в пятницу",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": {
+     "date": "2026-11-13"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: в среду",
+   "line": "Сделать в среду",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": {
+     "date": "2026-11-11"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: во вторник",
+   "line": "Сделать во вторник",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": {
+     "date": "2026-11-10"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: в следующий понедельник",
+   "line": "Сделать в следующий понедельник",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": {
+     "date": "2026-11-09"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: через 3 дня",
+   "line": "Сделать через 3 дня",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": {
+     "date": "2026-11-09"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: через неделю",
+   "line": "Сделать через неделю",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": {
+     "date": "2026-11-13"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: через месяц",
+   "line": "Сделать через месяц",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": {
+     "date": "2026-12-06"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: на следующей неделе",
+   "line": "Сделать на следующей неделе",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": {
+     "date": "2026-11-09"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: в следующем месяце",
+   "line": "Сделать в следующем месяце",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": {
+     "date": "2026-12-01"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: 5/12",
+   "line": "Сделать 5/12",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": {
+     "date": "2026-12-05"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: 05.12.",
+   "line": "Сделать 05.12.",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": {
+     "date": "2026-12-05"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: 5-го декабря",
+   "line": "Сделать 5-го декабря",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": {
+     "date": "2026-12-05"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: 5 дек.",
+   "line": "Сделать 5 дек.",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": {
+     "date": "2026-12-05"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: завтра в 15:30",
+   "line": "Звонок завтра в 15:30",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Звонок",
+    "due": {
+     "date": "2026-11-07",
+     "time": "15:30"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: в полдень",
+   "line": "Звонок в полдень",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Звонок",
+    "due": {
+     "date": "2026-11-06",
+     "time": "12:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: в полночь",
+   "line": "Звонок в полночь",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Звонок",
+    "due": {
+     "date": "2026-11-06",
+     "time": "00:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: через час",
+   "line": "Звонок через час",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Звонок",
+    "due": {
+     "date": "2026-11-06",
+     "time": "11:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: в 3 часа дня",
+   "line": "Звонок в 3 часа дня",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Звонок",
+    "due": {
+     "date": "2026-11-06",
+     "time": "15:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: каждый день",
+   "line": "Повторять каждый день",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Повторять",
+    "due": {
+     "date": "2026-11-06"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": "every day",
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: ежедневно",
+   "line": "Повторять ежедневно",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Повторять",
+    "due": {
+     "date": "2026-11-06"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": "every day",
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: каждую неделю",
+   "line": "Повторять каждую неделю",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Повторять",
+    "due": {
+     "date": "2026-11-06"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": "every week",
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: каждый месяц",
+   "line": "Повторять каждый месяц",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Повторять",
+    "due": {
+     "date": "2026-11-06"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": "every month",
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: каждый год",
+   "line": "Повторять каждый год",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Повторять",
+    "due": {
+     "date": "2026-11-06"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": "every year",
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: каждую пятницу",
+   "line": "Повторять каждую пятницу",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Повторять",
+    "due": {
+     "date": "2026-11-06"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": "every friday",
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: каждый понедельник и среду",
+   "line": "Повторять каждый понедельник и среду",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Повторять",
+    "due": {
+     "date": "2026-11-09"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": "every monday, wednesday",
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: каждый будний день",
+   "line": "Повторять каждый будний день",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Повторять",
+    "due": {
+     "date": "2026-11-06"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": "every weekday",
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: по будням",
+   "line": "Повторять по будням",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Повторять",
+    "due": {
+     "date": "2026-11-06"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": "every weekday",
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: каждые 3 дня после завершения",
+   "line": "Повторять каждые 3 дня после завершения",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Повторять",
+    "due": {
+     "date": "2026-11-06"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": "every 3 days after completion",
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: каждый второй вторник месяца",
+   "line": "Повторять каждый второй вторник месяца",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Повторять",
+    "due": {
+     "date": "2026-11-10"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": "every 2nd tuesday",
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: каждую последнюю пятницу месяца",
+   "line": "Повторять каждую последнюю пятницу месяца",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Повторять",
+    "due": {
+     "date": "2026-11-27"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": "every last friday",
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: каждые 2 недели",
+   "line": "Повторять каждые 2 недели",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Повторять",
+    "due": {
+     "date": "2026-11-06"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": "every 2 weeks",
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: каждые две недели",
+   "line": "Повторять каждые две недели",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Повторять",
+    "due": {
+     "date": "2026-11-06"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": "every 2 weeks",
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: через день",
+   "line": "Повторять через день",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Повторять",
+    "due": {
+     "date": "2026-11-06"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": "every 2 days",
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: каждый день до 5 декабря",
+   "line": "Повторять каждый день до 5 декабря",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Повторять",
+    "due": {
+     "date": "2026-11-06"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": "every day until 2026-12-05",
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: каждый день 10 раз",
+   "line": "Повторять каждый день 10 раз",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Повторять",
+    "due": {
+     "date": "2026-11-06"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": "every day for 10 times",
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: каждый 2-й вторник месяца",
+   "line": "Повторять каждый 2-й вторник месяца",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Повторять",
+    "due": {
+     "date": "2026-11-10"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": "every 2nd tuesday",
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: каждое 15-е",
+   "line": "Повторять каждое 15-е",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Повторять",
+    "due": {
+     "date": "2026-11-15"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": "every 15th",
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: every day",
+   "line": "Повторять every day",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Повторять",
+    "due": {
+     "date": "2026-11-06"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": "every day",
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: напомни за 30 минут",
+   "line": "Встреча завтра в 15:00 напомни за 30 минут",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Встреча",
+    "due": {
+     "date": "2026-11-07",
+     "time": "15:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "offset",
+      "minutes": -30
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian: напомни мне за час",
+   "line": "Встреча завтра в 15:00 напомни мне за час",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Встреча",
+    "due": {
+     "date": "2026-11-07",
+     "time": "15:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "offset",
+      "minutes": -60
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian: напомни 30 минут заранее",
+   "line": "Встреча завтра в 15:00 напомни 30 минут заранее",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Встреча",
+    "due": {
+     "date": "2026-11-07",
+     "time": "15:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "offset",
+      "minutes": -30
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian: напомни через 10 минут",
+   "line": "Встреча завтра в 15:00 напомни через 10 минут",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Встреча",
+    "due": {
+     "date": "2026-11-07",
+     "time": "15:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "offset",
+      "minutes": 10
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian: напомнить за 2 дня",
+   "line": "Встреча завтра в 15:00 напомнить за 2 дня",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Встреча",
+    "due": {
+     "date": "2026-11-07",
+     "time": "15:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "offset",
+      "minutes": -2880
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian: reminder moment",
+   "line": "Встреча напомни завтра в 9:00",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Встреча",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "moment",
+      "date": "2026-11-07",
+      "time": "09:00"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian: deadline with evening",
+   "line": "Отчёт завтра вечером крайний срок 9 ноября",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": [],
+    "dayParts": true
+   },
+   "expect": {
+    "title": "Отчёт",
+    "due": {
+     "date": "2026-11-07"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "dayPart": null,
+    "evening": true,
+    "deadline": "2026-11-09"
+   }
+  },
+  {
+   "name": "Russian: deadline by",
+   "line": "Отчёт к пятнице",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Отчёт",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "deadline": "2026-11-13"
+   }
+  },
+  {
+   "name": "Russian: by timed due",
+   "line": "Отчёт к пятнице в 15:00",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Отчёт",
+    "due": {
+     "date": "2026-11-13",
+     "time": "15:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "deadline": ""
+   }
+  },
+  {
+   "name": "Russian: today evening",
+   "line": "Уборка сегодня вечером",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Уборка",
+    "due": {
+     "date": "2026-11-06"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "dayPart": null,
+    "evening": true
+   }
+  },
+  {
+   "name": "Russian: завтра утром",
+   "line": "Разминка завтра утром",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": [],
+    "dayParts": true
+   },
+   "expect": {
+    "title": "Разминка",
+    "due": {
+     "date": "2026-11-07"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "dayPart": "morning",
+    "evening": false
+   }
+  },
+  {
+   "name": "Russian: завтра днём",
+   "line": "Разминка завтра днём",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": [],
+    "dayParts": true
+   },
+   "expect": {
+    "title": "Разминка",
+    "due": {
+     "date": "2026-11-07"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "dayPart": "afternoon",
+    "evening": false
+   }
+  },
+  {
+   "name": "Russian: завтра днем",
+   "line": "Разминка завтра днем",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": [],
+    "dayParts": true
+   },
+   "expect": {
+    "title": "Разминка",
+    "due": {
+     "date": "2026-11-07"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "dayPart": "afternoon",
+    "evening": false
+   }
+  },
+  {
+   "name": "Russian: disabled dayparts",
+   "line": "Разминка завтра утром",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": [],
+    "dayParts": false
+   },
+   "expect": {
+    "title": "Разминка утром",
+    "due": {
+     "date": "2026-11-07"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "dayPart": null,
+    "evening": false
+   }
+  },
+  {
+   "name": "Russian: sector на этой неделе",
+   "line": "Бюджет на этой неделе",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": [],
+    "sectors": true,
+    "weekStart": 1
+   },
+   "expect": {
+    "title": "Бюджет",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "sector": "2026-W45"
+   }
+  },
+  {
+   "name": "Russian: sector когда-нибудь на следующей неделе",
+   "line": "Бюджет когда-нибудь на следующей неделе",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": [],
+    "sectors": true,
+    "weekStart": 1
+   },
+   "expect": {
+    "title": "Бюджет",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "sector": "2026-W46"
+   }
+  },
+  {
+   "name": "Russian: sector в этом месяце",
+   "line": "Бюджет в этом месяце",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": [],
+    "sectors": true,
+    "weekStart": 1
+   },
+   "expect": {
+    "title": "Бюджет",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "sector": "2026-11"
+   }
+  },
+  {
+   "name": "Russian: sector когда-нибудь в следующем месяце",
+   "line": "Бюджет когда-нибудь в следующем месяце",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": [],
+    "sectors": true,
+    "weekStart": 1
+   },
+   "expect": {
+    "title": "Бюджет",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "sector": "2026-12"
+   }
+  },
+  {
+   "name": "Russian: sector в этом квартале",
+   "line": "Бюджет в этом квартале",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": [],
+    "sectors": true,
+    "weekStart": 1
+   },
+   "expect": {
+    "title": "Бюджет",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "sector": "2026-Q4"
+   }
+  },
+  {
+   "name": "Russian: sector в следующем квартале",
+   "line": "Бюджет в следующем квартале",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": [],
+    "sectors": true,
+    "weekStart": 1
+   },
+   "expect": {
+    "title": "Бюджет",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "sector": "2027-Q1"
+   }
+  },
+  {
+   "name": "Russian: inactive",
+   "line": "Купить завтра",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "en"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Купить завтра",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: quoted",
+   "line": "Купить \"завтра\"",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Купить завтра",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: literal fragments",
+   "line": "Завтрак и повседневные дела",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Завтрак и повседневные дела",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: unsupported recurrence",
+   "line": "Проверка каждые 3 часа",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Проверка каждые 3 часа",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: uppercase Cyrillic",
+   "line": "Отчёт в СЛЕДУЮЩИЙ ПОНЕДЕЛЬНИК",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Отчёт",
+    "due": {
+     "date": "2026-11-09"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: decomposed Cyrillic",
+   "line": "Отчёт в следующий понедельник",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Отчёт",
+    "due": {
+     "date": "2026-11-09"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: emoji prefix",
+   "line": "📝 Отчёт завтра",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "📝 Отчёт",
+    "due": {
+     "date": "2026-11-07"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: project and label",
+   "line": "Сделать завтра #МойДом @звонки p1 +30m",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": [
+     {
+      "id": "p-ru",
+      "name": "Мой дом"
+     }
+    ]
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": {
+     "date": "2026-11-07"
+    },
+    "projectId": "p-ru",
+    "labels": [
+     "звонки"
+    ],
+    "priority": 1,
+    "estimateMinutes": 30,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: decomposed project",
+   "line": "Сделать #МойДом",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": [
+     {
+      "id": "p-ru",
+      "name": "Мой дом"
+     }
+    ]
+   },
+   "expect": {
+    "title": "Сделать",
+    "due": null,
+    "projectId": "p-ru",
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: sector disabled на этой неделе",
+   "line": "Бюджет на этой неделе",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": [],
+    "sectors": false
+   },
+   "expect": {
+    "title": "Бюджет на этой неделе",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "sector": ""
+   }
+  },
+  {
+   "name": "Russian: sector disabled в этом месяце",
+   "line": "Бюджет в этом месяце",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": [],
+    "sectors": false
+   },
+   "expect": {
+    "title": "Бюджет в этом месяце",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "sector": ""
+   }
+  },
+  {
+   "name": "Russian: sector disabled в этом квартале",
+   "line": "Бюджет в этом квартале",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": [],
+    "sectors": false
+   },
+   "expect": {
+    "title": "Бюджет в этом квартале",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "sector": ""
+   }
+  },
+  {
+   "name": "Russian: sector disabled в следующем квартале",
+   "line": "Бюджет в следующем квартале",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": [],
+    "sectors": false
+   },
+   "expect": {
+    "title": "Бюджет в следующем квартале",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "sector": ""
+   }
+  },
+  {
+   "name": "Russian: literal Проверить 2026-02-30",
+   "line": "Проверить 2026-02-30",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Проверить 2026-02-30",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: literal Проверить 32/13",
+   "line": "Проверить 32/13",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Проверить 32/13",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: literal Напомни за",
+   "line": "Напомни за",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Напомни за",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: literal Проверка каждые 3 минуты",
+   "line": "Проверка каждые 3 минуты",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Проверка каждые 3 минуты",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: literal Проверка каждый 5-й вторник",
+   "line": "Проверка каждый 5-й вторник",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Проверка каждый 5-й вторник",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: invalid named date 31 февраля",
+   "line": "Проверить 31 февраля",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Проверить 31 февраля",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: invalid named date февраля 31",
+   "line": "Проверить февраля 31",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Проверить февраля 31",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: invalid named date 32 декабря",
+   "line": "Проверить 32 декабря",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Проверить 32 декабря",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: invalid named date декабря 32",
+   "line": "Проверить декабря 32",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Проверить декабря 32",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: invalid named date 29 февраля 2027",
+   "line": "Проверить 29 февраля 2027",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Проверить 29 февраля 2027",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: invalid named date 31-го февраля",
+   "line": "Проверить 31-го февраля",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Проверить 31-го февраля",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian: invalid named date февраля 0",
+   "line": "Проверить февраля 0",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Проверить февраля 0",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
   }
  ]
 }

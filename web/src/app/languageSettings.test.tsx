@@ -54,14 +54,14 @@ describe('Language panel', () => {
     await view.unmount()
   })
 
-  it('a language chosen on another device arrives by sync and applies', async () => {
+  it.each([['fr', 'Boîte de réception'], ['ru', 'Входящие']])('a language chosen on another device arrives by sync and applies: %s', async (language, inbox) => {
     const view = await render(<LanguageProvider><Tree /></LanguageProvider>)
     await panelShown(view)
     await act(async () => {
-      await applyOps([{ id: 'l1', entity: 'user_prefs', entityId: 'me', field: 'language', value: 'fr', ts: Date.now() + 10_000, device: 'phone' }])
+      await applyOps([{ id: 'l1', entity: 'user_prefs', entityId: 'me', field: 'language', value: language, ts: Date.now() + 10_000, device: 'phone' }])
     })
     await translated(view)
-    expect(view.container.querySelector('h1')?.textContent).toBe('Boîte de réception')
+    expect(view.container.querySelector('h1')?.textContent).toBe(inbox)
     await view.unmount()
   })
 
@@ -77,7 +77,7 @@ describe('Language panel', () => {
   it('System names the language it resolves to, and every language in its own name', async () => {
     const view = await render(<LanguageView value="system" system="English" onChange={vi.fn()} />)
     const options = [...view.container.querySelectorAll('#language-select option')].map((o) => o.textContent)
-    expect(options).toEqual(['System (English)', 'English', 'Deutsch', 'Français', 'Español', 'Italiano', 'Português', '简体中文'])
+    expect(options).toEqual(['System (English)', 'English', 'Deutsch', 'Français', 'Español', 'Italiano', 'Português', 'Русский', '简体中文'])
     await view.unmount()
   })
 
@@ -87,7 +87,7 @@ describe('Language panel', () => {
     const view = await render(<LanguageView value="system" system={system} onChange={vi.fn()} />)
     const options = [...view.container.querySelectorAll('#language-select option')].map((o) => o.textContent)
     expect(options[0]).toBe('System (简体中文)')
-    expect(options).toHaveLength(8)
+    expect(options).toHaveLength(9)
     await view.unmount()
   })
 

@@ -99,6 +99,8 @@ describe('helpers', () => {
   it('language from the browser and the state line', () => {
     expect(browserDigestLanguage(['de-CH', 'en'])).toBe('de')
     expect(browserDigestLanguage(['ja', 'pt-BR'])).toBe('pt')
+    expect(browserDigestLanguage(['ru-RU', 'en'])).toBe('ru')
+    expect(browserDigestLanguage(['ru-BY'])).toBe('ru')
     expect(browserDigestLanguage(['ja'])).toBe('en')
     expect(browserDigestLanguage(['zh-CN'])).toBe('zh')
     expect(browserDigestLanguage(['zh-TW'])).toBe('en')

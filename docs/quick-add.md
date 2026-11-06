@@ -1,6 +1,6 @@
 ---
 title: Quick add syntax
-summary: Every word quick add understands: dates, times, projects, labels, priorities, estimates, six languages and voice capture.
+summary: Every word quick add understands: dates, times, projects, labels, priorities, estimates, seven languages and voice capture.
 audience: user
 section: Reference
 specs: [natural-language-capture, voice-capture, manual-ordering, task-list-presentation]
@@ -55,7 +55,7 @@ Without the `+`, `45min` and `2h` also work, except that `2h` is left alone when
 
 ### Time spent
 
-`Draft the offer 30m/2h` creates the task with a two-hour estimate and one closed [time entry](time-tracking.md) of 30 minutes ending now, in the same step; the preview shows a **Spent 30 min** chip beside the estimate, and the row reads `30m / 2h`. Both parts need a unit (`h`, `m`, `min`), so `Pay rent 30/12` stays a date, and `Réunion 15h` with French active is still a meeting at 15:00. `+30m` remains an estimate only. Units are not translated: the token works the same in all six languages. Backspace on the chip keeps the text in the title, like every token.
+`Draft the offer 30m/2h` creates the task with a two-hour estimate and one closed [time entry](time-tracking.md) of 30 minutes ending now, in the same step; the preview shows a **Spent 30 min** chip beside the estimate, and the row reads `30m / 2h`. Both parts need a unit (`h`, `m`, `min`), so `Pay rent 30/12` stays a date, and `Réunion 15h` with French active is still a meeting at 15:00. `+30m` remains an estimate only. Units are not translated: the token works the same in all seven languages. Backspace on the chip keeps the text in the title, like every token.
 
 ## Dates and times
 
@@ -135,7 +135,7 @@ When a line has two dates, the first one counts and the second stays in the titl
 
 ## Languages
 
-Vocabulary is bundled for **English, German, French, Italian, Spanish and Portuguese**. The active languages are the [interface language](language.md) when you picked one, then your browser's preferred languages that are bundled, plus English, which is always on; all of them are matched at the same time. With the interface language on **System** the order is your browser's, as before. Settings → Capture → Quick add can override the list on this device. Where two languages read a word differently, the longer phrase wins (Spanish `mar` alone is Tuesday; `mar 3` is March 3rd).
+Vocabulary is bundled for **English, German, French, Italian, Spanish, Portuguese and Russian**. The active languages are the [interface language](language.md) when you picked one, then your browser's preferred languages that are bundled, plus English, which is always on; all of them are matched at the same time. With the interface language on **System** the order is your browser's, as before. Settings → Capture → Quick add can override the list on this device. Where two languages read a word differently, the longer phrase wins (Spanish `mar` alone is Tuesday; `mar 3` is March 3rd).
 
 | | Examples |
 | --- | --- |
@@ -145,9 +145,17 @@ Vocabulary is bundled for **English, German, French, Italian, Spanish and Portug
 | Spanish | `hoy`, `mañana a las 15:00`, `pasado mañana`, `el próximo lunes`, `martes que viene`, `en 3 días`, `dentro de 2 semanas`, `3 de febrero` |
 | Portuguese | `hoje`, `amanhã às 15h`, `depois de amanhã`, `próxima segunda`, `sábado que vem`, `daqui a 3 dias`, `em 2 semanas`, `3 de fevereiro` |
 
-Ordinal weekdays work in every language, with the ordinal words or a number with its suffix (`2nd`, `2.`, `2º`, `2e`): `am zweiten Montag`, `dritten Freitag im November`, `le 2e lundi de novembre`, `secondo lunedì`, `tercer viernes de noviembre`, `segunda segunda-feira`, `última sexta`. In Portuguese, `segunda` and `quarta` count as *second* and *fourth* only right before a weekday; alone they are Monday and Wednesday.
+Ordinal weekdays work in every language, with the ordinal words or a number with its suffix (`2nd`, `2.`, `2º`, `2e`, Russian `2-й`/`2-ю`): `am zweiten Montag`, `dritten Freitag im November`, `le 2e lundi de novembre`, `secondo lunedì`, `tercer viernes de noviembre`, `segunda segunda-feira`, `última sexta`. In Portuguese, `segunda` and `quarta` count as *second* and *fourth* only right before a weekday; alone they are Monday and Wednesday.
 
 Accents are optional (`manana`, `nachsten`, `fevrier` work too). Two-letter German abbreviations need their dot (`Mi.`, `Do.`) so ordinary words like *do* and *so* are not mistaken for weekdays.
+
+### Russian
+
+Russian accepts inflected dates and weekdays, for example `Купить подарок на 5 декабря`, `Позвонить завтра в 15:30`, `через 3 дня`, `через неделю`, `на следующей неделе` and `в следующий понедельник`. Month names work in their nominative, genitive and prepositional forms (`декабрь`, `декабря`, `в декабре`). Numeric dates default to day-month. The usual weekday rules apply: on Friday, `в пятницу` means the following Friday, while `каждую пятницу` starts today. Both `ё` and `е`, and composed or decomposed Cyrillic, are matched consistently; original title text is kept.
+
+With day parts on, `Разминка завтра утром` and `завтра днём` set Morning and Afternoon. `сегодня вечером` sets This Evening. With time sectors on, `Бюджет на этой неделе`, `в этом месяце`, `в этом квартале` and `в следующем квартале` select that period without a date; use `когда-нибудь на следующей неделе` or `когда-нибудь в следующем месяце` for an indefinite next period. `когда-нибудь` alone parks a task. `крайний срок 9 ноября` sets a deadline; `к пятнице` follows the same date/time distinction as English `by`.
+
+Invalid Russian dates such as `31 февраля`, `32 декабря` and `29 февраля 2027` stay in the title without a date chip.
 
 ## Views and defaults
 
@@ -212,6 +220,8 @@ Spoken forms of the tokens are turned into their typed forms first, in the activ
 
 Trigger words per language: *hashtag* (all), *project / Projekt / projet / progetto / proyecto / projeto* (only before an existing project's name), *label / Etikett / étiquette / etichetta / etiqueta*, and *priority / Priorität / priorité / priorità / prioridad / prioridade* followed by one to four. Numbers are only converted next to a time, priority or duration cue, so "buy two apples" stays as it is.
 
+Russian cues are `проект` before an existing project name, `метка`/`тег`, `хэштег`/`хештег`/`решётка`, `собачка` before an existing label, and `приоритет` followed by a number from one to four. For example, `Купить краску проект Дом метка покупки приоритет два` becomes `Купить краску #Дом @покупки p2`, and `Позвонить завтра в девять тридцать` becomes `Позвонить завтра в 9:30`. Contextual numbers from zero to fifty-nine are supported; ordinary `Купить два яблока` stays as spoken.
+
 The recognition language follows your first quick-add language, so the interface language when you picked one (with your browser's region, for example `en-GB`), and can be changed in Settings. If the browser cannot recognise that language, OpenTodo says so once and listens in the browser's default language.
 
 If the microphone is blocked, a message explains how to allow it in the browser's site settings and the button stays there to retry. In the [Android app](android-app.md#voice-input) the phone asks the first time, and a refusal is changed in the app's settings. When nothing is said, listening just stops. When recognition is unavailable (for example offline, in a browser that needs its vendor's service), quick add says "Voice capture is unavailable right now" and typing works as usual. Text already in the box is never cleared.
@@ -242,6 +252,10 @@ A rule and reminders can be typed in the same line. Each gets its own chip and i
 | `remind me at 9` | `erinnere mich um 9 Uhr` | `rappelle-moi à 9h` | `ricordamelo alle 9` | `recuérdame a las 9` | `lembre-me às 9` |
 
 Rules cover the whole [rule grammar](recurrence.md): weekday lists (`every mon, wed and fri`), `every weekday`, `every 15th`, `every 2nd Tuesday`, `every last Friday`, `every last day`, `every first weekday` (`jeden ersten Werktag`, `chaque premier jour ouvré`, `ogni primo giorno feriale`, `cada primer día laborable`, `todo primeiro dia útil`), with `after completion`, `until 31 Dec` or `for 10 times` at the end. The stored rule is always the English canonical form, whatever language you typed. A phrase the grammar cannot express, such as `every 3 hours`, stays in the title; only the first rule of a line counts. After a monthly rule, `of the month` is accepted and changes nothing (`every 2nd monday of the month`, `jeden zweiten Montag im Monat`, `tous les 2e lundis du mois`, `ogni secondo lunedì del mese`, `cada segundo lunes del mes`, `toda segunda segunda-feira do mês` are all `every 2nd monday`). A bare number before a weekday is a count, not an ordinal: `every 2 Mondays` (`alle 2 Montage`, `cada 2 lunes`) is not a rule and stays as typed, with no date.
+
+Russian repeats include `каждый день` (`every day`), `каждую неделю`, `каждый месяц`, `каждый год`, `каждую пятницу`, `каждый понедельник и среду`, `каждый будний день` and `по будням`. `ежедневно`, `еженедельно`, `ежемесячно` and `ежегодно` are the single-word forms. Intervals and tails work as in `каждые 3 дня после завершения`, `каждый день до 5 декабря` and `каждый день 10 раз`. Monthly ordinals include `каждый второй вторник месяца`, `каждый 2-й вторник месяца` and `каждую последнюю пятницу месяца`. Use `каждые 2 недели` or `каждые две недели` for a fortnight, and `через день` for every other day. Unsupported hourly repeats, such as `каждые 3 часа`, stay literal.
+
+Russian reminder cues can precede the amount: `Встреча завтра в 15:00 напомни за 30 минут` sets a reminder 30 minutes before the due time; `напомни 30 минут заранее` has the same meaning. `напомни через 10 минут` is a positive offset from the task's due time, not from the current clock. `напомни завтра в 9:00` is a reminder moment. A reminder without a due date follows the same rules as English below.
 
 **Every other.** `every other day`, `week`, `month` or `year` repeats every 2 of them. `every other Friday` is `every 2 weeks`, starting on the next Friday (today when it is Friday), the same as `every 2 weeks on Friday`. In German, `jeden zweiten Freitag` is every other Friday, while `jeden zweiten Freitag im Monat` stays the second Friday of each month; in the other languages `every second Friday` (`ogni secondo venerdì`, `cada segundo viernes`) is the second Friday of the month.
 
