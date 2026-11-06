@@ -40,6 +40,10 @@ Try examples such as `Купить подарок на 5 декабря`, `За�
 
 Entry 136.4 KiB gzip; initial static closure 681.2 KiB versus 679.4 KiB at baseline. Initial budget deliberately raised 680→682 KiB; entry budget remains 137 KiB. Russian catalog is lazy, outside the static closure: 804,617 raw / 211,026 gzip-9 bytes. Equivalent embedded server: 41,750,688 vs 40,902,816 bytes (+847,872, 2.07%). Build flags and rationale are in [design.md](design.md#measured-web-footprint-and-budget-decision).
 
+## Contributor wording corrections
+
+- Prefer `напомни за 30 минут` in reminder examples. Removed the awkward suffix-order wording from the guide and design examples. The existing suffix-order input remains a permissive parser regression case, not recommended wording. This is a partial review correction, not approval of the full translation.
+
 ## Next steps
 
 1. Contributor reviews and corrects all translation surfaces and manually tries Russian capture (6.1).

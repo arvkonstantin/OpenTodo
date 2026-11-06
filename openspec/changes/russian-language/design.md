@@ -64,7 +64,7 @@ Acceptance examples, with `today=2026-11-06`, `now=10:00` and Monday-start weeks
 | `каждую последнюю пятницу месяца` | `every last friday` |
 | `каждые 2 недели`, `каждые две недели`, `через день` | `every 2 weeks`, `every 2 weeks`, `every 2 days` |
 | `каждый день до 5 декабря`, `каждый день 10 раз` | Existing until/count tails |
-| `напомни за 30 минут`, `напомни 30 минут заранее` | Reminder offset -30 |
+| `напомни за 30 минут` | Reminder offset -30 |
 | `напомни через 10 минут` | Reminder offset +10 from due, consistent with current after-offset semantics |
 | `напомни завтра в 9:00` | Existing reminder moment |
 | `крайний срок 9 ноября`, `к пятнице` | Deadline without a following time; `к` follows the existing by-word time exception |

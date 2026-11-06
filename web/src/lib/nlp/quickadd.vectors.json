@@ -7300,7 +7300,7 @@
    }
   },
   {
-   "name": "Russian: напомни 30 минут заранее",
+   "name": "Russian: permissive suffix-order reminder alias",
    "line": "Встреча завтра в 15:00 напомни 30 минут заранее",
    "ctx": {
     "today": "2026-11-06",
