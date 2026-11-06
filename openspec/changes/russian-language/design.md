@@ -51,7 +51,7 @@ Acceptance examples, with `today=2026-11-06`, `now=10:00` and Monday-start weeks
 | Input after a title | Meaning |
 | --- | --- |
 | `сегодня`, `завтра`, `послезавтра` | Nov 6, 7, 8 |
-| `на 5 декабря`, `5 декабря 2026` | Dec 5, 2026 |
+| `5 декабря`, `5 декабря 2026` | Dec 5, 2026 |
 | `в пятницу`, `в следующий понедельник` | Existing bare/next-weekday rules |
 | `через 3 дня`, `через неделю`, `на следующей неделе` | Relative date/week using current week preference |
 | `в 15:30`, `в полдень`, `в полночь` | Existing floating times |

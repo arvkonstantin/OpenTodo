@@ -25,7 +25,7 @@ The contributor requested this draft and the known layout-problem screenshot in 
 
 Comments on lines of the GitHub commit or follow-up edits in the branch can supply corrections. Record actual surfaces reviewed and explicit contributor confirmation; do not infer approval from a push, passing tests or lack of comments. The optional local review checklist covers 7,546 items across these surfaces. Human review may use GitHub instead of its JSON export.
 
-Try examples such as `Купить подарок на 5 декабря`, `Зарядка каждый день`, `Уборка каждую неделю` and `Встреча завтра в 15:00 напомни за 30 минут`. Confirm the resulting fields and retained title. More supported forms and limitations are in the linked quick-add guide and design. Stored repeat rules remain canonical English. Documentation/Help, CLI output and server error envelopes are outside translation scope.
+Try examples such as `Купить подарок 5 декабря`, `Зарядка каждый день`, `Уборка каждую неделю` and `Встреча завтра в 15:00 напомни за 30 минут`. Confirm the resulting fields and retained title. More supported forms and limitations are in the linked quick-add guide and design. Stored repeat rules remain canonical English. Documentation/Help, CLI output and server error envelopes are outside translation scope.
 
 ## Verification already run
 
@@ -43,6 +43,8 @@ Entry 136.4 KiB gzip; initial static closure 681.2 KiB versus 679.4 KiB at basel
 ## Contributor wording corrections
 
 - Prefer `напомни за 30 минут` in reminder examples. Removed the awkward suffix-order wording from the guide and design examples. The existing suffix-order input remains a permissive parser regression case, not recommended wording. This is a partial review correction, not approval of the full translation.
+
+- Prefer `Купить подарок 5 декабря` as the due-date example. The `на 5 декабря` form remains accepted by the parser, but is no longer recommended in guides or the acceptance example. This wording correction does not change date or deadline semantics.
 
 ## Next steps
 

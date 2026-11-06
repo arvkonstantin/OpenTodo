@@ -151,7 +151,7 @@ Accents are optional (`manana`, `nachsten`, `fevrier` work too). Two-letter Germ
 
 ### Russian
 
-Russian accepts inflected dates and weekdays, for example `Купить подарок на 5 декабря`, `Позвонить завтра в 15:30`, `через 3 дня`, `через неделю`, `на следующей неделе` and `в следующий понедельник`. Month names work in their nominative, genitive and prepositional forms (`декабрь`, `декабря`, `в декабре`). Numeric dates default to day-month. The usual weekday rules apply: on Friday, `в пятницу` means the following Friday, while `каждую пятницу` starts today. Both `ё` and `е`, and composed or decomposed Cyrillic, are matched consistently; original title text is kept.
+Russian accepts inflected dates and weekdays, for example `Купить подарок 5 декабря`, `Позвонить завтра в 15:30`, `через 3 дня`, `через неделю`, `на следующей неделе` and `в следующий понедельник`. Month names work in their nominative, genitive and prepositional forms (`декабрь`, `декабря`, `в декабре`). Numeric dates default to day-month. The usual weekday rules apply: on Friday, `в пятницу` means the following Friday, while `каждую пятницу` starts today. Both `ё` and `е`, and composed or decomposed Cyrillic, are matched consistently; original title text is kept.
 
 With day parts on, `Разминка завтра утром` and `завтра днём` set Morning and Afternoon. `сегодня вечером` sets This Evening. With time sectors on, `Бюджет на этой неделе`, `в этом месяце`, `в этом квартале` and `в следующем квартале` select that period without a date; use `когда-нибудь на следующей неделе` or `когда-нибудь в следующем месяце` for an indefinite next period. `когда-нибудь` alone parks a task. `крайний срок 9 ноября` sets a deadline; `к пятнице` follows the same date/time distinction as English `by`.
 

@@ -13,7 +13,7 @@ order: 143
 
 OpenTodo speaks **English**, **Deutsch**, **Français**, **Español**, **Italiano**, **Português**, **Русский** and **简体中文**. Pick one in **Settings → Language and region → Language**; each is listed in its own language, so you can find yours whatever the app shows now. A browser set to Simplified Chinese (`zh`, `zh-CN`, `zh-Hans`, `zh-SG`) is offered 简体中文. Traditional Chinese (`zh-TW`, `zh-HK`, `zh-MO`, `zh-Hant`) stays in English. Simplified Chinese hasn't been reviewed by a native speaker yet; if you speak it, [help on the translation review discussion](https://github.com/OpenTodoApp/OpenTodo/discussions/906).
 
-A Russian browser (`ru`, `ru-RU`, `ru-BY`) selects Русский. Russian quick add understands forms such as `на 5 декабря`, `каждый день` and `напомни за 30 минут`; see the [Russian examples](quick-add.md#russian).
+A Russian browser (`ru`, `ru-RU`, `ru-BY`) selects Русский. Russian quick add understands forms such as `5 декабря`, `каждый день` and `напомни за 30 минут`; see the [Russian examples](quick-add.md#russian).
 
 - **System** uses the first language of your browser that the app has, and English otherwise. The option names the language it picked, for example *System (Deutsch)*.
 - Your choice belongs to your account: every device you sign in on switches to it after the next sync, also when you changed it offline.

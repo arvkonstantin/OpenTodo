@@ -43,7 +43,7 @@ Date, time, recurrence and reminder vocabulary SHALL be bundled for English, Ger
 With Russian active, quick add SHALL understand Russian relative days, weekday and month names with their date inflections, relative periods, times, recurrence, reminders, deadlines, someday, day parts and time sectors. English SHALL remain available. Matching SHALL ignore case and consistently fold Cyrillic combining marks, `ё` and `й` in both parsers, while preserving unclaimed original text. Quotes, chip dismissal and disabling parsing SHALL keep their existing literal behavior. Unsupported phrases SHALL stay in the title. Browser and server/CLI results SHALL agree for the same line, date, clock, languages and preferences. Parsing SHALL require no network; created tasks and reminders SHALL use existing operations, store resolved fields and canonical English repeat rules, and converge without reparsing after synchronization.
 
 #### Scenario: Month in the genitive
-- **WHEN** Russian is active, today is 2026-11-06 and the user enters `Купить подарок на 5 декабря`
+- **WHEN** Russian is active, today is 2026-11-06 and the user enters `Купить подарок 5 декабря`
 - **THEN** the title is `Купить подарок` and the due date is 2026-12-05
 
 #### Scenario: Relative days and time
