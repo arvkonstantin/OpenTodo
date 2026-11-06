@@ -10,7 +10,7 @@ The web app has seven interface languages and 7,167 source messages. The quick-a
 
 Goals: reuse the existing translation and parsing architecture, make Russian inflections explicit, keep browser and CLI behavior identical, and deliver a local build plus an auditable translation review checklist.
 
-Non-goals: a morphological library, a translation service, a generalized language scaffolder, any new recognition service or permissions, or changes to canonical filter/recurrence languages. Do not fold in the contributor-kit scope of `more-languages`.
+Non-goals: a morphological library, a translation service, a generalized language scaffolder, any new recognition service or permissions, or changes to canonical filter/recurrence languages. Do not fold in the contributor-kit scope of `more-languages`. The contributor explicitly excludes fixing the shared enlarged-text task-row defect: it also reproduces with English and all other shipped interface languages. Keep its screenshot and comparison evidence for reference; it does not block Russian localization verification.
 
 ## Decisions
 
