@@ -2,6 +2,8 @@
 
 This report records an agent review of the Russian contribution. It does not record human approval. The contributor still needs to review the Russian wording and product aliases; tasks 6.1 and 6.2 remain pending. The authorized fork branch is a review draft. No issue, pull request, release or archive is authorized by these review records.
 
+The verified correction commit is [`1d851e01a`](https://github.com/arvkonstantin/OpenTodo/commit/1d851e01a22561f9efe4bc73f2ceb95b93a13ea2), pushed to the contributor’s `feat/russian-language` fork branch. All nine second-audit tasks are complete; only the contributor-owned human-review tasks 6.1/6.2 remain open.
+
 ## Frozen inputs and complete coverage
 
 The audit starts from commit `5c09b5f19c233627ceff042fcf5ef893f94b4d1d` and its 7,167 Russian web message keys. Every baseline entry was compared with all seven counterparts: English source text, German, French, Spanish, Italian, Portuguese and Simplified Chinese. Other translations were evidence, rather than a majority vote; reviewers inspected actual callers when grammar, permissions or product meaning were unclear.

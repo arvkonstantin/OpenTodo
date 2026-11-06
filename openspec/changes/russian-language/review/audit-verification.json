@@ -45,6 +45,10 @@
     {
       "command": "node --test scripts/i18n/shell.test.mjs; Android XML/iOS catalog key and printf checks",
       "result": "passed"
+    },
+    {
+      "command": "cd web && npm run test:built",
+      "result": "passed after final workflow/docs build;2files,6tests"
     }
   ],
   "resolvedDuringVerification": [
@@ -52,5 +56,7 @@
     "Shortened eight Russian settings descriptions to 96–116 characters without dropping their conditions, with independent review; the 120-character limit was retained."
   ],
   "nativeBuilds": "Android SDK and Xcode unavailable; no device verification claimed",
-  "issueOrPullRequestCreated": false
+  "issueOrPullRequestCreated": false,
+  "applicationCommit": "1d851e01a22561f9efe4bc73f2ceb95b93a13ea2",
+  "workflowProgress": "23/25; only6.1/6.2 human tasks remain"
 }

@@ -6,11 +6,11 @@
   "buildFlags": "CGO_ENABLED=0 -trimpath -ldflags=-s -w -X main.version=russian-review",
   "gzipLevel": 9,
   "serverBytes": 41799840,
-  "serverSHA256": "5ea7d9f5952ed41d1c5bb4b4777ce5afbeb403bee7eac37ee74bf5903fdb5b4e",
+  "serverSHA256": "e7ce8588fd3884d698dd8b7bd950fa3e1f9ee33bb306a1444f9bb4253a284522",
   "firstLoad": {
-    "entry": "assets/main-CsovphRp.js",
-    "entryGzip": 139679,
-    "initialGzip": 698245,
+    "entry": "assets/main-4l1837aT.js",
+    "entryGzip": 139682,
+    "initialGzip": 698250,
     "initialChunks": 142
   },
   "russianAssets": [
@@ -31,6 +31,8 @@
   "serverDeltaBytes": 897024,
   "serverDeltaPercent": 2.193,
   "baselineInitialGzipKiBApprox": 679.4,
-  "measuredBeforeReviewCommit": true,
+  "measuredBeforeHandoffMetadataCommit": true,
+  "applicationCommit": "1d851e01a22561f9efe4bc73f2ceb95b93a13ea2",
+  "workflowProgress": "23/25; human review pending",
   "russianCatalogSourceSha256": "d104be89a01c41241d48111a53122b1d1e31e1501d8c49c171fac51d3a99eee7"
 }

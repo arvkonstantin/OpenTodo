@@ -2,6 +2,8 @@
 
 The contributor requested this draft and the known layout-problem screenshot in their fork for review through GitHub. Translation review is **not complete**. No issue or PR is authorized; do not release or archive the change before the contributor finishes review.
 
+The exhaustive-review corrections were delivered in commit `1d851e01a22561f9efe4bc73f2ceb95b93a13ea2` on the contributor’s fork. OpenSpec progress is 23/25: all agent audit/delivery tasks are complete; human review 6.1/6.2 remains pending.
+
 ## Branch and scope
 
 - Branch: `feat/russian-language`, based on upstream main `4d9321707733d6826a6fd292a9ed78c3b0103856` (v0.23.0). The fork’s main was fast-forwarded to the same baseline.
