@@ -73,6 +73,23 @@ describe('messages', () => {
     expect(formatList(['а', 'б', 'в'])).toBe('а, б и в')
   })
 
+  it('distinguishes a Russian scheduling action from a schedule label', async () => {
+    await applyLanguagePreference('ru')
+    expect(t('Schedule')).toBe('Расписание')
+    expect(t('Schedule', { context: 'task-action' })).toBe('Запланировать')
+    expect(t('Start')).toBe('Начало')
+    expect(t('Start', { context: 'action' })).toBe('Начать')
+  })
+
+  it('keeps Russian actor/action punctuation with styled rich values', async () => {
+    await applyLanguagePreference('ru')
+    const html = renderToStaticMarkup(createElement('p', null, t.rich('{actor} {action}', {
+      actor: createElement('strong', null, 'Мария'),
+      action: createElement('span', null, 'задача создана'),
+    })))
+    expect(html).toBe('<p><strong>Мария</strong>: <span>задача создана</span></p>')
+  })
+
   it('every shipped catalog has every source message', async () => {
     const ids = Object.keys(messages)
     for (const { code } of SHIPPED) {

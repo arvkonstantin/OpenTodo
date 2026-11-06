@@ -12197,7 +12197,16 @@
   "Pick {from} of {list} where {where}": [
     "web/src/lib/rules/sentence.ts"
   ],
+  "Pick {from} of {list} where {where}|pick-sentence": [
+    "web/src/lib/rules/sentence.ts"
+  ],
   "Pick {from} {n} of {list}": [
+    "web/src/lib/rules/sentence.ts"
+  ],
+  "Pick {from} {n} of {list}|pick-counted-sentence": [
+    "web/src/lib/rules/sentence.ts"
+  ],
+  "Pick {from} {n} of {list}|pick-sentence": [
     "web/src/lib/rules/sentence.ts"
   ],
   "Picked {picked}, shown as {used}": [
@@ -14183,11 +14192,7 @@
   ],
   "Schedule": [
     "web/src/app/BackupsPanel.tsx",
-    "web/src/app/ScheduleSheet.tsx",
-    "web/src/app/TriageView.tsx",
     "web/src/app/task-detail/TaskFacts.tsx",
-    "web/src/app/task-list/RowActionCluster.tsx",
-    "web/src/app/task-list/RowSwipe.tsx",
     "web/src/lib/settingsCopy.ts"
   ],
   "Schedule the selected task: Day view in placement mode": [
@@ -14222,6 +14227,12 @@
   ],
   "Schedule|sidebar": [
     "web/src/app/calendar/SidebarSchedule.tsx"
+  ],
+  "Schedule|task-action": [
+    "web/src/app/ScheduleSheet.tsx",
+    "web/src/app/TriageView.tsx",
+    "web/src/app/task-list/RowActionCluster.tsx",
+    "web/src/app/task-list/RowSwipe.tsx"
   ],
   "Schedule…": [
     "web/src/app/bulk/BulkActions.tsx"
@@ -15538,7 +15549,6 @@
     "web/src/app/RuleEditor.tsx",
     "web/src/app/calendar/FramesDialog.tsx",
     "web/src/app/filter/conditionText.ts",
-    "web/src/app/method/DailyCheckToast.tsx",
     "web/src/app/rules/RuleFields.tsx",
     "web/src/app/task-detail/Facets.tsx",
     "web/src/app/task-detail/TaskFacts.tsx",
@@ -15679,6 +15689,9 @@
   ],
   "Starts {from} → {to}": [
     "web/src/lib/assistant.ts"
+  ],
+  "Start|action": [
+    "web/src/app/method/DailyCheckToast.tsx"
   ],
   "Start|timer": [
     "web/src/app/focus/FocusParts.tsx",
@@ -20503,14 +20516,14 @@
   "ai, assistant, prompt, ask, sort, classify, extract": [
     "web/src/lib/rules/sentence.ts"
   ],
-  "all": [
-    "web/src/lib/rules/sentence.ts"
-  ],
   "all day": [
     "web/src/app/CalendarEvents.tsx",
     "web/src/app/CalendarView.tsx",
     "web/src/app/calendar/WeekAgenda.tsx",
     "web/src/app/calendar/projections.tsx"
+  ],
+  "all|pick-items": [
+    "web/src/lib/rules/sentence.ts"
   ],
   "and {n} more": [
     "web/src/app/themes/ImportReport.tsx"
@@ -21974,7 +21987,10 @@
   "the estimate": [
     "web/src/lib/activity.ts"
   ],
-  "the first": [
+  "the first|pick-one": [
+    "web/src/lib/rules/sentence.ts"
+  ],
+  "the first|pick-several": [
     "web/src/lib/rules/sentence.ts"
   ],
   "the joined text": [
@@ -21983,11 +21999,14 @@
   "the labels": [
     "web/src/lib/activity.ts"
   ],
-  "the last": [
-    "web/src/lib/rules/sentence.ts"
-  ],
   "the last day": [
     "web/src/lib/rules/summary.ts"
+  ],
+  "the last|pick-one": [
+    "web/src/lib/rules/sentence.ts"
+  ],
+  "the last|pick-several": [
+    "web/src/lib/rules/sentence.ts"
   ],
   "the lines": [
     "web/src/lib/rules/sentence.ts"
@@ -22035,7 +22054,7 @@
   "the notes": [
     "web/src/lib/activity.ts"
   ],
-  "the ones": [
+  "the ones|pick-items": [
     "web/src/lib/rules/sentence.ts"
   ],
   "the order": [
@@ -22500,6 +22519,9 @@
     "web/src/app/RestoreSection.tsx"
   ],
   "{actor} {action}": [
+    "web/src/app/FeedView.tsx",
+    "web/src/app/ProjectActivity.tsx",
+    "web/src/app/task-detail/ActivityTab.tsx",
     "web/src/lib/activityRuns.ts"
   ],
   "{added} new, {reused} already yours": [

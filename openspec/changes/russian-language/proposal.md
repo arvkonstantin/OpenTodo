@@ -10,6 +10,8 @@ Russian speakers cannot use OpenTodo in their language or enter dates and repeat
 - Add Russian quick-add dates, times, repeats, reminders, deadlines, day parts, someday and time sector phrases. Cover natural inflections (`декабря`, `пятницу`, `каждую неделю`), English mixed with Russian, and spoken attribute cues. Keep stored repeat rules in canonical English.
 - Keep browser and Go parsing identical, including Cyrillic normalization and original-text spans, through shared fixtures.
 - Prepare a local review build and a checklist covering every translation surface and representative grammar examples. At the contributor’s request, commit the explicitly unreviewed draft and the known layout-problem screenshot to their fork for review through GitHub commit comments or follow-up edits. The contributor must read and correct all wording; an AI draft is not a reviewed translation. Do not open an issue or PR before the contributor explicitly finishes that review.
+- Perform the contributor-requested exhaustive second language review: compare every Russian web message with all seven other interface languages and inspect code context where meaning is ambiguous. Review the remaining Russian surfaces against every available corresponding language. Record full coverage and actual corrections, while retaining the separate human-review requirement.
+- Add the contributor-approved Russian grocery-aisle vocabulary to the existing device-side matching mechanism, with all nine current categories, English fallback, offline operation and no new classification service.
 - No breaking changes, new dependencies, mandatory environment variables, API routes or op fields.
 
 ## Out of scope
@@ -33,6 +35,7 @@ None.
 - `voice-capture`: Russian spoken attribute cues and contextual numbers, using the existing recognition behavior.
 - `outgoing-email`: Russian subject/body templates, roles, expiry and digest text.
 - `notification-channels`: Russian generic and content-bearing delivery messages.
+- `reusable-lists`: Russian product-name vocabulary for automatic aisle placement through the existing matcher.
 
 ## Impact
 

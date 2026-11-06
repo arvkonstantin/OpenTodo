@@ -197,6 +197,9 @@ func (p *parser) step(i int) int {
 	if p.tokens[i].quoted {
 		return i + 1
 	}
+	if to := max(literalReminderEndAt(p.tokens, i, p.dctx), literalNightEndAt(p.tokens, i, p.dctx)); to > i {
+		return to
+	}
 	if next, ok := p.attribute(i); ok {
 		return next
 	}

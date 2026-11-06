@@ -6,6 +6,7 @@ import { act } from 'react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { db, useDatabase } from '../../lib/db'
 import { setDateTime } from '../../lib/dates'
+import { applyCatalog, loadLanguage } from '../../lib/i18n/catalog'
 import { createLabel } from '../../lib/labels'
 import { createProject, createTask, resetDeviceId, updateTask } from '../../lib/ops'
 import { key, render, waitFor } from '../../ui/test-utils'
@@ -14,6 +15,10 @@ import { resetPanel } from '../panel'
 import { TaskListView } from '../TaskListView'
 import { hideBulkToast } from './toastStore'
 import { UndoToast } from './UndoToast'
+import { bulkConfirmSpec, bulkMenuGroups, clearBulkConfirm, trashTicked } from './BulkActions'
+import { flatItems } from '../menus/ActionMenu'
+import type { ReviewPlan } from '../../lib/bulk'
+import type { Membership } from '../../lib/types'
 
 let n = 0
 beforeEach(() => {
@@ -29,6 +34,8 @@ afterEach(async () => {
   vi.useRealTimers()
   hideBulkToast()
   resetPanel()
+  clearBulkConfirm()
+  applyCatalog('en', 'en', {})
   // A case that opened a task page leaves its address; the next list starts from the Inbox's.
   history.replaceState(null, '', '/')
 })
@@ -37,6 +44,46 @@ const tickedTitles = () => [...document.querySelectorAll('[data-ticked] [data-ti
 const option = (name: string) => [...document.querySelectorAll('[data-picker-step] [role="option"]')].find((o) => o.textContent?.includes(name)) as HTMLElement | undefined
 const errandOption = () => option('errand')
 const bar = () => document.querySelector('[data-selection-bar] [role="status"]')?.textContent ?? null
+
+describe('Russian selection counts in review titles', () => {
+  it.each([[1, '1 задача'], [2, '2 задачи'], [21, '21 задача']] as const)('keeps the count independent when moving or assigning %i tasks', async (count, words) => {
+    await loadLanguage('ru')
+    const project = await createProject({ name: 'Дом' })
+    const ids = []
+    for (let i = 0; i < count; i++) ids.push(await createTask({ title: `Task ${i}`, project_id: project }))
+    const tasks = await db.tasks.bulkGet(ids)
+    const membership: Membership = { projectId: project, role: 'editor', ownerId: 'owner', members: [] }
+    const titles: string[] = []
+    const pending: Promise<ReviewPlan>[] = []
+    const groups = bulkMenuGroups(ids, {
+      tasks: tasks.filter((t) => t !== undefined), labels: [], projects: [], sections: [], memberships: new Map([[project, membership]]),
+    }, { review: (title, plan) => { titles.push(title); pending.push(plan) }, pickDate: () => {} })
+    const items = flatItems(groups)
+    const pick = async (id: string, value: unknown) => {
+      const item = items.find((i) => i.id === id)
+      if (!item || item.kind !== 'picker') throw new Error(`Missing picker: ${id}`)
+      await item.picker.onPick(value)
+    }
+    await pick('move', { key: 'project', value: project, label: 'Дом', path: '' })
+    await pick('move', { key: 'inbox', value: null, label: 'Входящие', path: '' })
+    await pick('section', { key: 'section', value: 'section', label: 'Покупки', path: '' })
+    await pick('section', { key: 'none', value: null, label: 'Без раздела', path: '' })
+    await pick('assign', { userId: 'member', name: 'Анна', email: 'anna@example.com' })
+    await pick('assign', { userId: '', name: '', email: '' })
+    await Promise.all(pending)
+    expect(titles).toHaveLength(6)
+    expect(titles[0]).toContain('«Дом»')
+    expect(titles[2]).toContain('«Покупки»')
+    expect(titles[4]).toContain('Анна')
+    for (const title of titles) expect(title).toContain(`(${words})`)
+  })
+
+  it('uses the same count form in the confirmation for 21 tasks', async () => {
+    await loadLanguage('ru')
+    await trashTicked(Array.from({ length: 21 }, (_, i) => `task-${i}`))
+    expect(bulkConfirmSpec()?.title).toBe('Переместить в Корзину (21 задача)?')
+  })
+})
 
 async function inbox(...titles: string[]) {
   const ids: string[] = []

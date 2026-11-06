@@ -17,7 +17,9 @@ A [reusable list](reusable-lists.md) can sort new items into the sections of a s
 
 With **Reusable list** on, the **List…** step also offers **Sort into aisles**. Turning it on asks once whether to add the aisle sections the list does not have yet: Produce, Bakery, Dairy and eggs, Meat and fish, Frozen, Pantry, Drinks, Household and Personal care, named in your app language. Choose **Add sections**, or **Not now** to keep your own sections.
 
-A new item then goes to the aisle section its name suggests. "Greek yoghurt" goes to Dairy and eggs, "Bananas" to Produce. The words come from a list built into the app for each app language, with English as a fallback, and never leave your device.
+A new item then goes to the aisle section its name suggests. "Greek yoghurt" goes to Dairy and eggs, "Bananas" to Produce. Product-name dictionaries are available for English, German, French, Spanish, Italian, Portuguese and Russian. The app uses its interface language's dictionary first, then English; an interface language without a dictionary uses English only. Aisle matching runs on your device and makes no network request.
+
+The Russian dictionary includes 250 product names, phrases and explicit case forms across the nine aisles. For example, `Молоко` goes to Dairy and eggs, `ягоды` to Produce and `замороженные ягоды` to Frozen. Original item titles keep their spelling. Unlisted words and forms follow the usual unmatched-item behavior below.
 
 - Each aisle section remembers its aisle, so you can rename it ("Fridge"), move it or give it another icon and items still find it. Members using another language find it too.
 - An item reopened from **Got it** stays in the section it was in. Move "Oat drink" to another section once and it comes back there.

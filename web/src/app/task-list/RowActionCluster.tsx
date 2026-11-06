@@ -66,7 +66,7 @@ export function RowActionCluster({ task, onMore, force = false, editable = true,
         <IconButton icon={slot === 'waiting' ? 'arrow-up' : 'undo-2'} size="sm" label={slotLabel(slot)} data-row-action="slot" onClick={slotRun} />
       )}
       {editable && <>
-      <IconButton ref={schedule} icon="calendar-days" size="sm" label={t('Schedule')} aria-haspopup="dialog" aria-expanded={scheduling}
+      <IconButton ref={schedule} icon="calendar-days" size="sm" label={t('Schedule', { context: 'task-action' })} aria-haspopup="dialog" aria-expanded={scheduling}
         data-row-action="schedule" onClick={() => setScheduling(true)} />
       <Menu kind="menu" label={`${t('Priority')}: ${PRIORITY_TEXT[task.priority]}`} tip={t('Priority')} tipShortcut={keysOf('list.priority')} align="end"
         triggerProps={{ 'data-row-action': 'priority' }}

@@ -76,7 +76,7 @@ function RunItem({ run, name, project, task, onOpenComment, now }: { run: Activi
               <span className="user-text">{summarizeRun(run, actor)}</span>
             </button>
           ) : (
-            <span className="user-text">{actor} {describeEvent(first, (id) => name(id), project, task)}</span>
+            <span className="user-text">{t('{actor} {action}', { actor, action: describeEvent(first, (id) => name(id), project, task) })}</span>
           )}
           {pending}
         </div>

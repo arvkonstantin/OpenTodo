@@ -8,6 +8,7 @@ import { act } from 'react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { db, useDatabase } from '../lib/db'
 import { setDateTime } from '../lib/dates'
+import { applyCatalog, loadLanguage } from '../lib/i18n/catalog'
 import { createTask, resetDeviceId } from '../lib/ops'
 import type { Task } from '../lib/types'
 import { click, render, waitFor } from '../ui/test-utils'
@@ -17,6 +18,7 @@ import { resetCollapsedGroups } from './collapsedGroups'
 import { commands, type PaletteContext } from './palette/registry'
 import { resetPanel } from './panel'
 import { TaskListView } from './TaskListView'
+import { GroupDateDialog } from './task-list/EarlierActions'
 
 let n = 0
 beforeEach(() => {
@@ -35,6 +37,7 @@ afterEach(async () => {
   hideBulkToast()
   resetPanel()
   resetCollapsedGroups()
+  applyCatalog('en', 'en', {})
 })
 
 const toast = () => document.querySelector('[data-bulk-toast]')?.textContent ?? ''
@@ -108,6 +111,15 @@ describe('Move all to today', () => {
 })
 
 describe('Reschedule…', () => {
+  it.each([[1, '1 задача'], [2, '2 задачи'], [21, '21 задача']] as const)('names %i Russian tasks in the actual group date dialog', async (count, words) => {
+    await loadLanguage('ru')
+    const r = await render(<GroupDateDialog ids={Array.from({ length: count }, (_, i) => `task-${i}`)} onClose={() => {}} />)
+    mounted.push(r)
+    const dialog = document.querySelector('[role="dialog"]')!
+    const title = document.getElementById(dialog.getAttribute('aria-labelledby')!)
+    expect(title?.textContent).toBe(`Дата выполнения (${words})`)
+  })
+
   it('offline, Tomorrow moves the four tasks at once, out of Today, as one queued batch', async () => {
     vi.spyOn(navigator, 'onLine', 'get').mockReturnValue(false)
     const ids = []

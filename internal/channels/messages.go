@@ -137,7 +137,7 @@ var texts = map[string]map[string]string{
 		txtReminderWith: "Напоминание", txtAssignedBy: "{name}: задача назначена вам", txtMentionedBy: "{name} упоминает вас",
 		txtUnblockedWith: "Можно приступать", txtPageRepliedBy: "{name}: ответ на странице задачи",
 		txtPageDoneBy: "{name}: задача завершена на её странице", txtPageReopenedBy: "{name}: задача возобновлена на её странице",
-		txtTestTitle: "Тест от OpenTodo", txtTestBody: "Этот канал работает.", txtGuest: "Гость",
+		txtTestTitle: "Тестовое уведомление OpenTodo", txtTestBody: "Этот канал работает.", txtGuest: "Гость",
 	},
 	"zh": {
 		txtTurn: "轮到你处理一项任务", txtTurnWith: "轮到你了",

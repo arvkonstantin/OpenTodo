@@ -55,7 +55,7 @@ func TestRussianDigestCounts(t *testing.T) {
 		if subj != "Ваша неделя в OpenTodo: завершено "+count {
 			t.Errorf("count %d: subject %q", n, subj)
 		}
-		for _, label := range []string{"Завершено: ", "Создано: ", "Завершено с опозданием: ", "Упущено: "} {
+		for _, label := range []string{"Завершено: ", "Создано: ", "Завершено с опозданием: ", "Не завершено к концу недели: "} {
 			if !strings.Contains(body, label+count+"\n") {
 				t.Errorf("count %d: missing %q", n, label+count)
 			}

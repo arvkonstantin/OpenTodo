@@ -1,0 +1,56 @@
+{
+  "humanApproval": false,
+  "catalogSourceSha256": "d104be89a01c41241d48111a53122b1d1e31e1501d8c49c171fac51d3a99eee7",
+  "toolchain": "Go1.27.3 linux/amd64; locked web dependencies",
+  "checks": [
+    {
+      "command": "TZ=UTC GOFLAGS=-p=1 make -j1 check",
+      "result": "passed",
+      "web": {
+        "filesPassed": 688,
+        "filesSkipped": 1,
+        "testsPassed": 8129,
+        "testsSkipped": 3
+      },
+      "performance": {
+        "filesPassed": 4,
+        "testsPassed": 13
+      },
+      "includes": [
+        "Go vet/staticcheck/all tests",
+        "web typecheck/ESLint",
+        "extension",
+        "Obsidian",
+        "format/UI/localization",
+        "docs/templates/OpenSpec",
+        "deployment/repository checks"
+      ]
+    },
+    {
+      "command": "cd web && npm run build",
+      "result": "passed"
+    },
+    {
+      "command": "make bundle-budget",
+      "result": "passed"
+    },
+    {
+      "command": "make docs && make docs-check openspec-validate",
+      "result": "passed after workflow-progress docs regeneration"
+    },
+    {
+      "command": "go test ./internal/web/...",
+      "result": "passed against the rebuilt embedded assets"
+    },
+    {
+      "command": "node --test scripts/i18n/shell.test.mjs; Android XML/iOS catalog key and printf checks",
+      "result": "passed"
+    }
+  ],
+  "resolvedDuringVerification": [
+    "Updated the Russian channel test-title expectation to the reviewed wording.",
+    "Shortened eight Russian settings descriptions to 96–116 characters without dropping their conditions, with independent review; the 120-character limit was retained."
+  ],
+  "nativeBuilds": "Android SDK and Xcode unavailable; no device verification claimed",
+  "issueOrPullRequestCreated": false
+}

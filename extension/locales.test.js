@@ -57,3 +57,12 @@ for (const lang of langs) {
     assert.ok([...msgs.extDescription.message].length <= 132, `${lang}.extDescription is ${[...msgs.extDescription.message].length} characters, over 132`)
   })
 }
+
+// Instructions must name the actual application sections, not a literal alternate translation.
+test('Russian token instructions name the actual settings sections', () => {
+  const app = JSON.parse(readFileSync(new URL('../web/src/locales/ru.json', import.meta.url), 'utf8'))
+  const help = read('ru').tokenHelp.message
+  for (const key of ['Settings', 'Integrations', 'API tokens']) {
+    assert.ok(help.includes(app[key]), `tokenHelp must use ${app[key]}`)
+  }
+})

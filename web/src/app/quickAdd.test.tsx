@@ -323,6 +323,9 @@ describe('pastedInputs (paste-to-tasks 3.2)', () => {
   it('a line that parses to no title keeps its text; with parsing off lines are titles as they are', async () => {
     expect(await pastedInputs(['tomorrow'], context)).toEqual([{ title: 'tomorrow' }])
     expect(await pastedInputs(['Call Anna tomorrow', 'p1'], null)).toEqual([{ title: 'Call Anna tomorrow' }, { title: 'p1' }])
+    expect(await pastedInputs(['Позвонить завтра в 11 ночи', 'Позвонить в 8 ночи'], null)).toEqual([
+      { title: 'Позвонить завтра в 11 ночи' }, { title: 'Позвонить в 8 ночи' },
+    ])
   })
 })
 

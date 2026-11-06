@@ -1,0 +1,4800 @@
+{
+  "reviewer": "root-agent",
+  "humanApproval": false,
+  "surfaces": [
+    {
+      "surface": "extension",
+      "reviewedCount": 57,
+      "entries": [
+        {
+          "key": "extName",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "extDescription",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "actionTitle",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "commandDescription",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "menuScreenshot",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "optionsTitle",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "optionsIntro",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "pendingNote",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "thisPage",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "serverLabel",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "save",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "screenshotsHeading",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "screenshotsIntro",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "screenshotsAllowed",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "screenshotsNotAllowed",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "allowScreenshots",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "invalidAddress",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "saved",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "popupLine",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "popupProject",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "popupInbox",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "popupLabels",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "popupAddLabel",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "popupRemoveLabel",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "popupOrigin",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "popupRemoveOrigin",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "popupOptions",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "popupOpenCapture",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "popupSaving",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "popupSaved",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "popupOpenTask",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "popupUnreachable",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "popupTokenRefused",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "popupEncrypted",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "popupRateLimited",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "popupFailed",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "popupNoServer",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "modeHeading",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "modeCapture",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "modeCaptureHelp",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "modeQuick",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "modeQuickHelp",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "modeNeedsToken",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "tokenLabel",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "tokenHelp",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "tokenSave",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "tokenForget",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "tokenForgotten",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "tokenChecking",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "tokenOk",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "tokenRead",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "tokenAgent",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "tokenRejected",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "tokenUnreachable",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "tokenNoServer",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "tokenHttp",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "tokenAccess",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        }
+      ]
+    },
+    {
+      "surface": "android",
+      "reviewedCount": 49,
+      "entries": [
+        {
+          "key": "app_name",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "setup_title",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "setup_intro",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "setup_hint",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "setup_connect",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "setup_connect_anyway",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "setup_try",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "setup_refused",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "setup_needs_https",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "setup_insecure",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "setup_no_network",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "setup_not_opentodo",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "setup_untrusted",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "retry",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "change_server",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "change_server_confirm",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "error_offline",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "error_untrusted",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "channel_reminders",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "reminder_generic",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "reminder_text",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "action_snooze",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "action_dismiss",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "action_done",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "location_arrived",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "location_left",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "test_title",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "test_text",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "biometric_enable_title",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "biometric_unlock_title",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "biometric_use_passphrase",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "widget_today",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "widget_today_description",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "widget_quick_add",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "widget_quick_add_label",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "widget_quick_add_description",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "widget_updated",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "widget_open_app",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "widget_locked",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "widget_empty",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "widget_untitled",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "widget_more",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "setup_old_webview",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "site_bar_host",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "site_bar_close",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "setup_login_wall",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "setup_web_page",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "setup_sign_in",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "error_sign_in",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        }
+      ]
+    },
+    {
+      "surface": "ios",
+      "reviewedCount": 30,
+      "entries": [
+        {
+          "key": "%lld today",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "%lld today · %lld overdue",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "Cancel",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "Change server?",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "Changes that have not reached the server are lost. Your tasks stay on the server.",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "Connect",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "Dismiss",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "Locked. Open OpenTodo to see your tasks.",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "No answer from that address. Check the address and your connection.",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "No connection to your server.",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "Nothing left for today.",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "Open OpenTodo to fill this widget.",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "OpenTodo reminder",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "OpenTodo runs on your own server. Enter the address you use in the browser.",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "Remove the server and its data",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "Server address",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "Snooze 10 min",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "Task",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "That address does not answer like an OpenTodo server.",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "That is not a usable address.",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "That server's certificate is not trusted.",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "The app could not be loaded.",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "The certificate of that server is not trusted by this device.",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "This is what a reminder looks like.",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "This server must be reached over https.",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "Today",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "Today's and overdue tasks from your own server.",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "Try again",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "Updated %@",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "Use %@",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        }
+      ]
+    },
+    {
+      "surface": "email",
+      "reviewedCount": 12,
+      "entries": [
+        {
+          "key": "digest",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "email_change",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "email_change_notice",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "invitation",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "member_invitation",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "password_reset",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "project_invite",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "routine",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "test",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "verify_signup",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "verify_signup_existing",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "workspace_invite",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        }
+      ]
+    },
+    {
+      "surface": "nlp",
+      "reviewedCount": 96,
+      "entries": [
+        {
+          "key": "dayWords.0",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "dayWords.1",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "dayWords.2",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "weekdays.0",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "weekdays.1",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "weekdays.2",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "weekdays.3",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "weekdays.4",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "weekdays.5",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "weekdays.6",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.0.names",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.0.abbr",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.1.names",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.1.abbr",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.2.names",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.2.abbr",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.3.names",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.3.abbr",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.4.names",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.4.abbr",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.5.names",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.5.abbr",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.6.names",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.6.abbr",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.7.names",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.7.abbr",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.8.names",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.8.abbr",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.9.names",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.9.abbr",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.10.names",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.10.abbr",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.11.names",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "months.11.abbr",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "before",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "deadlineWords",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "byWords",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "somedayWords",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "sectorPhrases.this-week",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "sectorPhrases.next-week",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "sectorPhrases.this-month",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "sectorPhrases.next-month",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "sectorPhrases.this-quarter",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "sectorPhrases.next-quarter",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "eveningWords",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "morningWords",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "afternoonWords",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "partWords.morning",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "partWords.afternoon",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "partWords.evening",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "nextBefore",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "nextAfter",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "thisBefore",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "inWords",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "oneWords",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "units.minute",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "units.hour",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "units.day",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "units.week",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "units.month",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "units.year",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "ofWords",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "atWords",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "hourWords",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "timeWords.12:00",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "timeWords.00:00",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "am",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "pm",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "every",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "everyOne.day",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "everyOne.week",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "everyOne.month",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "everyOne.year",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "everyOne.weekday",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "everyOne.2 days",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "weekdayAll",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "ordinals.1",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "ordinals.2",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "ordinals.3",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "ordinals.4",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "ordinals.-1",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "ordinalArticles",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "ordinalOf",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "ofMonthWords",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "andWords",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "afterCompletion",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "untilWords",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "timesWords.before",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "timesWords.after",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "everyOther",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "everyOtherAround.before",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "everyOtherAround.after",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "monthTextBefore",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "remindWords",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "beforeWords",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "afterWords",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        }
+      ]
+    },
+    {
+      "surface": "spoken",
+      "reviewedCount": 69,
+      "entries": [
+        {
+          "key": "hashtag",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "project",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "label",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "labelAt",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "priority",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.0",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.1",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.2",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.3",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.4",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.5",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.6",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.7",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.8",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.9",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.10",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.11",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.12",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.13",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.14",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.15",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.16",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.17",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.18",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.19",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.20",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.21",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.22",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.23",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.24",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.25",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.26",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.27",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.28",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.29",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.30",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.31",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.32",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.33",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.34",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.35",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.36",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.37",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.38",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.39",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.40",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.41",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.42",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.43",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.44",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.45",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.46",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.47",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.48",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.49",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.50",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.51",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.52",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.53",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.54",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.55",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.56",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.57",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.58",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "numbers.59",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "minuteZero",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "minutes",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "and",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        },
+        {
+          "key": "durationBefore",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt"
+          ],
+          "unavailableCounterparts": [
+            "zh"
+          ]
+        }
+      ]
+    },
+    {
+      "surface": "push",
+      "reviewedCount": 6,
+      "entries": [
+        {
+          "key": "reminder",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "due",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "generic",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "snooze",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "dismiss",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "test",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        }
+      ]
+    },
+    {
+      "surface": "channels",
+      "reviewedCount": 22,
+      "entries": [
+        {
+          "key": "txtTurn",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "txtTurnWith",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "txtRoutine",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "txtRoutineFailed",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "txtRoutineFailedWith",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "txtReminder",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "txtAssigned",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "txtMentioned",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "txtUnblocked",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "txtPageReplied",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "txtPageDone",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "txtPageReopened",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "txtReminderWith",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "txtAssignedBy",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "txtMentionedBy",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "txtUnblockedWith",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "txtPageRepliedBy",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "txtPageDoneBy",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "txtPageReopenedBy",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "txtTestTitle",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "txtTestBody",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "txtGuest",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        }
+      ]
+    },
+    {
+      "surface": "email-helper-tables",
+      "reviewedCount": 26,
+      "entries": [
+        {
+          "key": "weekday.0",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "weekday.1",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "weekday.2",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "weekday.3",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "weekday.4",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "weekday.5",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "weekday.6",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "month.0",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "month.1",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "month.2",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "month.3",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "month.4",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "month.5",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "month.6",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "month.7",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "month.8",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "month.9",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "month.10",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "month.11",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "digest.inbox",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "digest.nothing",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "digest.more",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "digest.never",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "roles",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "expiry-units",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        },
+        {
+          "key": "anonymous-inviter",
+          "comparedLanguages": [
+            "en",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "pt",
+            "zh"
+          ]
+        }
+      ]
+    }
+  ]
+}

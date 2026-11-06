@@ -508,7 +508,7 @@ func TestDigestWordsForLateTasks(t *testing.T) {
 		"en": "Still open from earlier", "de": "Noch offen von früher", "fr": "Encore ouvertes d'avant",
 		"es": "Siguen abiertas de antes", "it": "Ancora aperte da prima", "pt": "Ainda abertas de antes",
 		"zh": "更早仍未完成",
-		"ru": "Ещё не завершено с прежних дней",
+		"ru": "Незавершённые задачи за прошлые дни",
 	}
 	// The old headings, matched as whole lines where the word also names a measurement.
 	old := map[string]*regexp.Regexp{

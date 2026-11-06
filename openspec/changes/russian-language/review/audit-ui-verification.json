@@ -1,0 +1,795 @@
+{
+  "humanApproval": false,
+  "screenshots": {
+    "count": 72,
+    "widths": [
+      360,
+      1280
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "taskFontSizes": [
+      "normal",
+      20,
+      24
+    ],
+    "screens": [
+      "today",
+      "quick-add",
+      "task-details",
+      "repeat",
+      "reminders",
+      "language-settings"
+    ],
+    "errors": [],
+    "knownSharedRowWarnings": [
+      "360-light-24: existing timed phone row collapses the title; task details captured through its normal deep link",
+      "360-dark-24: existing timed phone row collapses the title; task details captured through its normal deep link"
+    ],
+    "artifactLocation": "Local preview artifacts: /tmp/opentodo-russian-ui/index.html; screenshot image set is not committed. The known row screenshots and all-language comparison are committed separately in this directory.",
+    "cases": [
+      {
+        "key": "1280-light-normal",
+        "name": "today",
+        "file": "1280-light-normal-today.png",
+        "font": "13px",
+        "rootSize": null,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-light-normal",
+        "name": "quick-add",
+        "file": "1280-light-normal-quick-add.png",
+        "font": "13px",
+        "rootSize": null,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-light-normal",
+        "name": "task-details",
+        "file": "1280-light-normal-task-details.png",
+        "font": "13px",
+        "rootSize": null,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-light-normal",
+        "name": "repeat",
+        "file": "1280-light-normal-repeat.png",
+        "font": "13px",
+        "rootSize": null,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-light-normal",
+        "name": "reminders",
+        "file": "1280-light-normal-reminders.png",
+        "font": "13px",
+        "rootSize": null,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-light-normal",
+        "name": "language-settings",
+        "file": "1280-light-normal-language-settings.png",
+        "font": "13px",
+        "rootSize": null,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-light-20",
+        "name": "today",
+        "file": "1280-light-20-today.png",
+        "font": "20px",
+        "rootSize": 24.615384615384617,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-light-20",
+        "name": "quick-add",
+        "file": "1280-light-20-quick-add.png",
+        "font": "20px",
+        "rootSize": 24.615384615384617,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-light-20",
+        "name": "task-details",
+        "file": "1280-light-20-task-details.png",
+        "font": "20px",
+        "rootSize": 24.615384615384617,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-light-20",
+        "name": "repeat",
+        "file": "1280-light-20-repeat.png",
+        "font": "20px",
+        "rootSize": 24.615384615384617,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-light-20",
+        "name": "reminders",
+        "file": "1280-light-20-reminders.png",
+        "font": "20px",
+        "rootSize": 24.615384615384617,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-light-20",
+        "name": "language-settings",
+        "file": "1280-light-20-language-settings.png",
+        "font": "20px",
+        "rootSize": 24.615384615384617,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-light-24",
+        "name": "today",
+        "file": "1280-light-24-today.png",
+        "font": "24px",
+        "rootSize": 29.53846153846154,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-light-24",
+        "name": "quick-add",
+        "file": "1280-light-24-quick-add.png",
+        "font": "24px",
+        "rootSize": 29.53846153846154,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-light-24",
+        "name": "task-details",
+        "file": "1280-light-24-task-details.png",
+        "font": "24px",
+        "rootSize": 29.53846153846154,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-light-24",
+        "name": "repeat",
+        "file": "1280-light-24-repeat.png",
+        "font": "24px",
+        "rootSize": 29.53846153846154,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-light-24",
+        "name": "reminders",
+        "file": "1280-light-24-reminders.png",
+        "font": "24px",
+        "rootSize": 29.53846153846154,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-light-24",
+        "name": "language-settings",
+        "file": "1280-light-24-language-settings.png",
+        "font": "24px",
+        "rootSize": 29.53846153846154,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-dark-normal",
+        "name": "today",
+        "file": "1280-dark-normal-today.png",
+        "font": "13px",
+        "rootSize": null,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-dark-normal",
+        "name": "quick-add",
+        "file": "1280-dark-normal-quick-add.png",
+        "font": "13px",
+        "rootSize": null,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-dark-normal",
+        "name": "task-details",
+        "file": "1280-dark-normal-task-details.png",
+        "font": "13px",
+        "rootSize": null,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-dark-normal",
+        "name": "repeat",
+        "file": "1280-dark-normal-repeat.png",
+        "font": "13px",
+        "rootSize": null,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-dark-normal",
+        "name": "reminders",
+        "file": "1280-dark-normal-reminders.png",
+        "font": "13px",
+        "rootSize": null,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-dark-normal",
+        "name": "language-settings",
+        "file": "1280-dark-normal-language-settings.png",
+        "font": "13px",
+        "rootSize": null,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-dark-20",
+        "name": "today",
+        "file": "1280-dark-20-today.png",
+        "font": "20px",
+        "rootSize": 24.615384615384617,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-dark-20",
+        "name": "quick-add",
+        "file": "1280-dark-20-quick-add.png",
+        "font": "20px",
+        "rootSize": 24.615384615384617,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-dark-20",
+        "name": "task-details",
+        "file": "1280-dark-20-task-details.png",
+        "font": "20px",
+        "rootSize": 24.615384615384617,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-dark-20",
+        "name": "repeat",
+        "file": "1280-dark-20-repeat.png",
+        "font": "20px",
+        "rootSize": 24.615384615384617,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-dark-20",
+        "name": "reminders",
+        "file": "1280-dark-20-reminders.png",
+        "font": "20px",
+        "rootSize": 24.615384615384617,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-dark-20",
+        "name": "language-settings",
+        "file": "1280-dark-20-language-settings.png",
+        "font": "20px",
+        "rootSize": 24.615384615384617,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-dark-24",
+        "name": "today",
+        "file": "1280-dark-24-today.png",
+        "font": "24px",
+        "rootSize": 29.53846153846154,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-dark-24",
+        "name": "quick-add",
+        "file": "1280-dark-24-quick-add.png",
+        "font": "24px",
+        "rootSize": 29.53846153846154,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-dark-24",
+        "name": "task-details",
+        "file": "1280-dark-24-task-details.png",
+        "font": "24px",
+        "rootSize": 29.53846153846154,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-dark-24",
+        "name": "repeat",
+        "file": "1280-dark-24-repeat.png",
+        "font": "24px",
+        "rootSize": 29.53846153846154,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-dark-24",
+        "name": "reminders",
+        "file": "1280-dark-24-reminders.png",
+        "font": "24px",
+        "rootSize": 29.53846153846154,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "1280-dark-24",
+        "name": "language-settings",
+        "file": "1280-dark-24-language-settings.png",
+        "font": "24px",
+        "rootSize": 29.53846153846154,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "language": "ru"
+      },
+      {
+        "key": "360-light-normal",
+        "name": "today",
+        "file": "360-light-normal-today.png",
+        "font": "14.5px",
+        "rootSize": null,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-light-normal",
+        "name": "quick-add",
+        "file": "360-light-normal-quick-add.png",
+        "font": "14.5px",
+        "rootSize": null,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-light-normal",
+        "name": "task-details",
+        "file": "360-light-normal-task-details.png",
+        "font": "14.5px",
+        "rootSize": null,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-light-normal",
+        "name": "repeat",
+        "file": "360-light-normal-repeat.png",
+        "font": "14.5px",
+        "rootSize": null,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-light-normal",
+        "name": "reminders",
+        "file": "360-light-normal-reminders.png",
+        "font": "14.5px",
+        "rootSize": null,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-light-normal",
+        "name": "language-settings",
+        "file": "360-light-normal-language-settings.png",
+        "font": "14.5px",
+        "rootSize": null,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-light-20",
+        "name": "today",
+        "file": "360-light-20-today.png",
+        "font": "20px",
+        "rootSize": 22.06896551724138,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-light-20",
+        "name": "quick-add",
+        "file": "360-light-20-quick-add.png",
+        "font": "20px",
+        "rootSize": 22.06896551724138,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-light-20",
+        "name": "task-details",
+        "file": "360-light-20-task-details.png",
+        "font": "20px",
+        "rootSize": 22.06896551724138,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-light-20",
+        "name": "repeat",
+        "file": "360-light-20-repeat.png",
+        "font": "20px",
+        "rootSize": 22.06896551724138,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-light-20",
+        "name": "reminders",
+        "file": "360-light-20-reminders.png",
+        "font": "20px",
+        "rootSize": 22.06896551724138,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-light-20",
+        "name": "language-settings",
+        "file": "360-light-20-language-settings.png",
+        "font": "20px",
+        "rootSize": 22.06896551724138,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-light-24",
+        "name": "today",
+        "file": "360-light-24-today.png",
+        "font": "24px",
+        "rootSize": 26.482758620689655,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-light-24",
+        "name": "quick-add",
+        "file": "360-light-24-quick-add.png",
+        "font": "24px",
+        "rootSize": 26.482758620689655,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-light-24",
+        "name": "task-details",
+        "file": "360-light-24-task-details.png",
+        "font": "24px",
+        "rootSize": 26.482758620689655,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-light-24",
+        "name": "repeat",
+        "file": "360-light-24-repeat.png",
+        "font": "24px",
+        "rootSize": 26.482758620689655,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-light-24",
+        "name": "reminders",
+        "file": "360-light-24-reminders.png",
+        "font": "24px",
+        "rootSize": 26.482758620689655,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-light-24",
+        "name": "language-settings",
+        "file": "360-light-24-language-settings.png",
+        "font": "24px",
+        "rootSize": 26.482758620689655,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-dark-normal",
+        "name": "today",
+        "file": "360-dark-normal-today.png",
+        "font": "14.5px",
+        "rootSize": null,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-dark-normal",
+        "name": "quick-add",
+        "file": "360-dark-normal-quick-add.png",
+        "font": "14.5px",
+        "rootSize": null,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-dark-normal",
+        "name": "task-details",
+        "file": "360-dark-normal-task-details.png",
+        "font": "14.5px",
+        "rootSize": null,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-dark-normal",
+        "name": "repeat",
+        "file": "360-dark-normal-repeat.png",
+        "font": "14.5px",
+        "rootSize": null,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-dark-normal",
+        "name": "reminders",
+        "file": "360-dark-normal-reminders.png",
+        "font": "14.5px",
+        "rootSize": null,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-dark-normal",
+        "name": "language-settings",
+        "file": "360-dark-normal-language-settings.png",
+        "font": "14.5px",
+        "rootSize": null,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-dark-20",
+        "name": "today",
+        "file": "360-dark-20-today.png",
+        "font": "20px",
+        "rootSize": 22.06896551724138,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-dark-20",
+        "name": "quick-add",
+        "file": "360-dark-20-quick-add.png",
+        "font": "20px",
+        "rootSize": 22.06896551724138,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-dark-20",
+        "name": "task-details",
+        "file": "360-dark-20-task-details.png",
+        "font": "20px",
+        "rootSize": 22.06896551724138,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-dark-20",
+        "name": "repeat",
+        "file": "360-dark-20-repeat.png",
+        "font": "20px",
+        "rootSize": 22.06896551724138,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-dark-20",
+        "name": "reminders",
+        "file": "360-dark-20-reminders.png",
+        "font": "20px",
+        "rootSize": 22.06896551724138,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-dark-20",
+        "name": "language-settings",
+        "file": "360-dark-20-language-settings.png",
+        "font": "20px",
+        "rootSize": 22.06896551724138,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-dark-24",
+        "name": "today",
+        "file": "360-dark-24-today.png",
+        "font": "24px",
+        "rootSize": 26.482758620689655,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-dark-24",
+        "name": "quick-add",
+        "file": "360-dark-24-quick-add.png",
+        "font": "24px",
+        "rootSize": 26.482758620689655,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-dark-24",
+        "name": "task-details",
+        "file": "360-dark-24-task-details.png",
+        "font": "24px",
+        "rootSize": 26.482758620689655,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-dark-24",
+        "name": "repeat",
+        "file": "360-dark-24-repeat.png",
+        "font": "24px",
+        "rootSize": 26.482758620689655,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-dark-24",
+        "name": "reminders",
+        "file": "360-dark-24-reminders.png",
+        "font": "24px",
+        "rootSize": 26.482758620689655,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      },
+      {
+        "key": "360-dark-24",
+        "name": "language-settings",
+        "file": "360-dark-24-language-settings.png",
+        "font": "24px",
+        "rootSize": 26.482758620689655,
+        "width": 360,
+        "scrollWidth": 360,
+        "language": "ru"
+      }
+    ]
+  },
+  "offline": {
+    "passed": true,
+    "precache": true,
+    "offlineSwitch": true,
+    "offlineCaptureAndReload": true,
+    "apiNetworkOnly": true,
+    "crossDevicePreferenceAndTask": true,
+    "task": {
+      "title": "Проверить итоговый офлайн-перевод",
+      "due": {
+        "date": "2026-11-06",
+        "time": "23:00"
+      },
+      "recurrence": "every day"
+    }
+  },
+  "checklist": {
+    "passed": true,
+    "initial": "Всего: 7803. Отмечено вами: 0. Исправлено: 0. До полной проверки: 7803.",
+    "search": true,
+    "grocery": true,
+    "editInvalidatesApproval": true,
+    "persistence": true,
+    "errors": []
+  },
+  "native": {
+    "android": {
+      "strings": 49,
+      "xmlAndPlaceholders": "passed",
+      "sdkBuild": "not available",
+      "device": "not verified"
+    },
+    "ios": {
+      "strings": 30,
+      "xcstringsAndPlaceholders": "passed",
+      "xcodeBuild": "not available",
+      "device": "not verified"
+    }
+  },
+  "catalogSourceSha256AtCapture": "d104be89a01c41241d48111a53122b1d1e31e1501d8c49c171fac51d3a99eee7"
+}

@@ -5,7 +5,7 @@
 // The result is zone free; createTask resolves it against the final due date.
 import { t } from '../i18n/catalog'
 import { matchDuration } from './attributes'
-import { countAt, matchDateAt, matchTimeAt, phraseAt, type DateContext } from './dates'
+import { addDays, countAt, matchDateAt, matchTimeAt, phraseAt, russianNightAt, type DateContext } from './dates'
 import type { Token } from './tokenize'
 import type { Vocabulary } from './vocab'
 
@@ -30,6 +30,28 @@ function offsetUnitAt(tokens: readonly Token[], i: number, v: Vocabulary): { n: 
   return null
 }
 
+function amountAt(tokens: readonly Token[], i: number, v: Vocabulary): { n: number; minutes: number } | null {
+  const count = countAt(tokens, i, v)
+  if (count) {
+    const unit = offsetUnitAt(tokens, i + count.n, v)
+    if (unit) return { n: count.n + unit.n, minutes: count.count * unit.minutes }
+  }
+  if (!tokens[i] || tokens[i].quoted) return null
+  const minutes = matchDuration(tokens[i].text, { bareHourIsTime: false })
+  return minutes === null ? null : { n: 1, minutes }
+}
+
+/** Russian «через» counts from now, with an explicit date so a later due cannot move it. */
+function fromNowAt(tokens: readonly Token[], k: number, prefix: number, v: Vocabulary, ctx: DateContext): { reminder: ReminderPhrase; to: number } | null {
+  if (!ctx.now) return null
+  const amount = amountAt(tokens, k + prefix, v)
+  if (!amount || amount.minutes <= 0) return null
+  const total = minutesOf(ctx.now) + amount.minutes
+  const time = `${String(Math.floor(total / 60) % 24).padStart(2, '0')}:${String(total % 60).padStart(2, '0')}`
+  const date = addDays(ctx.today, Math.floor(total / 1440))
+  return { reminder: { kind: 'moment', date, time }, to: k + prefix + amount.n }
+}
+
 /** An offset at token k: a count and a unit, or a compact duration ("30min", "2h"), then a before or after word. */
 function offsetAt(tokens: readonly Token[], k: number, ctx: DateContext): { n: number; minutes: number } | null {
   let best: { n: number; minutes: number } | null = null
@@ -39,16 +61,7 @@ function offsetAt(tokens: readonly Token[], k: number, ctx: DateContext): { n: n
     const preAfter = v.code === 'ru' && !preBefore ? phraseAt(tokens, k, v.afterWords, `${v.code}:rafter`) : 0
     const prefix = preBefore || preAfter
     const j = k + prefix
-    let amount: { n: number; minutes: number } | null = null
-    const count = countAt(tokens, j, v)
-    if (count) {
-      const unit = offsetUnitAt(tokens, j + count.n, v)
-      if (unit) amount = { n: count.n + unit.n, minutes: count.count * unit.minutes }
-    }
-    if (!amount && tokens[j] && !tokens[j].quoted) {
-      const m = matchDuration(tokens[j].text, { bareHourIsTime: false })
-      if (m !== null) amount = { n: 1, minutes: m }
-    }
+    const amount = amountAt(tokens, j, v)
     if (!amount || amount.minutes <= 0) continue
     const before = prefix ? preBefore : phraseAt(tokens, j + amount.n, v.beforeWords, `${v.code}:rbefore`)
     const after = prefix ? preAfter : before ? 0 : phraseAt(tokens, j + amount.n, v.afterWords, `${v.code}:rafter`)
@@ -83,8 +96,43 @@ export function matchReminderAt(tokens: readonly Token[], i: number, ctx: DateCo
   return r ? { reminder: r.reminder, from: i, to: r.to } : null
 }
 
+function literalNightReminderEndAt(tokens: readonly Token[], k: number, ctx: DateContext): number {
+  const date = matchDateAt(tokens, k, ctx)
+  const night = russianNightAt(tokens, k, ctx) ?? (date ? russianNightAt(tokens, date.to, ctx) : null)
+  if (!night || night.time) return 0
+  return matchDateAt(tokens, night.to, ctx)?.to ?? night.to
+}
+
+/** Skip an invalid Russian reminder as literal text, without reparsing its body as a due. */
+export function literalReminderEndAt(tokens: readonly Token[], i: number, ctx: DateContext): number {
+  for (const v of ctx.vocabs) {
+    if (v.code !== 'ru') continue
+    const word = Math.max(...ctx.vocabs.map((r) => phraseAt(tokens, i, r.remindWords, `${r.code}:remind`)))
+    if (!word) continue
+    const k = i + word
+    const nightEnd = literalNightReminderEndAt(tokens, k, ctx)
+    if (nightEnd) return nightEnd
+    const prefix = phraseAt(tokens, k, v.inWords, `${v.code}:in`)
+    if (!prefix || fromNowAt(tokens, k, prefix, v, ctx)) continue
+    const j = k + prefix
+    const count = countAt(tokens, j, v)
+    const numeric = tokens[j] && !tokens[j].quoted && /^[+-]?\d/.test(tokens[j].norm)
+    const unitAt = j + (count?.n ?? (numeric ? 1 : 0))
+    let unitN = 0
+    for (const [unit, words] of Object.entries(v.units)) {
+      unitN = Math.max(unitN, phraseAt(tokens, unitAt, words, `${v.code}:unit:${unit}`))
+    }
+    return unitAt + unitN
+  }
+  return 0
+}
+
 /** The reminder body (offset or moment) at token k, without the reminder word. */
 export function parseReminderAt(tokens: readonly Token[], k: number, ctx: DateContext): { reminder: ReminderPhrase; to: number } | null {
+  for (const v of ctx.vocabs) {
+    const prefix = v.code === 'ru' ? phraseAt(tokens, k, v.inWords, `${v.code}:in`) : 0
+    if (prefix) return fromNowAt(tokens, k, prefix, v, ctx)
+  }
   const off = offsetAt(tokens, k, ctx)
   const mom = momentAt(tokens, k, ctx)
   if (off && (!mom || off.n >= mom.n)) return { reminder: { kind: 'offset', minutes: off.minutes }, to: k + off.n }

@@ -1,0 +1,36 @@
+{
+  "baselineCommit": "4d9321707733d6826a6fd292a9ed78c3b0103856",
+  "branch": "feat/russian-language",
+  "version": "russian-review",
+  "go": "go1.27.3 linux/amd64",
+  "buildFlags": "CGO_ENABLED=0 -trimpath -ldflags=-s -w -X main.version=russian-review",
+  "gzipLevel": 9,
+  "serverBytes": 41799840,
+  "serverSHA256": "5ea7d9f5952ed41d1c5bb4b4777ce5afbeb403bee7eac37ee74bf5903fdb5b4e",
+  "firstLoad": {
+    "entry": "assets/main-CsovphRp.js",
+    "entryGzip": 139679,
+    "initialGzip": 698245,
+    "initialChunks": 142
+  },
+  "russianAssets": [
+    {
+      "path": "assets/ru-CbNR0ltP.js",
+      "lazy": true,
+      "bytes": 827441,
+      "gzipBytes": 216328
+    },
+    {
+      "path": "assets/ru-mq2rOACo.js",
+      "lazy": true,
+      "bytes": 6938,
+      "gzipBytes": 1859
+    }
+  ],
+  "baselineServerBytes": 40902816,
+  "serverDeltaBytes": 897024,
+  "serverDeltaPercent": 2.193,
+  "baselineInitialGzipKiBApprox": 679.4,
+  "measuredBeforeReviewCommit": true,
+  "russianCatalogSourceSha256": "d104be89a01c41241d48111a53122b1d1e31e1501d8c49c171fac51d3a99eee7"
+}

@@ -51,3 +51,9 @@ test('a path in an operating system’s settings keeps that system’s wording',
   const problems = checkCatalog('de', { ...de, [id]: 'Prüfe unter Android Einstellungen → Apps → dein Browser.' }, [...messages, id], fmt)
   assert.deepEqual(problems, [])
 })
+
+test('the external Claude Desktop path may keep its English menu names', () => {
+  const id = 'Settings → Developer → Edit Config, then add this entry to claude_desktop_config.json and restart Claude Desktop.'
+  const catalog = { Settings: 'Настройки', [id]: 'В Claude Desktop откройте Settings → Developer → Edit Config, добавьте эту запись в claude_desktop_config.json и перезапустите Claude Desktop.' }
+  assert.deepEqual(checkCatalog('ru', catalog, ['Settings', id], fmt), [])
+})

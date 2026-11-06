@@ -6,7 +6,7 @@ All notable changes to OpenTodo are documented here. The format follows [Keep a 
 
 ### Added
 
-- **Russian.** Русский is available for the interface, reminder notifications, browser extension, Android and iPhone shells, emails and delivery channels. Quick add and spoken attributes understand Russian dates, repeats and reminders, such as `на 5 декабря`, `каждый день` and `напомни за 30 минут`, with matching browser and CLI parsing.
+- **Russian.** Русский is available for the interface, reminder notifications, browser extension, Android and iPhone shells, emails and delivery channels. Quick add and spoken attributes understand Russian dates, repeats and reminders, such as `5 декабря`, `каждый день` and `напомни за 30 минут`, with matching browser and CLI parsing. Reusable grocery lists recognize 250 Russian product names and forms across the existing nine aisles.
 
 ## [0.23.0] - 2026-11-06
 

@@ -29,11 +29,16 @@ Open an issue or a discussion naming the language and who will review it. Until 
 | The Android app | `mobile/android/app/src/main/res/values-<code>/strings.xml` |
 | Emails | `internal/mail/templates/*.<code>.txt`, and `<code>` in `mail.Languages` |
 | Delivery channel messages | the rows in `internal/channels/messages.go` |
+| Product names for grocery aisles | `web/src/lib/aisles/<code>.json`, when adding product-name recognition for the language; see below |
 | The docs | the glossary column in [Translating OpenTodo](../translating.md#glossary), and the list in [Language](../language.md) |
 
 Quick add understands dates and priorities in a language only with a vocabulary in `web/src/lib/nlp/vocab/`. That is a separate contribution; without it, quick add keeps English.
 
 Russian also has quick-add and spoken-token vocabularies. Keep its explicit case forms and Cyrillic normalization identical in the browser and Go parser; cover dates, repeats and reminders with shared vectors.
+
+Grocery-aisle dictionaries are separate from both interface catalogs and quick-add date grammars. They currently cover English, German, French, Spanish, Italian, Portuguese and Russian; other interface languages use English product names only. A dictionary maps normalized whole words or phrases of up to four words to the existing nine aisle keys. Keep explicit useful forms and synonyms, compare category choices with the existing dictionaries, and have a speaker review every entry. The Russian dictionary has 250 normalized entries, including explicit case forms; title normalization folds `ё` to `е` and `й` to `и`, while stored item titles stay unchanged.
+
+Each aisle dictionary loads lazily through the existing matcher. The Russian JSON is 8,292 bytes raw and 1,794 bytes gzip at level 9; these are source-file measurements, not the production chunk or binary delta. Measure the built asset and embedded binary as part of the change's footprint checks. No Go vocabulary or new classifier is needed: automatic aisle placement runs on the device. Cover all nine categories, phrase precedence, English fallback, negative whole-word matches and actual placement into a renamed keyed section. Run `cd web && npm test -- src/lib/aisles/aisles.test.ts src/app/quickAdd.reusable.test.tsx --no-fsModuleCache` after adding a new dictionary; disabling the transformed-module cache ensures its new lazy import is discovered.
 
 ## Check it
 

@@ -1,0 +1,783 @@
+{
+  "baselineCommit": "5c09b5f19c233627ceff042fcf5ef893f94b4d1d",
+  "web": {
+    "count": 7167,
+    "comparisonLanguages": [
+      "en",
+      "de",
+      "fr",
+      "es",
+      "it",
+      "pt",
+      "zh"
+    ],
+    "ranges": [
+      [
+        0,
+        1791
+      ],
+      [
+        1792,
+        3583
+      ],
+      [
+        3584,
+        5375
+      ],
+      [
+        5376,
+        7166
+      ]
+    ]
+  },
+  "inputs": [
+    {
+      "path": "extension/_locales/de/messages.json",
+      "sha256": "4fa7fd96842d31355c4ce516e981fdda2e7d998395c41afbc80dc43f7d868019"
+    },
+    {
+      "path": "extension/_locales/en/messages.json",
+      "sha256": "8f1008ff73c602d9592967a0181f3b6d4074489fa4975725c1dfe2c06344f521"
+    },
+    {
+      "path": "extension/_locales/es/messages.json",
+      "sha256": "84fa0461db12cbe7eb45db473670c97f83438ab488ba0a5273dc6e1ad5c60bdb"
+    },
+    {
+      "path": "extension/_locales/fr/messages.json",
+      "sha256": "6c943d6a2209a526c24c830d0d37a8732f2583eda4a9aefdb7f3af823fcab00e"
+    },
+    {
+      "path": "extension/_locales/it/messages.json",
+      "sha256": "ef2b96af16bb3fd5cbbed1efba24ec3a7ad9d9ca0a0f3f6942f7cc70bf5d3a51"
+    },
+    {
+      "path": "extension/_locales/pt/messages.json",
+      "sha256": "bc1a89af55a6fad4d2e7693fad2c837a36e8f08c2164e2470595d26b623b150b"
+    },
+    {
+      "path": "extension/_locales/ru/messages.json",
+      "sha256": "aadda23091056ae2d916bed47340f0b586d71a1584e281613cc8307a04cf2799"
+    },
+    {
+      "path": "extension/_locales/zh/messages.json",
+      "sha256": "87c1bb163aea5c0be593dea531b0da80cc40bed1c27a4175cf450ffbae3f365c"
+    },
+    {
+      "path": "internal/channels/channels.go",
+      "sha256": "444d08ee4ba4090ad5e250acf17774d74ec628d17e75ac3ccd5374a74c1b86f9"
+    },
+    {
+      "path": "internal/channels/messages.go",
+      "sha256": "cdc68642cda8c2acbda60423825bfee3de594e56f350ef0ff3ecbade28b70f0b"
+    },
+    {
+      "path": "internal/mail/digest.go",
+      "sha256": "11c9c50fa878e8c7fc767f823743a601659ee0df5df14bcddca0d63492732b48"
+    },
+    {
+      "path": "internal/mail/message.go",
+      "sha256": "eaa195bf6f86f953ad9a68c286632727eca927acf1a18afde793d31c2201c217"
+    },
+    {
+      "path": "internal/mail/templates/digest.de.txt",
+      "sha256": "286675f423ad418104916e47a58d62640d0c7f612345aea278fba0d9899a73d4"
+    },
+    {
+      "path": "internal/mail/templates/digest.en.txt",
+      "sha256": "9cdef8347359f2e805dd360afa8f43fad86f32a7c4bb691b9fd645e080aee61f"
+    },
+    {
+      "path": "internal/mail/templates/digest.es.txt",
+      "sha256": "9533081deed3735819813a747c43616fb60a155b43d82f81c3af948ff52d47d6"
+    },
+    {
+      "path": "internal/mail/templates/digest.fr.txt",
+      "sha256": "ec28514f22157162f18bfb6f3d58ab411a653abc21edc4bb8000939c68ef7d29"
+    },
+    {
+      "path": "internal/mail/templates/digest.it.txt",
+      "sha256": "21c97c842056f872fe76d65af509bd199b3077c9dbf6adb322590cc58bbe1bd3"
+    },
+    {
+      "path": "internal/mail/templates/digest.pt.txt",
+      "sha256": "6d3d086749cacae0423df88cc28ef9d8cfdaca6930eb3276783e52bdaa7bb597"
+    },
+    {
+      "path": "internal/mail/templates/digest.ru.txt",
+      "sha256": "946f67b2b1590128dc3ffc4a5b073f4bc8f5dd9be4b1dfffba67277c95bf23eb"
+    },
+    {
+      "path": "internal/mail/templates/digest.zh.txt",
+      "sha256": "52b666ea8d3f379e94d46c0ac8c15d0d80573600ffe9e6a9da49634da8f7073c"
+    },
+    {
+      "path": "internal/mail/templates/email_change.de.txt",
+      "sha256": "e646a9efc1836810e0ad3e93030f72ba2b52edd80b1c2d888c3201c3648eabbd"
+    },
+    {
+      "path": "internal/mail/templates/email_change.en.txt",
+      "sha256": "e499f1e41d50ff12f9f9a74e2073f774f9326e5514e665ec3c9aba5552a28a67"
+    },
+    {
+      "path": "internal/mail/templates/email_change.es.txt",
+      "sha256": "17cbd10eb93b7d220482110f8f67e8d76bb855a225545bc7858a70f580058c96"
+    },
+    {
+      "path": "internal/mail/templates/email_change.fr.txt",
+      "sha256": "ce9f08ef2cca5e46d3f75a5803d48c78b2784bd9f4394cd7fba5a970165f4774"
+    },
+    {
+      "path": "internal/mail/templates/email_change.it.txt",
+      "sha256": "e189ae578201342592a4ee6c882014c168a7c65b41ddadccbe7eae93b24c062e"
+    },
+    {
+      "path": "internal/mail/templates/email_change.pt.txt",
+      "sha256": "5293c34d89b1619ffa1b31a780a91ef781e165e3697c9e4a909eaf308ba49285"
+    },
+    {
+      "path": "internal/mail/templates/email_change.ru.txt",
+      "sha256": "1d2571db687fcc6797d7a4e510d00cb8e20719c8f6d9500587c5f1895719b50a"
+    },
+    {
+      "path": "internal/mail/templates/email_change.zh.txt",
+      "sha256": "35cfb116751658feb68ca62d4f3f21099b239d5ac9d6118170c2c9fa15aaf645"
+    },
+    {
+      "path": "internal/mail/templates/email_change_notice.de.txt",
+      "sha256": "2afd8ad81e988b2100a7de2ddb2b726f8894cf76114fa0593908e7aaf2fc5aa1"
+    },
+    {
+      "path": "internal/mail/templates/email_change_notice.en.txt",
+      "sha256": "9ba4d2d5d07b711e4350aaff446f17f7cff05a9708032e99983deee8239e44f9"
+    },
+    {
+      "path": "internal/mail/templates/email_change_notice.es.txt",
+      "sha256": "84d3299a484d1230c09001290680f1442b3a9fb6ea1f7f6bd8e7348660c167e3"
+    },
+    {
+      "path": "internal/mail/templates/email_change_notice.fr.txt",
+      "sha256": "9c1c68e9622a4e0eeb1f17887cfe495aea3438f946dd2c0b708fc435d54fc8e0"
+    },
+    {
+      "path": "internal/mail/templates/email_change_notice.it.txt",
+      "sha256": "f22ed61888052045777afce6e62fb6042b27d4807692e424532ce36f359f76c8"
+    },
+    {
+      "path": "internal/mail/templates/email_change_notice.pt.txt",
+      "sha256": "c7c2a4812c6df60b5b5700d1019e3d6a6400a89ef0ff596716225cdc3e088709"
+    },
+    {
+      "path": "internal/mail/templates/email_change_notice.ru.txt",
+      "sha256": "5acb0857c4358b73ba940e8bae851c8cfa63681b1321e8cb49c3f85e3dc91071"
+    },
+    {
+      "path": "internal/mail/templates/email_change_notice.zh.txt",
+      "sha256": "d8c58d8503bde171d14332b10fe62acba0778e83415b04738cc01f203a786b34"
+    },
+    {
+      "path": "internal/mail/templates/invitation.de.txt",
+      "sha256": "9164cd13a3b14274c3112096de477c67a298b514de0ccce03ca829ae693cf979"
+    },
+    {
+      "path": "internal/mail/templates/invitation.en.txt",
+      "sha256": "a8b2ffe9e07aae704cd2215b0373681d74ecedd9213f0c62acf31b9ae3af4b6a"
+    },
+    {
+      "path": "internal/mail/templates/invitation.es.txt",
+      "sha256": "97d40eb0cca374e31fad6deb4514cc20029b5899340b2c141a6e5a6ab651d1bd"
+    },
+    {
+      "path": "internal/mail/templates/invitation.fr.txt",
+      "sha256": "70bbf8c486f390a8bccc8212a30507e1e554d89a49c360a3c34100b6c83a7ad2"
+    },
+    {
+      "path": "internal/mail/templates/invitation.it.txt",
+      "sha256": "cc1b2735985f1be66dc2f2fe694b33793a9c4ada719350fd6ea5e2c42f3dfbe0"
+    },
+    {
+      "path": "internal/mail/templates/invitation.pt.txt",
+      "sha256": "80eff80a178d634b1bb355ce21c2d4ddc1779816932e98417bcbd7bbf22cdb80"
+    },
+    {
+      "path": "internal/mail/templates/invitation.ru.txt",
+      "sha256": "3fae738a3371e2fcaeacb3deff07c95c0fde57bf28dfc08771df803541bcaf0e"
+    },
+    {
+      "path": "internal/mail/templates/invitation.zh.txt",
+      "sha256": "e1f8a8d423dfb9e070af9837adb16c3ce11470797c75b36acd9ee46660b8e196"
+    },
+    {
+      "path": "internal/mail/templates/member_invitation.de.txt",
+      "sha256": "cadc393c7e3c2c5b9613c7962d37b31f645fd24eff66d5281e031d002be297db"
+    },
+    {
+      "path": "internal/mail/templates/member_invitation.en.txt",
+      "sha256": "46bfd6d1b8b43fba48c60eeedc6014d0a9f4afceda74650c3d99581252661782"
+    },
+    {
+      "path": "internal/mail/templates/member_invitation.es.txt",
+      "sha256": "7366b158867f42a6ae42725667b5807a7237b4a3330570923176aa787b64b204"
+    },
+    {
+      "path": "internal/mail/templates/member_invitation.fr.txt",
+      "sha256": "20e3314314c76c1f65881b4b65fa4ea0c7f8c4d8cd607c25d52af5e45a1c2637"
+    },
+    {
+      "path": "internal/mail/templates/member_invitation.it.txt",
+      "sha256": "42b8cee0668e83762baf00888beb5f02fd1aa584046e3966416bb9a7ef5c0359"
+    },
+    {
+      "path": "internal/mail/templates/member_invitation.pt.txt",
+      "sha256": "a72c6fca0b6799c7e8f503131e93b9578e2e77a95e5b9560929e64aa0a125cae"
+    },
+    {
+      "path": "internal/mail/templates/member_invitation.ru.txt",
+      "sha256": "7f7b66e1ee76b0871b2b8317c3e901cc72208eb6b1a48d5097135f037b573a2f"
+    },
+    {
+      "path": "internal/mail/templates/member_invitation.zh.txt",
+      "sha256": "0131113505dd6c2a7d240693fa31a00d0e5902c2b8165408ffeb9c8551d92bab"
+    },
+    {
+      "path": "internal/mail/templates/password_reset.de.txt",
+      "sha256": "4393e8417fad4f677504c9ddbc7ad6c80064d7e30c88f48aec2c9b49536269bf"
+    },
+    {
+      "path": "internal/mail/templates/password_reset.en.txt",
+      "sha256": "4b02ef83a3a7e336f67751cdfb6fe8c0ea99dd9ed8930313493ac1099e17356d"
+    },
+    {
+      "path": "internal/mail/templates/password_reset.es.txt",
+      "sha256": "88fe3404b751414b64382e212345b31608abe3efa8b76614e43cbe86fb3d4b10"
+    },
+    {
+      "path": "internal/mail/templates/password_reset.fr.txt",
+      "sha256": "bbe28ac9ea6be8623ed83fef37ce099b78451626c1ccbc40cdceb93bab35887a"
+    },
+    {
+      "path": "internal/mail/templates/password_reset.it.txt",
+      "sha256": "4492e4fe580974c47da7570de1b86f15bb26c400bbfa47911c72810266356215"
+    },
+    {
+      "path": "internal/mail/templates/password_reset.pt.txt",
+      "sha256": "99144cb07e070fe82a1b778660e593c88cf65a831b5a938190f625364c4b7093"
+    },
+    {
+      "path": "internal/mail/templates/password_reset.ru.txt",
+      "sha256": "61b1f29812bf38d483b90784dec63b6f62475dd38c001a028cc1defc4209cc03"
+    },
+    {
+      "path": "internal/mail/templates/password_reset.zh.txt",
+      "sha256": "038698e1eb978ab4d481122ac7624f49d0d76b56e1fda6493b8d962eff3bcea0"
+    },
+    {
+      "path": "internal/mail/templates/project_invite.de.txt",
+      "sha256": "77d9f36bb02cf471d29b9fd28dda2be11f9037e50b1c12437cc871a92e177513"
+    },
+    {
+      "path": "internal/mail/templates/project_invite.en.txt",
+      "sha256": "d7e39c1af9b4b35b7957134c28d9140f4d756518a7e9cb4c2bc5719c3c804be9"
+    },
+    {
+      "path": "internal/mail/templates/project_invite.es.txt",
+      "sha256": "0db414d5f6f8c2f6c781118c7ad22754e168b3dbb6ba8623c3be97c3b6b68bcd"
+    },
+    {
+      "path": "internal/mail/templates/project_invite.fr.txt",
+      "sha256": "ecfff87666b9c214c9b74b0dfb0402d8bac004650d64deb95d9f29547d51e7b9"
+    },
+    {
+      "path": "internal/mail/templates/project_invite.it.txt",
+      "sha256": "948ee45dd680e8ea7c21b7b031b8654e584172e76e294922f92cc4988ed4325e"
+    },
+    {
+      "path": "internal/mail/templates/project_invite.pt.txt",
+      "sha256": "3bca73543825a0aa637bf381862e02f6cde34844e3934b980155e920292ccad6"
+    },
+    {
+      "path": "internal/mail/templates/project_invite.ru.txt",
+      "sha256": "c783b413b30ee014a1469b0812bec2dedb902048741c10fc789c5d0258a748be"
+    },
+    {
+      "path": "internal/mail/templates/project_invite.zh.txt",
+      "sha256": "70cfbe799c0fe6c7ce24bd5453e10822f1ee94e3ca6dbafe00021278a01290a1"
+    },
+    {
+      "path": "internal/mail/templates/routine.de.txt",
+      "sha256": "f432ed185514c25da2674ed52ec636dc6a441af88fa064a32e0cd941d1cedc38"
+    },
+    {
+      "path": "internal/mail/templates/routine.en.txt",
+      "sha256": "fd5f2eef530f2724b84e2a8a22197d55c5cd8d783a043a70dd9c10e003a7a397"
+    },
+    {
+      "path": "internal/mail/templates/routine.es.txt",
+      "sha256": "8911ff992a153c379106b1b4f2f21499dccfd56c001fce62d6b90fcd904dbe55"
+    },
+    {
+      "path": "internal/mail/templates/routine.fr.txt",
+      "sha256": "874c566c4dd23ca895da230add17b292cf8a8f0033a7cdb9e0896bf6a2ce67b9"
+    },
+    {
+      "path": "internal/mail/templates/routine.it.txt",
+      "sha256": "66dcaf4c0fc0327d3b0a197a1e199482ae1583f951a22cd45b7fa21fb192a3d1"
+    },
+    {
+      "path": "internal/mail/templates/routine.pt.txt",
+      "sha256": "e2eb10061352ba036fee546116ed4230451630ec46659739d9b5eaff1bb6aa8c"
+    },
+    {
+      "path": "internal/mail/templates/routine.ru.txt",
+      "sha256": "82c468557360ae19dfd2267207de10801e3a6f1ceb8f2e4d692706765671edff"
+    },
+    {
+      "path": "internal/mail/templates/routine.zh.txt",
+      "sha256": "1af7412a95706bd479677ad4384c6b6dcbd4feeb2fcca273724abf94b8b49730"
+    },
+    {
+      "path": "internal/mail/templates/test.de.txt",
+      "sha256": "2b19f060b5a256c697732db9cedb25c07bcbffec4f11ebe52bbb41cdf0a2b017"
+    },
+    {
+      "path": "internal/mail/templates/test.en.txt",
+      "sha256": "cd71206d02f97997cd4e250414313b20eb47b1ad6a48c3f93036ffd74fde99d1"
+    },
+    {
+      "path": "internal/mail/templates/test.es.txt",
+      "sha256": "2e004607f8b6741ee28019476c8be75f44ae7ed70dd2e336532e2f3bb6fcefe3"
+    },
+    {
+      "path": "internal/mail/templates/test.fr.txt",
+      "sha256": "89b5ceb84a452a2630271adc4bebdda557ef6fc7da782475716914c87c2ecf00"
+    },
+    {
+      "path": "internal/mail/templates/test.it.txt",
+      "sha256": "c48afd819f3126452569d0c7bdf4a8e4002a629a3f46be8859574837065414ef"
+    },
+    {
+      "path": "internal/mail/templates/test.pt.txt",
+      "sha256": "4905f956c011fcd9c6f22adff46866e3fa8fc1cbf40aa9f834d4216581dfb613"
+    },
+    {
+      "path": "internal/mail/templates/test.ru.txt",
+      "sha256": "a5ddf9aa50563ab32143c36b2b237e9ba1f7566c1212c0570311814467312cce"
+    },
+    {
+      "path": "internal/mail/templates/test.zh.txt",
+      "sha256": "1a1252b73996c12b3d884d12dba2403358ef9285e3ae2f1d26fc47eef911d640"
+    },
+    {
+      "path": "internal/mail/templates/verify_signup.de.txt",
+      "sha256": "da2bceb0c00a0410dc64336cd84ef4c8dc5de59ab41c17d232bd74cbf951b47c"
+    },
+    {
+      "path": "internal/mail/templates/verify_signup.en.txt",
+      "sha256": "28416679ba82211aaf07e7649d09ecb5b1c5654e5d2fcd80a784103b96cf17c1"
+    },
+    {
+      "path": "internal/mail/templates/verify_signup.es.txt",
+      "sha256": "192508becbc23dcaa5a13e31c90e1cda2080745f655e5a4d60a2efe8b7fd48e2"
+    },
+    {
+      "path": "internal/mail/templates/verify_signup.fr.txt",
+      "sha256": "d63c275b7d68ef1894746d9e19d073d118ced9f78721d3f2e8646b2d4dd1bdf3"
+    },
+    {
+      "path": "internal/mail/templates/verify_signup.it.txt",
+      "sha256": "0e893dac6809c21c4bedc1360d398e99169babacb889eb752ed6fb4c162fd460"
+    },
+    {
+      "path": "internal/mail/templates/verify_signup.pt.txt",
+      "sha256": "bfbc1bdf03f62edb1974dbe81e5846fb63b36cae06f5f011b1aee06598d52cef"
+    },
+    {
+      "path": "internal/mail/templates/verify_signup.ru.txt",
+      "sha256": "6d340a095da14081e7f4cbb0cc4a0b39d1bd5485ed40baf76e0048745a186d63"
+    },
+    {
+      "path": "internal/mail/templates/verify_signup.zh.txt",
+      "sha256": "f73c6dc0ce3d4d96152d6ed41f860479b84c2b70153c29238f2d92f3f0a7eca7"
+    },
+    {
+      "path": "internal/mail/templates/verify_signup_existing.de.txt",
+      "sha256": "1b3d914eab86a1818140be1480821183a13687cdce22963ce838715c7695e84e"
+    },
+    {
+      "path": "internal/mail/templates/verify_signup_existing.en.txt",
+      "sha256": "c51ed7f5276ef25e113c8f9bb224fd353ff035c1212e3aaaabf0137bac7b398c"
+    },
+    {
+      "path": "internal/mail/templates/verify_signup_existing.es.txt",
+      "sha256": "98faf628ed99044ae5badf3d61f7a26a80f74aec54a125d6d9758c89f5c6417a"
+    },
+    {
+      "path": "internal/mail/templates/verify_signup_existing.fr.txt",
+      "sha256": "fa5a05771490484e68573d48402610c0e583b296db5902a756806a8a675c6336"
+    },
+    {
+      "path": "internal/mail/templates/verify_signup_existing.it.txt",
+      "sha256": "563573c45ba70fdf7bda002f77b7649d6a67648335043e713ea21cb8b9604d70"
+    },
+    {
+      "path": "internal/mail/templates/verify_signup_existing.pt.txt",
+      "sha256": "cca85fac889db0ecf9c598d86f0f7beb1fa0da0a0559f1beb8cf8ab7c61052cd"
+    },
+    {
+      "path": "internal/mail/templates/verify_signup_existing.ru.txt",
+      "sha256": "11924856ad92303ce3a91bc84dda63e08a90ca26b2832501463148e1f21722e7"
+    },
+    {
+      "path": "internal/mail/templates/verify_signup_existing.zh.txt",
+      "sha256": "8160f745037119e4f61ceebd84903af722b0cf153ac2bb3c7af8615e5d0f9b1a"
+    },
+    {
+      "path": "internal/mail/templates/workspace_invite.de.txt",
+      "sha256": "c09e246568e6435b029e94203b2602b922bad8394ca7cb50a156230d8021af7e"
+    },
+    {
+      "path": "internal/mail/templates/workspace_invite.en.txt",
+      "sha256": "ed859c1cbf8a0d3b093a34059b35558fa080497888f08929a417f32a8be7adad"
+    },
+    {
+      "path": "internal/mail/templates/workspace_invite.es.txt",
+      "sha256": "e42779743bb79d08b93fd271f5945a1bd90ea27cf64a46374c62477b657d319a"
+    },
+    {
+      "path": "internal/mail/templates/workspace_invite.fr.txt",
+      "sha256": "88dd1cfbd6d7de9131703fce8ea1e0b586dc0ad9f0f7b2636809564c0aaba408"
+    },
+    {
+      "path": "internal/mail/templates/workspace_invite.it.txt",
+      "sha256": "45bd2832f9de936f842d69b43d9cc0ddffdfcfd07f4c612b2ae6d15411578f4b"
+    },
+    {
+      "path": "internal/mail/templates/workspace_invite.pt.txt",
+      "sha256": "17a02f51023a610980a8dbd5bb412d2423b36c71b25aa746a4b848f445ecc464"
+    },
+    {
+      "path": "internal/mail/templates/workspace_invite.ru.txt",
+      "sha256": "b5d5f074021ad529bd648ece2a726192425840ad6e51c8384a1169eb158199a4"
+    },
+    {
+      "path": "internal/mail/templates/workspace_invite.zh.txt",
+      "sha256": "a903858386a55e681ddebca389d702c14a0826721fa6b401218322f4089bd0cc"
+    },
+    {
+      "path": "mobile/android/app/src/main/res/values/strings.xml",
+      "sha256": "6aadd92a7925bfe718c23df1b194d4f466eb72ad3db79990a5d9b61d44a275ce"
+    },
+    {
+      "path": "mobile/android/app/src/main/res/values-de/strings.xml",
+      "sha256": "b03501349a596aad2e3c124cb1078224b83f4ae4aa447a550363e23164df3c85"
+    },
+    {
+      "path": "mobile/android/app/src/main/res/values-es/strings.xml",
+      "sha256": "097e85fc778f32d020f788a8bbc135577883668159a2bfb90f9d2c6f2497e41e"
+    },
+    {
+      "path": "mobile/android/app/src/main/res/values-fr/strings.xml",
+      "sha256": "88425df40bedf9e8791bd420719705d5045dd43efd5fc07b4a82e6073d55621a"
+    },
+    {
+      "path": "mobile/android/app/src/main/res/values-it/strings.xml",
+      "sha256": "45711df156dd87685ef92f46694041212ffd92951488bf1d1309ed44f567ef55"
+    },
+    {
+      "path": "mobile/android/app/src/main/res/values-pt/strings.xml",
+      "sha256": "b2c6f2b290815371f8065b15e06d4f29660371c8ddbbcff0fcf5bd1274a86b2f"
+    },
+    {
+      "path": "mobile/android/app/src/main/res/values-ru/strings.xml",
+      "sha256": "8ab48df2be13b27bd5255b25273c2406d21417cb2eaa514436d4a9e608ac316c"
+    },
+    {
+      "path": "mobile/android/app/src/main/res/values-zh/strings.xml",
+      "sha256": "c51db56c85e4ba7a0d6e36b5880a58d3f690cb008e29df05896e581e1cb18846"
+    },
+    {
+      "path": "mobile/ios/Shared/Localizable.xcstrings",
+      "sha256": "9ffa4beab947e0bbbd1026fd0a829e370c3b06aa9af0afe1072b5f321fd61ac3"
+    },
+    {
+      "path": "web/public/push-sw.js",
+      "sha256": "da6ebcd8e95c2d91cfc12af4c957d62f1779cd4cbc9a3d0ed4fbc2330562ea0e"
+    },
+    {
+      "path": "web/src/lib/nlp/vocab/de.ts",
+      "sha256": "d9647971d1e026834b9427bb3927eb8974554c9f98e2cba60cd067d530c9aaad"
+    },
+    {
+      "path": "web/src/lib/nlp/vocab/en.ts",
+      "sha256": "e504063e6b6f0aaea9b08f8498ad80f3a7ed1855bd8b6efb084f37e662e26c2c"
+    },
+    {
+      "path": "web/src/lib/nlp/vocab/es.ts",
+      "sha256": "007c446ba17cdb648abe28b015ebf42185514382a2bb46e36246bacb68b4d565"
+    },
+    {
+      "path": "web/src/lib/nlp/vocab/fr.ts",
+      "sha256": "cc8196293b6ecf1d4fd18126c3794a5dc8d63586062d6ae4e15b2b594bd50cb3"
+    },
+    {
+      "path": "web/src/lib/nlp/vocab/index.ts",
+      "sha256": "1820f612de4de42e9b31b9552426c0e051410e07e01a2cc903f08788d30a933f"
+    },
+    {
+      "path": "web/src/lib/nlp/vocab/it.ts",
+      "sha256": "baeaf17c3be7f6c40deed97baa1c9105904c8e78dedc003cc7e548028ecb8741"
+    },
+    {
+      "path": "web/src/lib/nlp/vocab/pt.ts",
+      "sha256": "425c01d2afd111c792f7c74db501993d11f2e2656010391316f88cf40b004295"
+    },
+    {
+      "path": "web/src/lib/nlp/vocab/ru.ts",
+      "sha256": "24a193097a9b8917fc6aeb5e7bd73bd9ab16bce842de0488627e9227a7660ffc"
+    },
+    {
+      "path": "web/src/lib/nlp/vocab/types.ts",
+      "sha256": "973960745e885ffc8466b5477da327a751228539e2afc25b3e5b81bb9f839fea"
+    },
+    {
+      "path": "web/src/lib/voice/spoken/de.ts",
+      "sha256": "e7f4d1fcb6fe256bb5ddbd3dd6f27c9d354d6ddb95d1b00fe30421965d9c1e6f"
+    },
+    {
+      "path": "web/src/lib/voice/spoken/en.ts",
+      "sha256": "63eeb0bcfee5c5f6413edeab631d1e8f6c482d1180f74a715d41b778b4af8aa6"
+    },
+    {
+      "path": "web/src/lib/voice/spoken/es.ts",
+      "sha256": "b2bad90a4ac375646314fcfc1fd2f31c3a33d7e01d6163d52aeaa559a6b1c0bc"
+    },
+    {
+      "path": "web/src/lib/voice/spoken/fr.ts",
+      "sha256": "1a9e1405c16f0ad606edf30289627c7ef0e4ed704fe1e04e5b8b367c6e701d2b"
+    },
+    {
+      "path": "web/src/lib/voice/spoken/index.ts",
+      "sha256": "f801ff803a698ead23aca88f044df942e53e1672c028d5420bd981cb1791c677"
+    },
+    {
+      "path": "web/src/lib/voice/spoken/it.ts",
+      "sha256": "6cc16ee36f077b0b1512fb941ee62942f0183c048ff29166aaf5983a80dab6dc"
+    },
+    {
+      "path": "web/src/lib/voice/spoken/pt.ts",
+      "sha256": "61bfe24ad5d0f73dc61f6692825d18b001c053501a19745120084e7672784b1b"
+    },
+    {
+      "path": "web/src/lib/voice/spoken/ru.ts",
+      "sha256": "7e6f2aadc429eb962ff8a67b64597ced47063e342244a932b24d62a4eee0ef1b"
+    },
+    {
+      "path": "web/src/lib/voice/spoken/types.ts",
+      "sha256": "a7a60e7585118487901e82e9c89655f334b150296225dab1f500ee47349ba99c"
+    },
+    {
+      "path": "web/src/locales/de.json",
+      "sha256": "4b2573d4040f9f78d68ffa3cc90dc0af048a455824b222260c9cf27cdc3e0f7a"
+    },
+    {
+      "path": "web/src/locales/es.json",
+      "sha256": "fc210a6229dd94b071ab73feaa8ecfb2a7c944f60653e1d0d240610cb198e5bc"
+    },
+    {
+      "path": "web/src/locales/fr.json",
+      "sha256": "6a66f67f77ae6e10feda2b59ccd1a3b126a2666f2eaea73bda55efd246baa04b"
+    },
+    {
+      "path": "web/src/locales/it.json",
+      "sha256": "b62a8383c62b50a9893ac9875f158591c22d7f727549c9bb7da15178cac7fadb"
+    },
+    {
+      "path": "web/src/locales/messages.json",
+      "sha256": "b349cbddce19f68497a2ad5a79e2870327119937adf83e1164e978db558b4903"
+    },
+    {
+      "path": "web/src/locales/pt.json",
+      "sha256": "2bc763b6fd837322bfa8eb8804518afaee368458d6dcfff3c4ea58738875ac89"
+    },
+    {
+      "path": "web/src/locales/ru.json",
+      "sha256": "a47b1e5e318865da5a0075b4213a0eb29459f233a80d88480f7012a326bca5f6"
+    },
+    {
+      "path": "web/src/locales/zh.json",
+      "sha256": "5351faa99c58af66fe48cac02d98f66998852a8bd43c4e90f5602af100e23892"
+    }
+  ],
+  "nonWebSurfaces": [
+    {
+      "surface": "extension",
+      "conceptualEntries": 57,
+      "availableComparisonLanguages": [
+        "en",
+        "de",
+        "fr",
+        "es",
+        "it",
+        "pt",
+        "zh"
+      ]
+    },
+    {
+      "surface": "android",
+      "conceptualEntries": 49,
+      "availableComparisonLanguages": [
+        "en",
+        "de",
+        "fr",
+        "es",
+        "it",
+        "pt",
+        "zh"
+      ]
+    },
+    {
+      "surface": "ios",
+      "conceptualEntries": 30,
+      "availableComparisonLanguages": [
+        "en",
+        "de",
+        "fr",
+        "es",
+        "it",
+        "pt",
+        "zh"
+      ]
+    },
+    {
+      "surface": "email",
+      "conceptualEntries": 12,
+      "availableComparisonLanguages": [
+        "en",
+        "de",
+        "fr",
+        "es",
+        "it",
+        "pt",
+        "zh"
+      ]
+    },
+    {
+      "surface": "nlp",
+      "conceptualEntries": 96,
+      "availableComparisonLanguages": [
+        "en",
+        "de",
+        "fr",
+        "es",
+        "it",
+        "pt"
+      ]
+    },
+    {
+      "surface": "spoken",
+      "conceptualEntries": 69,
+      "availableComparisonLanguages": [
+        "en",
+        "de",
+        "fr",
+        "es",
+        "it",
+        "pt"
+      ]
+    },
+    {
+      "surface": "push",
+      "conceptualEntries": 6,
+      "availableComparisonLanguages": [
+        "en",
+        "de",
+        "fr",
+        "es",
+        "it",
+        "pt",
+        "zh"
+      ]
+    },
+    {
+      "surface": "channels",
+      "conceptualEntries": 22,
+      "availableComparisonLanguages": [
+        "en",
+        "de",
+        "fr",
+        "es",
+        "it",
+        "pt",
+        "zh"
+      ]
+    },
+    {
+      "surface": "email-helper-tables",
+      "conceptualEntries": 26,
+      "availableComparisonLanguages": [
+        "en",
+        "de",
+        "fr",
+        "es",
+        "it",
+        "pt",
+        "zh"
+      ]
+    }
+  ],
+  "knownUnavailableCounterparts": [
+    {
+      "surface": "android",
+      "language": "zh",
+      "keys": [
+        "action_done",
+        "location_arrived",
+        "location_left"
+      ]
+    },
+    {
+      "surface": "nlp-and-spoken",
+      "language": "zh",
+      "reason": "Chinese has no bundled typed/spoken grammar in the baseline; every other existing grammar was compared."
+    }
+  ],
+  "addedContextKeysReviewedSeparately": [
+    "Pick {from} of {list} where {where}|pick-sentence",
+    "Pick {from} {n} of {list}|pick-counted-sentence",
+    "Pick {from} {n} of {list}|pick-sentence",
+    "Schedule|task-action",
+    "Start|action",
+    "all|pick-items",
+    "the first|pick-one",
+    "the first|pick-several",
+    "the last|pick-one",
+    "the last|pick-several",
+    "the ones|pick-items"
+  ],
+  "groceryReferenceInputs": [
+    {
+      "path": "web/src/lib/aisles/de.json",
+      "sha256": "69dd8475d2321a3d4953c1454760b9f6bdac607dd309f3444b1a343134609ed3"
+    },
+    {
+      "path": "web/src/lib/aisles/en.json",
+      "sha256": "8189c772f5c79837db009fcd08711f7e405c02d0c07e519de585e89ba9594d7a"
+    },
+    {
+      "path": "web/src/lib/aisles/es.json",
+      "sha256": "3f61c4d03966c83a86d903f663807eec519e0421c3557bbec1dc0c678fed7ff9"
+    },
+    {
+      "path": "web/src/lib/aisles/fr.json",
+      "sha256": "eb1c3b3a8ee91150e2ef355d511735e8bf30b16e7bd99793fcdea31ac79e1026"
+    },
+    {
+      "path": "web/src/lib/aisles/it.json",
+      "sha256": "d8202593663c8befd7596506aabdaa6a14b03fb901bc7658c2086edc8d72a9c2"
+    },
+    {
+      "path": "web/src/lib/aisles/pt.json",
+      "sha256": "e687265bd71be33341b4358b48456414def7b87cae94b7f57b55fca1050ad3c7"
+    }
+  ]
+}

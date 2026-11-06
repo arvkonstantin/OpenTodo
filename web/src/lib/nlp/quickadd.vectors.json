@@ -7355,8 +7355,9 @@
     "recurrence": null,
     "reminders": [
      {
-      "kind": "offset",
-      "minutes": 10
+      "kind": "moment",
+      "date": "2026-11-06",
+      "time": "10:10"
      }
     ]
    }
@@ -8396,6 +8397,2652 @@
     "estimateMinutes": null,
     "spentMinutes": null,
     "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian current-time reminder: midnight",
+   "line": "Позвонить напомни через 10 минут",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "23:55",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "moment",
+      "date": "2026-11-07",
+      "time": "00:05"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian current-time reminder: minute singular",
+   "line": "Позвонить напомни через 1 минуту",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "moment",
+      "date": "2026-11-06",
+      "time": "10:01"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian current-time reminder: minute few",
+   "line": "Позвонить напомни через 2 минуты",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "moment",
+      "date": "2026-11-06",
+      "time": "10:02"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian current-time reminder: hour",
+   "line": "Позвонить напомни через час",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "moment",
+      "date": "2026-11-06",
+      "time": "11:00"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian current-time reminder: hours across month",
+   "line": "Позвонить напомни через 2 часа",
+   "ctx": {
+    "today": "2026-12-31",
+    "now": "23:55",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "moment",
+      "date": "2027-01-01",
+      "time": "01:55"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian current-time reminder: day implicit",
+   "line": "Позвонить напомни через день",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "moment",
+      "date": "2026-11-07",
+      "time": "10:00"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian current-time reminder: days",
+   "line": "Позвонить напомни через 2 дня",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "moment",
+      "date": "2026-11-08",
+      "time": "10:00"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian current-time reminder: week implicit",
+   "line": "Позвонить напомни через неделю",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "moment",
+      "date": "2026-11-13",
+      "time": "10:00"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian current-time reminder: weeks",
+   "line": "Позвонить напомни через 5 недель",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "moment",
+      "date": "2026-12-11",
+      "time": "10:00"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian current-time reminder: compact duration",
+   "line": "Позвонить напомни через 2h",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "moment",
+      "date": "2026-11-06",
+      "time": "12:00"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian current-time reminder: explicit after due prefix",
+   "line": "Позвонить напомни после 10 минут",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "offset",
+      "minutes": 10
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian current-time reminder: explicit after due suffix",
+   "line": "Позвонить напомни 10 минут позже",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "offset",
+      "minutes": 10
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian current-time reminder: literal напомни через",
+   "line": "Позвонить напомни через",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian current-time reminder: literal напомни через 0 минут",
+   "line": "Позвонить напомни через 0 минут",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через 0 минут",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian current-time reminder: literal напомни через 1000 минут",
+   "line": "Позвонить напомни через 1000 минут",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через 1000 минут",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian current-time reminder: literal напомни через 999999999999999999999999 минут",
+   "line": "Позвонить напомни через 999999999999999999999999 минут",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через 999999999999999999999999 минут",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian current-time reminder: literal напомни через -10 минут",
+   "line": "Позвонить напомни через -10 минут",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через -10 минут",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian current-time reminder: inactive",
+   "line": "Позвонить напомни через 10 минут",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "en"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через 10 минут",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian current-time reminder: quoted",
+   "line": "Позвонить \"напомни через 10 минут\"",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через 10 минут",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder literal: напомни через 0 часов",
+   "line": "Позвонить напомни через 0 часов",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через 0 часов",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder literal: напомни через 0 часов with independent due",
+   "line": "Позвонить напомни через 0 часов завтра в 15:00",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через 0 часов",
+    "due": {
+     "date": "2026-11-07",
+     "time": "15:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder literal: напомни через 0 дней",
+   "line": "Позвонить напомни через 0 дней",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через 0 дней",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder literal: напомни через 0 дней with independent due",
+   "line": "Позвонить напомни через 0 дней завтра в 15:00",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через 0 дней",
+    "due": {
+     "date": "2026-11-07",
+     "time": "15:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder literal: напомни через 0 недель",
+   "line": "Позвонить напомни через 0 недель",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через 0 недель",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder literal: напомни через 0 недель with independent due",
+   "line": "Позвонить напомни через 0 недель завтра в 15:00",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через 0 недель",
+    "due": {
+     "date": "2026-11-07",
+     "time": "15:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder literal: напомни через 1000 дней",
+   "line": "Позвонить напомни через 1000 дней",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через 1000 дней",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder literal: напомни через 1000 дней with independent due",
+   "line": "Позвонить напомни через 1000 дней завтра в 15:00",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через 1000 дней",
+    "due": {
+     "date": "2026-11-07",
+     "time": "15:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder literal: напомни через 1000 недель",
+   "line": "Позвонить напомни через 1000 недель",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через 1000 недель",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder literal: напомни через 1000 недель with independent due",
+   "line": "Позвонить напомни через 1000 недель завтра в 15:00",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через 1000 недель",
+    "due": {
+     "date": "2026-11-07",
+     "time": "15:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder literal: напомни через месяц",
+   "line": "Позвонить напомни через месяц",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через месяц",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder literal: напомни через месяц with independent due",
+   "line": "Позвонить напомни через месяц завтра в 15:00",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через месяц",
+    "due": {
+     "date": "2026-11-07",
+     "time": "15:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder literal: напомни через год",
+   "line": "Позвонить напомни через год",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через год",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder literal: напомни через год with independent due",
+   "line": "Позвонить напомни через год завтра в 15:00",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через год",
+    "due": {
+     "date": "2026-11-07",
+     "time": "15:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder literal: напомни через 999999999999999999999h",
+   "line": "Позвонить напомни через 999999999999999999999h",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через 999999999999999999999h",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder literal: напомни через 999999999999999999999h with independent due",
+   "line": "Позвонить напомни через 999999999999999999999h завтра в 15:00",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через 999999999999999999999h",
+    "due": {
+     "date": "2026-11-07",
+     "time": "15:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder literal: напомни через 2.5 дня",
+   "line": "Позвонить напомни через 2.5 дня",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через 2.5 дня",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder literal: напомни через 2.5 дня with independent due",
+   "line": "Позвонить напомни через 2.5 дня завтра в 15:00",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через 2.5 дня",
+    "due": {
+     "date": "2026-11-07",
+     "time": "15:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder literal: напомни через -2 дня",
+   "line": "Позвонить напомни через -2 дня",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через -2 дня",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder literal: напомни через -2 дня with independent due",
+   "line": "Позвонить напомни через -2 дня завтра в 15:00",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через -2 дня",
+    "due": {
+     "date": "2026-11-07",
+     "time": "15:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder after independent due: напомни через 0 часов",
+   "line": "Позвонить завтра в 15:00 напомни через 0 часов",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через 0 часов",
+    "due": {
+     "date": "2026-11-07",
+     "time": "15:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian invalid relative reminder after independent due: напомни через месяц",
+   "line": "Позвонить завтра в 15:00 напомни через месяц",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни через месяц",
+    "due": {
+     "date": "2026-11-07",
+     "time": "15:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: 1 bare hour",
+   "line": "Позвонить в 1 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "01:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: 2 bare hour",
+   "line": "Позвонить в 2 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "02:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: 3 bare hour",
+   "line": "Позвонить в 3 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "03:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: 4 bare hour",
+   "line": "Позвонить в 4 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "04:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: 5 bare hour",
+   "line": "Позвонить в 5 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "05:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: 6 bare hour",
+   "line": "Позвонить в 6 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "06:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: 7 bare hour",
+   "line": "Позвонить в 7 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить в 7 ночи",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: 8 bare hour",
+   "line": "Позвонить в 8 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить в 8 ночи",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: 9 bare hour",
+   "line": "Позвонить в 9 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить в 9 ночи",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: 10 bare hour",
+   "line": "Позвонить в 10 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "22:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: 11 bare hour",
+   "line": "Позвонить в 11 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "23:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: 12 bare hour",
+   "line": "Позвонить в 12 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "00:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: 11 ночи",
+   "line": "Позвонить 11 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "23:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: в 11:15 ночи",
+   "line": "Позвонить в 11:15 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "23:15"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: 12:15 ночи",
+   "line": "Позвонить 12:15 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "00:15"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: в 2 часа ночи",
+   "line": "Позвонить в 2 часа ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "02:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: 11 часов ночи",
+   "line": "Позвонить 11 часов ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "23:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: в 6:45 часов ночи",
+   "line": "Позвонить в 6:45 часов ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "06:45"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: в 11.15 ночи",
+   "line": "Позвонить в 11.15 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "23:15"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: к 11 ночи",
+   "line": "Позвонить к 11 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "23:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: literal в 8:15 ночи",
+   "line": "Позвонить в 8:15 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить в 8:15 ночи",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "deadline": ""
+   }
+  },
+  {
+   "name": "Russian night qualifier: literal в 8 часов ночи",
+   "line": "Позвонить в 8 часов ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить в 8 часов ночи",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "deadline": ""
+   }
+  },
+  {
+   "name": "Russian night qualifier: literal 8.11 ночи",
+   "line": "Позвонить 8.11 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить 8.11 ночи",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "deadline": ""
+   }
+  },
+  {
+   "name": "Russian night qualifier: literal к 8.11 ночи",
+   "line": "Позвонить к 8.11 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить к 8.11 ночи",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "deadline": ""
+   }
+  },
+  {
+   "name": "Russian night qualifier: literal в 0 ночи",
+   "line": "Позвонить в 0 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить в 0 ночи",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "deadline": ""
+   }
+  },
+  {
+   "name": "Russian night qualifier: literal в 13 ночи",
+   "line": "Позвонить в 13 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить в 13 ночи",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "deadline": ""
+   }
+  },
+  {
+   "name": "Russian night qualifier: literal в 11:99 ночи",
+   "line": "Позвонить в 11:99 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить в 11:99 ночи",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "deadline": ""
+   }
+  },
+  {
+   "name": "Russian night qualifier: date before",
+   "line": "Позвонить завтра в 11 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-07",
+     "time": "23:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: date after",
+   "line": "Позвонить в 11 ночи 5 декабря",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-12-05",
+     "time": "23:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: midnight explicit date",
+   "line": "Позвонить 5 декабря в 12 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-12-05",
+     "time": "00:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: independent date before invalid night",
+   "line": "Позвонить завтра в 8 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить в 8 ночи",
+    "due": {
+     "date": "2026-11-07"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: independent date after invalid night",
+   "line": "Позвонить в 8 ночи завтра",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить в 8 ночи",
+    "due": {
+     "date": "2026-11-07"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: independent date and time after invalid night",
+   "line": "Позвонить в 8 ночи завтра в 15:00",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить в 8 ночи",
+    "due": {
+     "date": "2026-11-07",
+     "time": "15:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: moment напомни в 11 ночи",
+   "line": "Позвонить напомни в 11 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "moment",
+      "date": null,
+      "time": "23:00"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian night qualifier: moment напомни завтра в 11 часов ночи",
+   "line": "Позвонить напомни завтра в 11 часов ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "moment",
+      "date": "2026-11-07",
+      "time": "23:00"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian night qualifier: moment напомни в 12:15 ночи 5 декабря",
+   "line": "Позвонить напомни в 12:15 ночи 5 декабря",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "moment",
+      "date": "2026-12-05",
+      "time": "00:15"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian night qualifier: literal reminder напомни в 8 ночи",
+   "line": "Позвонить напомни в 8 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни в 8 ночи",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: literal reminder напомни завтра в 8 ночи",
+   "line": "Позвонить напомни завтра в 8 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни завтра в 8 ночи",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: literal reminder напомни в 8:15 ночи завтра",
+   "line": "Позвонить напомни в 8:15 ночи завтра",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни в 8:15 ночи завтра",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: literal reminder напомни 8.11 ночи",
+   "line": "Позвонить напомни 8.11 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни 8.11 ночи",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: literal reminder remind me завтра в 8 ночи",
+   "line": "Позвонить remind me завтра в 8 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить remind me завтра в 8 ночи",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: independent due before invalid reminder",
+   "line": "Позвонить завтра в 15:00 напомни в 8 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни в 8 ночи",
+    "due": {
+     "date": "2026-11-07",
+     "time": "15:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: quoted",
+   "line": "Позвонить \"в 11 ночи\"",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить в 11 ночи",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: quoted reminder",
+   "line": "Позвонить \"напомни завтра в 11 ночи\"",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить напомни завтра в 11 ночи",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: inactive Russian bare",
+   "line": "Позвонить в 11 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "en"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить в 11 ночи",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: inactive Russian portable clock retains English behavior",
+   "line": "Позвонить в 11:15 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "en"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить в ночи",
+    "due": {
+     "date": "2026-11-06",
+     "time": "11:15"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: regression в 11 утра",
+   "line": "Позвонить в 11 утра",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "11:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: regression в 11 вечера",
+   "line": "Позвонить в 11 вечера",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "23:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: regression в 12 дня",
+   "line": "Позвонить в 12 дня",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "12:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier: regression at 11pm",
+   "line": "Позвонить at 11pm",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "23:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier prefix regression: в 11.10 ночи",
+   "line": "Позвонить в 11.10 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "23:10"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "deadline": ""
+   }
+  },
+  {
+   "name": "Russian night qualifier prefix regression: к 11.10 ночи",
+   "line": "Позвонить к 11.10 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "23:10"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "deadline": ""
+   }
+  },
+  {
+   "name": "Russian night qualifier prefix regression: at 11 ночи",
+   "line": "Позвонить at 11 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "23:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "deadline": ""
+   }
+  },
+  {
+   "name": "Russian night qualifier prefix regression: by 11.10 ночи",
+   "line": "Позвонить by 11.10 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "23:10"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "deadline": ""
+   }
+  },
+  {
+   "name": "Russian night qualifier invalid prefix regression: к 8.11 ночи",
+   "line": "Позвонить к 8.11 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить к 8.11 ночи",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "deadline": ""
+   }
+  },
+  {
+   "name": "Russian night qualifier invalid prefix regression: at 8 ночи",
+   "line": "Позвонить at 8 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить at 8 ночи",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "deadline": ""
+   }
+  },
+  {
+   "name": "Russian night qualifier invalid prefix regression: by 8.11 ночи",
+   "line": "Позвонить by 8.11 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить by 8.11 ночи",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "deadline": ""
+   }
+  },
+  {
+   "name": "Russian night qualifier invalid prefix regression: крайний срок 8.11 ночи",
+   "line": "Позвонить крайний срок 8.11 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить крайний срок 8.11 ночи",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "deadline": ""
+   }
+  },
+  {
+   "name": "Russian night qualifier hour word: в 1 час ночи",
+   "line": "Позвонить в 1 час ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "01:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier hour word: В 11 Ч. НОЧИ",
+   "line": "Позвонить В 11 Ч. НОЧИ",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-11-06",
+     "time": "23:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": []
+   }
+  },
+  {
+   "name": "Russian night qualifier by date plus night clock",
+   "line": "Позвонить к 5 декабря в 11 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": {
+     "date": "2026-12-05",
+     "time": "23:00"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [],
+    "deadline": ""
+   }
+  },
+  {
+   "name": "Russian night qualifier dateless midnight reminder",
+   "line": "Позвонить напомни в 12 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить",
+    "due": null,
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": null,
+    "reminders": [
+     {
+      "kind": "moment",
+      "date": null,
+      "time": "00:00"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Russian night qualifier unsupported dotted clock is not a recurrence until date",
+   "line": "Позвонить каждый день до 8.11 ночи",
+   "ctx": {
+    "today": "2026-11-06",
+    "now": "10:00",
+    "languages": [
+     "ru"
+    ],
+    "projects": []
+   },
+   "expect": {
+    "title": "Позвонить до 8.11 ночи",
+    "due": {
+     "date": "2026-11-06"
+    },
+    "projectId": null,
+    "labels": [],
+    "priority": null,
+    "estimateMinutes": null,
+    "spentMinutes": null,
+    "recurrence": "every day",
     "reminders": []
    }
   }

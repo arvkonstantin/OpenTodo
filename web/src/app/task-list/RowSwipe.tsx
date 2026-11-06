@@ -95,7 +95,7 @@ export function useRowSwipe({ task, enabled, onComplete, force, rowEl }: {
           className={`group/edge pointer-events-none absolute inset-y-0 flex w-0 flex-col items-center justify-center gap-0.5 overflow-hidden px-1 text-hint font-medium ${dir === 'right' ? 'left-0 bg-success-soft text-on-success-soft' : 'right-0 bg-accent-soft text-on-accent-soft'}`}>
           <Icon name={dir === 'right' ? (doneTask ? 'rotate-ccw' : 'check') : 'calendar-days'} size="sm" />
           <span className="whitespace-nowrap opacity-0 transition-opacity duration-(--duration-ui) group-data-revealed/edge:opacity-100">
-            {dir === 'right' ? (doneTask ? t('Reopen') : t('Complete')) : t('Schedule')}
+            {dir === 'right' ? (doneTask ? t('Reopen') : t('Complete')) : t('Schedule', { context: 'task-action' })}
           </span>
         </span>
       )}
@@ -150,11 +150,11 @@ export function RowScheduleSheet({ task, onClose }: { task: Task; onClose: () =>
     }))
   const run = (c: Choice) => { onClose(); void act(c.apply()) }
   return (
-    <Dialog title={t('Schedule')} onClose={onClose} size="sm" placement="sheet" testId="row-schedule-sheet">
+    <Dialog title={t('Schedule', { context: 'task-action' })} onClose={onClose} size="sm" placement="sheet" testId="row-schedule-sheet">
       {picking ? (
         <DateField label={t('Date')} autoFocus value={task.due?.date ?? null} onChange={(iso) => { onClose(); if (iso) void act(schedule(task, iso)) }} />
       ) : (
-        <div className="grid gap-1" role="group" aria-label={t('Schedule')}>
+        <div className="grid gap-1" role="group" aria-label={t('Schedule', { context: 'task-action' })}>
           {choices.slice(0, 3).map((c) => <SheetChoice key={c.id} id={c.id} label={c.label} onClick={() => run(c)} />)}
           <SheetChoice id="pick" label={t('Pick a day…')} onClick={() => setPicking(true)} />
           <SheetChoice id="someday" label={choices[3].label} onClick={() => run(choices[3])} />

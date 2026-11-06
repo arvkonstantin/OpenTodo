@@ -4,10 +4,10 @@
 import type { Due, Priority } from '../types'
 import { matchDuration, matchEnergy, matchLabel, matchPriority, matchProject, matchSpent, projectMiss, type ProjectRef } from './attributes'
 import { firstOccurrence } from '../recurrence'
-import { matchByTimeAt, matchDateAt, matchDeadlineAt, matchTimeAt, ordinalOutOfRangeAt, partWordAt, sectorPhraseAt, wordsAt, type DateContext, type DateMatch, type TimeMatch } from './dates'
+import { literalNightEndAt, matchByTimeAt, matchDateAt, matchDeadlineAt, matchTimeAt, ordinalOutOfRangeAt, partWordAt, sectorPhraseAt, wordsAt, type DateContext, type DateMatch, type TimeMatch } from './dates'
 import { resolvePhrase, type SectorWord } from '../sectors'
 import { matchRecurrenceAt, type RecurrenceMatch } from './recurrence'
-import { matchReminderAt, type ReminderMatch, type ReminderPhrase } from './reminders'
+import { literalReminderEndAt, matchReminderAt, type ReminderMatch, type ReminderPhrase } from './reminders'
 import { stripSpans, tokenize, type Span, type Token } from './tokenize'
 import { vocabulariesFor, type DayMonthOrder } from './vocab'
 
@@ -105,16 +105,20 @@ function sectorAt(line: string, tokens: readonly Token[], i: number, ctx: ParseC
   return { value: resolvePhrase(sp.word, ctx.today, ctx.weekStart ?? 1)!, span, n: sp.n }
 }
 
-export function parse(line: string, ctx: ParseContext): ParseResult {
+function dateContext(ctx: ParseContext): DateContext {
   const vocabs = vocabulariesFor(ctx.languages)
-  const dctx: DateContext = {
+  return {
     today: ctx.today,
     now: ctx.now,
     vocabs,
     dayMonthOrder: ctx.dayMonthOrder ?? vocabs[0].dayMonthOrder,
     weekStart: ctx.weekStart,
   }
-  const bareHourIsTime = vocabs.some((v) => v.hourSuffixH)
+}
+
+export function parse(line: string, ctx: ParseContext): ParseResult {
+  const dctx = dateContext(ctx)
+  const bareHourIsTime = dctx.vocabs.some((v) => v.hourSuffixH)
   const dismissed = liveDismissals(line, ctx.dismissed)
   const { tokens, quoteSpans } = tokenize(line)
 
@@ -155,6 +159,8 @@ export function parse(line: string, ctx: ParseContext): ParseResult {
       i++
       continue
     }
+    const literalEnd = Math.max(literalReminderEndAt(tokens, i, dctx), literalNightEndAt(tokens, i, dctx))
+    if (literalEnd > i) { i = literalEnd; continue }
     const one = spanOf(line, tokens, i, i + 1)
     const free = !overlaps(one, dismissed)
 

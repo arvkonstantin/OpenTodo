@@ -12,8 +12,8 @@ const section = (id: string, aisle: string | null, position: number, extra: Part
 
 describe('aisle vocabularies (reusable-lists D5)', () => {
   const files = readdirSync(dir).filter((f) => f.endsWith('.json'))
-  it('has one file per app language', () => {
-    expect(files.sort()).toEqual(['de.json', 'en.json', 'es.json', 'fr.json', 'it.json', 'pt.json'])
+  it('has the supported product-name vocabularies', () => {
+    expect(files.sort()).toEqual(['de.json', 'en.json', 'es.json', 'fr.json', 'it.json', 'pt.json', 'ru.json'])
   })
   for (const f of files) {
     it(`${f}: normalized keys of at most four words, known aisles only`, () => {
@@ -47,6 +47,41 @@ describe('placing a new item', () => {
     expect(aisleForTitle('Pain au chocolat', fr)).toBe('bakery')
     expect(aisleForTitle('Crème fraîche', fr)).toBe('dairy')
     expect(await loadVocabularies('xx')).toHaveLength(1)
+  })
+
+  it('recognizes Russian products in all nine aisles, including explicit case forms', async () => {
+    const ru = await loadVocabularies('ru-RU')
+    expect(ru).toHaveLength(2)
+    const examples = [
+      ['Купить бананы, 1 кг', 'produce'], ['2 багета', 'bakery'], ['Молоко', 'dairy'],
+      ['Курицу', 'meat'], ['Мороженое', 'frozen'], ['Растительное масло', 'pantry'],
+      ['Яблочный сок', 'drinks'], ['Стиральный порошок', 'household'], ['Зубную щётку', 'personal'],
+    ] as const
+    for (const [title, aisle] of examples) expect(aisleForTitle(title, ru), title).toBe(aisle)
+  })
+
+  it('uses Russian whole phrases before shorter words and keeps English as the fallback', async () => {
+    const ru = await loadVocabularies('ru')
+    expect(aisleForTitle('ягоды', ru)).toBe('produce')
+    expect(aisleForTitle('замороженные ягоды', ru)).toBe('frozen')
+    expect(aisleForTitle('2 пакета замороженных ягод', ru)).toBe('frozen')
+    expect(aisleForTitle('яблочный сок', ru)).toBe('drinks')
+    expect(aisleForTitle('яблоки', ru)).toBe('produce')
+    expect(aisleForTitle('чай', ru)).toBe('pantry')
+    expect(aisleForTitle('Milk', ru)).toBe('dairy')
+    // The app language wins before English, even if English has a longer phrase.
+    expect(aisleForTitle('бананы orange juice', ru)).toBe('produce')
+    expect(aisleForTitle('замороженные ягоды', await loadVocabularies('en'))).toBeNull()
+    expect(await loadVocabularies('zh')).toHaveLength(1)
+  })
+
+  it('normalizes Cyrillic for lookup without inferring stems or ambiguous product names', async () => {
+    const ru = await loadVocabularies('ru')
+    for (const title of ['ЙОГУРТ', 'И\u0306ОГУРТ', '(йогурт),']) expect(aisleForTitle(title, ru)).toBe('dairy')
+    for (const title of ['Зубная щётка', 'Зубная щетка', 'Зубная ще\u0308тка']) expect(aisleForTitle(title, ru)).toBe('personal')
+    for (const title of ['Молокоотсос', 'Починить хлебопечку', 'Забрать посылку', 'масло', 'перец']) {
+      expect(aisleForTitle(title, ru), title).toBeNull()
+    }
   })
 
   it('uses the first live section with the key, by position', () => {

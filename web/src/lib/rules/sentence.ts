@@ -118,7 +118,13 @@ export function sentenceParts(step: Pick<RoutineStep, 'kind' | 'in'>): SentenceP
   const slots = [...source.matchAll(/\{([a-z_]+)\}/g)].map((m) => m[1])
   const values: Record<string, string> = {}
   for (const s of slots) values[s] = `${MARK}${s}${MARK}`
-  const text = t(source, values)
+  // Separate Pick's composition from the generic words: mode and list-output
+  // names may have different genders/cases, and N may require a different form.
+  const countedPick = step.kind === 'take' && ['first_n', 'last_n'].includes(pickModeOf(step))
+  const text = countedPick ? t('Pick {from} {n} of {list}', { ...values, context: 'pick-counted-sentence' })
+    : step.kind === 'take' ? t('Pick {from} {n} of {list}', { ...values, context: 'pick-sentence' })
+    : step.kind === 'filter' ? t('Pick {from} of {list} where {where}', { ...values, context: 'pick-sentence' })
+      : t(source, values)
   const out: SentencePart[] = []
   text.split(MARK).forEach((chunk, i) => {
     if (i % 2 === 1 && slots.includes(chunk)) out.push({ slot: chunk })
@@ -170,9 +176,16 @@ const TRIGGER_OUTPUT: Partial<Record<RoutineStepType, string>> = { task: msg('th
 /** The name of the trigger's output. */
 export const triggerOutputName = (type: RoutineStepType): string => (TRIGGER_OUTPUT[type] ? t(TRIGGER_OUTPUT[type]!) : t('the trigger'))
 
-/** Pick's mode words: on the card ("Pick the first of the tasks") and in its mode menu (routines-dynamic-data D2). */
-export const PICK_WORD: Record<PickMode, string> = {
-  first: msg('the first'), last: msg('the last'), first_n: msg('the first'), last_n: msg('the last'), all: msg('all'), where: msg('the ones'),
+/** Pick's mode word, shared by the card and its accessible sentence. */
+export function pickWord(mode: PickMode): string {
+  switch (mode) {
+    case 'first': return t('the first', { context: 'pick-one' })
+    case 'last': return t('the last', { context: 'pick-one' })
+    case 'first_n': return t('the first', { context: 'pick-several' })
+    case 'last_n': return t('the last', { context: 'pick-several' })
+    case 'all': return t('all', { context: 'pick-items' })
+    case 'where': return t('the ones', { context: 'pick-items' })
+  }
 }
 export const PICK_MENU: Record<PickMode, string> = {
   first: msg('The first'), last: msg('The last'), first_n: msg('The first N…'), last_n: msg('The last N…'), all: msg('All'), where: msg('The ones where…'),

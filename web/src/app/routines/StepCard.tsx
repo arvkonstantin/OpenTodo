@@ -11,7 +11,7 @@ import { pickModeOf, pickUnsorted, PICK_MODES, setPickMode, sortBeforePick, type
 import type { Fix } from '../../lib/rules/fixes'
 import { roundEstimate } from '../../lib/rules/ai'
 import { previewLines, type Preview } from '../../lib/rules/preview'
-import { addableInputs, countText, extraInputs, inputLabel, PICK_MENU, PICK_WORD, sentenceParts, stepName } from '../../lib/rules/sentence'
+import { addableInputs, countText, extraInputs, inputLabel, PICK_MENU, pickWord, sentenceParts, stepName } from '../../lib/rules/sentence'
 import { conditionParts, triggerText } from '../../lib/rules/summary'
 import { stepKind } from '../../lib/rules/steps'
 import { RULE_TRIGGERS, type RoutineArg, type RoutineStep, type RuleCondition, type RuleTrigger, type RuleTriggerKind } from '../../lib/types'
@@ -91,7 +91,7 @@ export function sentenceText(step: RoutineStep, ctx: WordContext): string {
   const k = stepKind(step.kind)
   return sentenceParts(step).map((p) => {
     if ('text' in p) return p.text
-    if (isPick(step.kind) && p.slot === 'from') return t(PICK_WORD[pickModeOf(step)])
+    if (isPick(step.kind) && p.slot === 'from') return pickWord(pickModeOf(step))
     if (isPick(step.kind) && p.slot === 'n' && !['first_n', 'last_n'].includes(pickModeOf(step))) return ''
     const def = k?.inputs.find((d) => d.name === p.slot)
     return def ? wordValue(step, def, ctx).shown || '…' : ''
@@ -154,7 +154,7 @@ function PickModeWord({ step, events }: { step: RoutineStep; events: CardEvents 
   const choices: Choice[] = PICK_MODES.map((m) => ({ key: m, label: t(PICK_MENU[m]), selected: m === mode, run: () => choose(m) }))
   return (
     <>
-      <WordButton ref={anchor} label={t('Which')} value={t(PICK_WORD[mode])} placeholder="" action={t('change')} haspopup="listbox" expanded={open} onClick={() => setOpen(true)} />
+      <WordButton ref={anchor} label={t('Which')} value={pickWord(mode)} placeholder="" action={t('change')} haspopup="listbox" expanded={open} onClick={() => setOpen(true)} />
       <ChoicePopover open={open} onClose={() => { setOpen(false); requestAnimationFrame(() => anchor.current?.focus()) }} anchor={anchor} label={t('Which')} choices={choices} />
     </>
   )

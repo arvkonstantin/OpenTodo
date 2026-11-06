@@ -1,6 +1,9 @@
 package quickadd
 
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 // Reminder is a reminder as typed: an offset from the due (negative = before)
 // or a floating wall-clock moment.
@@ -26,6 +29,34 @@ var unitMinutes = []struct {
 	{func(v *Vocab) []string { return v.Units.Week }, 10080},
 }
 
+func reminderAmountAt(tokens []token, i int, v *Vocab) (int, int) {
+	if cn, count, ok := countAt(tokens, i, v); ok {
+		for _, u := range unitMinutes {
+			if n := phraseAt(tokens, i+cn, u.pick(v)); n > 0 {
+				return cn + n, count * u.minutes
+			}
+		}
+	}
+	if t := tok(tokens, i); t != nil {
+		if m := matchDuration(t.text, false); m > 0 {
+			return 1, m
+		}
+	}
+	return 0, 0
+}
+
+// Russian «через» counts from now. An explicit date keeps a later due independent.
+func reminderFromNowAt(tokens []token, k, prefix int, v *Vocab, ctx *dateCtx) (Reminder, int, bool) {
+	n, amount := reminderAmountAt(tokens, k+prefix, v)
+	if ctx.now == "" || n == 0 || amount <= 0 {
+		return Reminder{}, 0, false
+	}
+	total := minutesOf(ctx.now) + amount
+	date := addDays(ctx.today, total/1440)
+	at := fmt.Sprintf("%02d:%02d", total/60%24, total%60)
+	return Reminder{Kind: "moment", Date: &date, Time: at}, k + prefix + n, true
+}
+
 func offsetAt(tokens []token, k int, ctx *dateCtx) (int, int, bool) {
 	bestN, bestMin, found := 0, 0, false
 	for _, v := range ctx.vocabs {
@@ -38,22 +69,7 @@ func offsetAt(tokens []token, k int, ctx *dateCtx) (int, int, bool) {
 		}
 		prefix := preBefore + preAfter
 		j := k + prefix
-		an, amount := 0, 0
-		if cn, count, ok := countAt(tokens, j, v); ok {
-			for _, u := range unitMinutes {
-				if n := phraseAt(tokens, j+cn, u.pick(v)); n > 0 {
-					an, amount = cn+n, count*u.minutes
-					break
-				}
-			}
-		}
-		if an == 0 {
-			if t := tok(tokens, j); t != nil {
-				if m := matchDuration(t.text, false); m > 0 {
-					an, amount = 1, m
-				}
-			}
-		}
+		an, amount := reminderAmountAt(tokens, j, v)
 		if an == 0 || amount <= 0 {
 			continue
 		}
@@ -106,6 +122,13 @@ func momentAt(tokens []token, k int, ctx *dateCtx) (int, *string, string, bool) 
 
 // parseReminderAt parses the reminder body (offset or moment) at token k.
 func parseReminderAt(tokens []token, k int, ctx *dateCtx) (Reminder, int, bool) {
+	for _, v := range ctx.vocabs {
+		if v.Code == "ru" {
+			if prefix := phraseAt(tokens, k, v.InWords); prefix > 0 {
+				return reminderFromNowAt(tokens, k, prefix, v, ctx)
+			}
+		}
+	}
 	on, mins, okOff := offsetAt(tokens, k, ctx)
 	mn, date, at, okMom := momentAt(tokens, k, ctx)
 	if okOff && (!okMom || on >= mn) {
@@ -133,6 +156,69 @@ func matchReminderAt(tokens []token, i int, ctx *dateCtx) *remMatch {
 		return nil
 	}
 	return &remMatch{r, i, to}
+}
+
+func literalNightReminderEndAt(tokens []token, k int, ctx *dateCtx) int {
+	night := russianNightAt(tokens, k, ctx)
+	if night == nil {
+		if date := matchDateAt(tokens, k, ctx); date != nil {
+			night = russianNightAt(tokens, date.to, ctx)
+		}
+	}
+	if night == nil || night.time != "" {
+		return 0
+	}
+	if date := matchDateAt(tokens, night.to, ctx); date != nil {
+		return date.to
+	}
+	return night.to
+}
+
+// literalReminderEndAt prevents an invalid Russian reminder body
+// from being reinterpreted as a separate task date/time by the general scanner.
+func literalReminderEndAt(tokens []token, i int, ctx *dateCtx) int {
+	for _, v := range ctx.vocabs {
+		if v.Code != "ru" {
+			continue
+		}
+		word := 0
+		for _, r := range ctx.vocabs {
+			word = max(word, phraseAt(tokens, i, r.RemindWords))
+		}
+		if word == 0 {
+			continue
+		}
+		k := i + word
+		if to := literalNightReminderEndAt(tokens, k, ctx); to > 0 {
+			return to
+		}
+		prefix := phraseAt(tokens, k, v.InWords)
+		if prefix == 0 {
+			continue
+		}
+		if _, _, ok := reminderFromNowAt(tokens, k, prefix, v, ctx); ok {
+			continue
+		}
+		j := k + prefix
+		cn, _, ok := countAt(tokens, j, v)
+		if !ok {
+			if t := tok(tokens, j); t != nil {
+				body := t.norm
+				if len(body) > 0 && (body[0] == '+' || body[0] == '-') {
+					body = body[1:]
+				}
+				if len(body) > 0 && body[0] >= '0' && body[0] <= '9' {
+					cn = 1
+				}
+			}
+		}
+		unitN := 0
+		for _, words := range [][]string{v.Units.Minute, v.Units.Hour, v.Units.Day, v.Units.Week, v.Units.Month, v.Units.Year} {
+			unitN = max(unitN, phraseAt(tokens, j+cn, words))
+		}
+		return j + cn + unitN
+	}
+	return 0
 }
 
 // Resolved is how a typed reminder is stored once the due is known.

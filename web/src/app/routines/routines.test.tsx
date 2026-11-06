@@ -9,8 +9,12 @@ import { db, useDatabase } from '../../lib/db'
 import { createLabel } from '../../lib/labels'
 import { createProject, createTask, resetDeviceId, updateProject } from '../../lib/ops'
 import { publishEncryption } from '../../lib/e2ee'
+import { applyCatalog } from '../../lib/i18n/catalog'
 import { resetCatalogueCache } from '../../lib/rules/catalogue'
+import { draftTypes, type RoutineDraft } from '../../lib/rules/draft'
+import { outputNames } from '../../lib/rules/sentence'
 import { createRule } from '../../lib/rules/store'
+import ru from '../../locales/ru.json'
 import { addressOf, canonicalPath, navigate, parseRoute, routePath } from '../router'
 import type { RoutineCatalogueEntry, RoutineRun, RoutineStep } from '../../lib/types'
 import { click, key, mockFetch, render, type, waitFor } from '../../ui/test-utils'
@@ -19,6 +23,8 @@ import { RoutinePage } from './RoutinePage'
 import { openRoutineDraft } from './routineNav'
 import { RoutinesView } from './RoutinesView'
 import { RunDetail } from './RunHistory'
+import { sentenceText } from './StepCard'
+import type { WordContext } from './words'
 
 let n = 0
 let requests: { method: string; path: string; body?: unknown }[] = []
@@ -130,6 +136,91 @@ describe('Routines page', () => {
 })
 
 describe('Routine editor', () => {
+  it('renders every Russian Pick mode and count with unchanged list names and English sentences', async () => {
+    // N=1 intentionally retains the existing singular-mode normalization.
+    const choices = [
+      { from: 'start', n: 1, ru: 'первый элемент', en: 'the first' },
+      { from: 'end', n: 1, ru: 'последний элемент', en: 'the last' },
+      { from: 'start', n: 2, ru: 'с начала', en: 'the first' },
+      { from: 'start', n: 21, ru: 'с начала', en: 'the first' },
+      { from: 'end', n: 2, ru: 'с конца', en: 'the last' },
+      { from: 'end', n: 21, ru: 'с конца', en: 'the last' },
+      { from: 'all', ru: 'все элементы', en: 'all' },
+      { from: 'where', ru: 'элементы', en: 'the ones' },
+    ]
+    const lists = [{ ref: 'a', ru: 'задачи', en: 'the tasks' }, { ref: 'b', ru: 'строки', en: 'the lines' }]
+    const picks: RoutineStep[] = lists.flatMap((list) => choices.map((choice, i): RoutineStep => ({
+      id: `${list.ref}${i}`, kind: choice.from === 'where' ? 'filter' : 'take',
+      in: choice.from === 'where' ? { list: { ref: list.ref }, where: { literal: list.ref === 'a' ? { priority: { in: [1] } } : { contains: 'foo' } } }
+        : { list: { ref: list.ref }, from: { literal: choice.from }, ...(choice.n ? { n: { literal: choice.n } } : {}) },
+    })))
+    const draft: RoutineDraft = {
+      name: 'Pick list items', trigger: { kind: 'manual' }, condition: null, steps: [
+        { id: 'a', kind: 'find_tasks', in: { condition: { literal: {} } } },
+        { id: 'b', kind: 'split_lines', in: { text: { literal: 'one\ntwo' } } },
+        ...picks,
+      ],
+    }
+    try {
+      for (const language of ['ru', 'en'] as const) {
+        applyCatalog(language, language, language === 'ru' ? ru : {})
+        const rendered = await render(<RoutineEditor draft={draft} onBack={() => {}} />)
+        try {
+          await waitFor(() => cards().length === draft.steps.length, 'all Pick cards')
+          for (const list of lists) for (const [i, choice] of choices.entries()) {
+            const counted = !!choice.n && choice.n > 1
+            const condition = language === 'ru' ? (list.ref === 'a' ? 'приоритет 1' : 'содержит «foo»')
+              : list.ref === 'a' ? 'priority 1' : 'contains “foo”'
+            const expected = language === 'ru'
+              ? `Выбрать ${counted ? `${choice.n} ` : ''}${choice.ru} списка «${list.ru}»${choice.from === 'where' ? ` по условию: ${condition}` : ''}`
+              : `Pick ${choice.en}${counted ? ` ${choice.n}` : ''} of ${list.en}${choice.from === 'where' ? ` where ${condition}` : ''}`
+            const card = rendered.container.querySelector<HTMLElement>(`[data-step-card="${list.ref}${i}"]`)!
+            expect(card.getAttribute('aria-label')).toBe(expected)
+            const sentence = card.querySelector('p')!
+            expect(sentence.textContent?.replace(/\s+/g, ' ').trim()).toBe(expected)
+            expect(sentence.querySelector('[data-chip]')?.textContent).toBe(list[language])
+            const mode = [...sentence.querySelectorAll('button')].find((b) => b.textContent === choice[language])!
+            expect(mode.getAttribute('aria-label')).toContain(choice[language])
+            expect(mode.getAttribute('aria-haspopup')).toBe('listbox')
+            expect([...sentence.querySelectorAll('button')].some((b) => b.textContent === String(choice.n))).toBe(counted)
+          }
+        } finally {
+          await rendered.unmount()
+        }
+      }
+    } finally {
+      applyCatalog('en', 'en', {})
+    }
+  })
+
+  it('keeps singular Russian task references grammatical in Change sentences', () => {
+    const triggered: RoutineStep = { id: 'a', kind: 'change_tasks', in: { tasks: { ref: 'trigger' }, set: { literal: { priority: 1 } } } }
+    const each: RoutineStep = { id: 'c', kind: 'change_tasks', in: { tasks: { ref: 'item' }, set: { literal: { priority: 1 } } } }
+    const event: RoutineDraft = { name: 'Change the triggering task', trigger: { kind: 'task.created' }, condition: null, steps: [triggered] }
+    const repeated: RoutineDraft = {
+      name: 'Change each task', trigger: { kind: 'manual' }, condition: null, steps: [
+        { id: 'a', kind: 'find_tasks', in: { condition: { literal: {} } } },
+        { id: 'b', kind: 'repeat', in: { list: { ref: 'a' } }, do: [each] },
+      ],
+    }
+    const context = (draft: RoutineDraft): WordContext => {
+      const types = draftTypes(draft)
+      return {
+        draft, types, outputs: outputNames(draft.steps, undefined, types),
+        names: { labels: [], projects: [], sections: [], views: [], webhooks: [], tasks: [], title: () => '', projectName: () => '' },
+      }
+    }
+    applyCatalog('ru', 'ru', ru)
+    try {
+      expect(sentenceText(triggered, context(event))).toBe('Изменить (задача, вызвавшая запуск): приоритет 1')
+      expect(sentenceText(each, context(repeated))).toBe('Изменить (каждая задача): приоритет 1')
+    } finally {
+      applyCatalog('en', 'en', {})
+    }
+    expect(sentenceText(triggered, context(event))).toBe('Change the task that triggered: priority 1')
+    expect(sentenceText(each, context(repeated))).toBe('Change each task: priority 1')
+  })
+
   it('"Reading a routine": one card per step in order, and the screen-reader names', async () => {
     const { id } = await groceries()
     const rule = (await db.rules.get(id))!

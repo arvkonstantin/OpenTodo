@@ -310,6 +310,7 @@ export function matchByTimeAt(tokens: readonly Token[], i: number, ctx: DateCont
 }
 
 export function matchDateAt(tokens: readonly Token[], i: number, ctx: DateContext): DateMatch | null {
+  if (russianNightAt(tokens, i, ctx)) return null
   if (!tokens[i] || tokens[i].quoted) return null
   let best: DateMatch | null = null
   const consider = (m: DateMatch | null) => {
@@ -565,6 +566,8 @@ function numericDateAt(tokens: readonly Token[], j: number, ctx: DateContext): {
  * named ("noon") form, or "in N hours" relative to `now`.
  */
 export function matchTimeAt(tokens: readonly Token[], i: number, ctx: DateContext): TimeMatch | null {
+  const night = russianNightAt(tokens, i, ctx)
+  if (night) return night.time ? { from: i, to: night.to, time: night.time } : null
   if (!tokens[i] || tokens[i].quoted) return null
   let best: TimeMatch | null = null
   const consider = (m: TimeMatch | null) => {
@@ -601,6 +604,31 @@ const HDOTM_RE = /^(\d{1,2})\.(\d{2})$/
 const H12_RE = /^(\d{1,2})(am|pm|a\.m\.|p\.m\.)$/
 const HH_RE = /^(\d{1,2})h(\d{2})?$/
 const H_RE = /^(\d{1,2})$/
+
+/** Russian night hours (russian-language D3b); a null time protects an unsupported clock as literal. */
+export function russianNightAt(tokens: readonly Token[], i: number, ctx: DateContext): { to: number; time: string | null } | null {
+  const v = ctx.vocabs.find((v) => v.code === 'ru')
+  if (!v) return null
+  const at = Math.max(...ctx.vocabs.map((v) => Math.max(phraseAt(tokens, i, v.atWords, `${v.code}:at`), phraseAt(tokens, i, v.byWords, `${v.code}:by`))))
+  const j = i + at
+  const token = tokens[j]
+  if (!token || token.quoted) return null
+  const m = H_RE.exec(token.norm) ?? HM_RE.exec(token.norm) ?? HDOTM_RE.exec(token.norm)
+  if (!m || m[3]) return null
+  const hw = phraseAt(tokens, j + 1, v.hourWords, `${v.code}:hw`)
+  const night = phraseAt(tokens, j + 1 + hw, ['ночи'], 'ru:night')
+  if (!night) return null
+  const h = Number(m[1]), minute = Number(m[2] ?? 0)
+  const to = j + 1 + hw + night
+  if (minute > 59 || h < 1 || h > 12 || (h >= 7 && h <= 9)) return { to, time: null }
+  return { to, time: clock(h === 12 ? 0 : h >= 10 ? h + 12 : h, minute) }
+}
+
+/** The protected end of an unsupported Russian night phrase, or zero. */
+export function literalNightEndAt(tokens: readonly Token[], i: number, ctx: DateContext): number {
+  const night = russianNightAt(tokens, i, ctx)
+  return night && !night.time ? night.to : 0
+}
 
 function meridiem(tokens: readonly Token[], k: number, v: Vocabulary): { n: number; pm: boolean } | null {
   const hw = v.code === 'ru' ? phraseAt(tokens, k, v.hourWords, `${v.code}:hw`) : 0

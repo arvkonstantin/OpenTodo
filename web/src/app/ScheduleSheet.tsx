@@ -46,7 +46,7 @@ export function ScheduleSheet({ task, onPick, onClose }: ScheduleSheetProps) {
   }
 
   return (
-    <Dialog title={t('Schedule')} onClose={onClose} size="sm" placement="sheet" testId="schedule-sheet">
+    <Dialog title={t('Schedule', { context: 'task-action' })} onClose={onClose} size="sm" placement="sheet" testId="schedule-sheet">
       <div className="space-y-4">
         {relative.length > 0 && (
           <div>

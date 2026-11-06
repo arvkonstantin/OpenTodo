@@ -37,3 +37,19 @@ Russian SHALL be offered as `Русский` with code `ru`, selected for Russia
 #### Scenario: Long phone navigation labels
 - **WHEN** Russian navigation labels do not fit their existing phone tab buttons, including with enlarged text
 - **THEN** each visible label is truncated within its own button without overlapping adjacent tabs, while its accessible name retains the full translated label
+
+#### Scenario: Actor names and Russian activity grammar
+- **WHEN** a Russian task history, project history, shared activity feed or grouped run combines an arbitrary actor name with an event description
+- **THEN** the full line uses the localized actor/action message, preserving the actor name and allowing Russian punctuation and neutral event wording without assuming the actor’s gender
+
+#### Scenario: Scheduling action and schedule noun
+- **WHEN** the Russian interface offers a task-scheduling action and displays a backup schedule or a task’s schedule facts
+- **THEN** action controls use `Запланировать` while the noun label uses `Расписание`, through separate translation contexts with the English visible text unchanged
+
+#### Scenario: Start date and starting an action
+- **WHEN** Russian task/date fields display Start and the daily-check prompt offers a Start button
+- **THEN** the field label uses `Начало` and the action uses `Начать`, through separate translation contexts with the English visible text unchanged
+
+#### Scenario: Picking from different list types
+- **WHEN** Russian displays a routine Pick card for the first, last, first N, last N, all or matching items of a task or line list, including quantities 1, 2 and 21
+- **THEN** its interactive sentence and accessible name use the same grammatical, mode-aware wording, retain list-reference names unchanged and keep the existing English display, editable inputs and stored step schema

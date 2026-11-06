@@ -51,7 +51,7 @@ func TestRussianChannelTextAndContentPolicy(t *testing.T) {
 		}
 	}
 	m := testMessage("ru", "https://todo.example.com", 10)
-	if m.Title != "Тест от OpenTodo" || m.Body != "Этот канал работает." {
+	if m.Title != "Тестовое уведомление OpenTodo" || m.Body != "Этот канал работает." {
 		t.Fatalf("test message: %+v", m)
 	}
 }

@@ -81,3 +81,23 @@ With Russian active, quick add SHALL understand Russian relative days, weekday a
 #### Scenario: Mixed language and offline synchronization
 - **WHEN** Russian is active and an offline device creates `Купить хлеб every day`, then reconnects
 - **THEN** the task stores `every day` with the resolved first due date locally, and other devices converge on those fields without parsing the line again
+
+#### Scenario: Russian reminder counted from now
+- **WHEN** Russian is active, today is 2026-11-06, the current time is 10:00 and the user enters `Встреча завтра в 15:00 напомни через 10 минут`
+- **THEN** the task remains due 2026-11-07 at 15:00 and its reminder moment is 2026-11-06 at 10:10, resolved through the existing reminder storage rules rather than ten minutes after the task
+
+#### Scenario: Current-time reminder crosses midnight
+- **WHEN** Russian is active, today is 2026-11-06, the current time is 23:55 and the user enters `Позвонить напомни через 10 минут`
+- **THEN** the title is `Позвонить`, the task has no inferred due date, and its reminder moment is 2026-11-07 at 00:05
+
+#### Scenario: Explicit after-due reminder
+- **WHEN** Russian is active and the user enters `Встреча завтра в 15:00 напомни 10 минут позже`
+- **THEN** the task keeps its due value and its relative reminder offset is plus ten minutes from that due time
+
+#### Scenario: Russian night hour
+- **WHEN** Russian is active and the user enters `Позвонить завтра в 11 ночи`, `в 12 ночи` or `в 2 ночи`
+- **THEN** the corresponding due times are 23:00, 00:00 and 02:00 on the resolved date, identically in both parsers
+
+#### Scenario: Ambiguous night hour stays literal
+- **WHEN** Russian is active and a phrase uses 7, 8 or 9 with `ночи`
+- **THEN** that entire time phrase stays in the title without a partial time or date match; independent valid scheduling phrases outside it retain their existing behavior

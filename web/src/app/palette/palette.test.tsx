@@ -18,6 +18,7 @@ import { filterEntries, hasFilterTerm } from './filterEntries'
 import { buildEntries, makeTaskEntry } from './index'
 import { commands, type PaletteContext } from './registry'
 import { parse } from '../../lib/filter'
+import { applyCatalog, loadLanguage } from '../../lib/i18n/catalog'
 
 const user = { id: 'u1', email: 'a@example.com', name: 'Ada', role: 'owner', created_at: 0 } as unknown as User
 
@@ -27,7 +28,7 @@ beforeEach(async () => {
   resetDeviceId()
   vi.stubGlobal('fetch', vi.fn(async () => new Response('{}', { status: 404 })))
 })
-afterEach(() => { vi.unstubAllGlobals() })
+afterEach(() => { vi.unstubAllGlobals(); applyCatalog('en', 'en', {}) })
 
 const palette = () => document.querySelector('[data-testid="command-palette"]')
 const field = () => document.querySelector('input[aria-label="Search tasks, projects and commands"]') as HTMLInputElement
@@ -257,6 +258,21 @@ describe('empty box order (2.2)', () => {
 })
 
 describe('commands on ticked tasks (bulk-edit 6.3)', () => {
+  it.each([[1, '1 задача'], [2, '2 задачи'], [21, '21 задача']] as const)('keeps the Russian count independent of the action for %i ticked tasks', async (count, words) => {
+    await loadLanguage('ru')
+    const selected = task({ id: 'selected' })
+    const ids = Array.from({ length: count }, (_, i) => `selected-${i}`)
+    const list = { ...listFor(selected), ticked: () => ids, openActions: () => {} }
+    const selectedCommands = commands(ctxFor({ task: selected, list, timeSectors: true })).filter((c) => c.id.startsWith('sel:'))
+    expect(selectedCommands.map((c) => c.id)).toEqual([
+      'sel:complete', 'sel:p1', 'sel:p2', 'sel:p3', 'sel:p4', 'sel:today', 'sel:tomorrow', 'sel:next-week',
+      'sel:no-date', 'sel:sector', 'sel:labels', 'sel:move', 'sel:assign', 'sel:trash',
+    ])
+    // tasksWord is nominative. Each action must keep that phrase independent,
+    // rather than composing e.g. «Завершить 21 задача» or «для 21 задача».
+    for (const command of selectedCommands) expect(command.label, command.id).toContain(`(${words})`)
+  })
+
   it('with three ticked, "Complete 3 tasks" acts on all of them and single-task commands are hidden', async () => {
     const ids = [await createTask({ title: 'a' }), await createTask({ title: 'b' }), await createTask({ title: 'c' })]
     const t = (await db.tasks.get(ids[0]))!

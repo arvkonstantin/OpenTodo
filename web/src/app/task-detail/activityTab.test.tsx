@@ -4,6 +4,7 @@
 import 'fake-indexeddb/auto'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { groupRuns } from '../../lib/activityRuns'
+import { applyLanguagePreference } from '../../lib/i18n'
 import { createComment } from '../../lib/comments'
 import { db, useDatabase } from '../../lib/db'
 import { createTask, resetDeviceId, updateTask } from '../../lib/ops'
@@ -27,6 +28,22 @@ function props(events: ActivityEvent[], over: Partial<ActivityViewProps> = {}, p
 }
 
 describe('ActivityView', () => {
+  it('formats Russian actor names with a neutral complete event phrase', async () => {
+    await applyLanguagePreference('ru')
+    try {
+      const v = await render(<ActivityView {...props([
+        ev('created', 'alice', NOW - MIN),
+        ev('created', 'bob', NOW - 2 * MIN),
+      ], { name: (id) => id === 'alice' ? 'Мария' : 'Женя' })} />)
+      const lines = [...v.container.querySelectorAll('[data-run]')].map((row) => row.textContent)
+      expect(lines.some((line) => line?.includes('Мария: задача создана'))).toBe(true)
+      expect(lines.some((line) => line?.includes('Женя: задача создана'))).toBe(true)
+      await v.unmount()
+    } finally {
+      await applyLanguagePreference('en')
+    }
+  })
+
   it('folds a burst of edits into one run that expands to its events', async () => {
     const v = await render(<ActivityView {...props([
       ev('edited', 'me', NOW - 1 * MIN, [{ field: 'priority', from: 4, to: 1 }]),

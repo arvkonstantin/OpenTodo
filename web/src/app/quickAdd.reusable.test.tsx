@@ -9,6 +9,7 @@ import { db } from '../lib/db'
 import { createProject, createTask, mutate, resetDeviceId, setTaskCompleted, updateProject } from '../lib/ops'
 import { createSection, loadShowCompleted, moveTaskToSection } from '../lib/sections'
 import { collapseDuplicates } from '../lib/reuseAdd'
+import { applyCatalog, loadLanguage } from '../lib/i18n/catalog'
 import { undoBatch } from '../lib/undo'
 import { render, mockFetch, noPublicLinks, type, waitFor } from '../ui/test-utils'
 import { bulkToast, hideBulkToast } from './bulk/toastStore'
@@ -16,7 +17,7 @@ import { addManyToList, addToList } from './reuseAdd'
 import { TaskListView } from './TaskListView'
 
 beforeEach(() => mockFetch(noPublicLinks))
-afterEach(() => { vi.unstubAllGlobals(); hideBulkToast() })
+afterEach(() => { vi.restoreAllMocks(); vi.unstubAllGlobals(); hideBulkToast(); applyCatalog('en', 'en', {}) })
 beforeEach(async () => {
   await db.delete()
   await db.open()
@@ -116,6 +117,33 @@ describe('adding to a reusable list', () => {
 })
 
 describe('sorting into aisles', () => {
+  it('places a Russian item offline in a renamed keyed aisle, preserving its title and later placement', async () => {
+    await loadLanguage('ru')
+    vi.spyOn(navigator, 'onLine', 'get').mockReturnValue(false)
+    const pid = await createProject({ name: 'Покупки' })
+    await updateProject(pid, { reusable: true, aisles: true })
+    const fridge = await createSection(pid, 'Холодильник')
+    await mutate('section', fridge, { aisle: 'dairy' })
+    const other = await createSection(pid, 'Другое')
+    await db.outbox.clear()
+    const milk = await addToList({ title: 'Молоко', project_id: pid }, create)
+    const stored = (await db.tasks.get(milk))!
+    expect(stored.title).toBe('Молоко')
+    expect(stored.section_id).toBe(fridge)
+    expect((await db.outbox.toArray()).some((op) => op.entityId === milk && op.field === 'section_id' && op.value === fridge)).toBe(true)
+    const english = await addToList({ title: 'Greek yoghurt', project_id: pid }, create)
+    expect((await db.tasks.get(english))!.section_id).toBe(fridge)
+    const explicit = await addToList({ title: 'Сметана', project_id: pid, section_id: other }, create)
+    expect((await db.tasks.get(explicit))!.section_id).toBe(other)
+    await moveTaskToSection(milk, other)
+    await setTaskCompleted(milk, true)
+    expect(await addToList({ title: 'Молоко', project_id: pid }, create)).toBe(milk)
+    expect((await db.tasks.get(milk))!.section_id).toBe(other)
+    await updateProject(pid, { aisles: false })
+    const unsorted = await addToList({ title: 'Сыр', project_id: pid }, create)
+    expect((await db.tasks.get(unsorted))!.section_id ?? null).toBeNull()
+  })
+
   it('places a new item in the section keyed with its aisle, even renamed; a section token wins; a reopened item stays', async () => {
     const pid = await createProject({ name: 'Groceries' })
     await updateProject(pid, { reusable: true, aisles: true })

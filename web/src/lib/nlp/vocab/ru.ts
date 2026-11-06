@@ -87,5 +87,5 @@ export const ru: Vocabulary = {
   monthTextBefore: ['с', 'со', 'из', 'за', 'от', 'после', 'для'],
   remindWords: ['напомни', 'напомни мне', 'напомнить'],
   beforeWords: ['за', 'заранее', 'до'],
-  afterWords: ['через', 'после', 'позже'],
+  afterWords: ['после', 'позже'],
 }

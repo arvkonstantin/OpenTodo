@@ -250,7 +250,7 @@ export function TriageView() {
   const label = (id: string) => labels.find((l) => l.id === id)?.name ?? 'label'
   const bar: { key: string; hint: string; label: string; run: () => void; disabled?: boolean }[] = task ? [
     { key: 'today', hint: 't', label: t('Today'), run: () => void decide('today') },
-    { key: 'schedule', hint: 's', label: t('Schedule'), run: () => setPicker('schedule') },
+    { key: 'schedule', hint: 's', label: t('Schedule', { context: 'task-action' }), run: () => setPicker('schedule') },
     { key: 'move', hint: 'm', label: t('Move'), run: () => setPicker('move') },
     { key: 'delegate', hint: 'a', label: t('Delegate'), run: () => setPicker('delegate'), disabled: delegates.length === 0 },
     { key: 'labels', hint: 'l', label: t('Labels'), run: () => setPicker('labels') },

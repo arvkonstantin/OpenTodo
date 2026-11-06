@@ -112,8 +112,10 @@ function ActivityList({ project }: { project: Project }) {
           return (
             <li key={e.id} className="flex items-baseline gap-2 text-meta text-muted" data-event={e.kind} data-actor={e.actor}>
               <span className="min-w-0 flex-1">
-                <strong className="font-medium text-muted">{guestActorLabel(e) ?? name(e.actor)}</strong>{' '}
-                {describeEvent(e, name, projectName, undefined, (id) => merged.has(id))}
+                {t.rich('{actor} {action}', {
+                  actor: <strong className="font-medium text-muted">{guestActorLabel(e) ?? name(e.actor)}</strong>,
+                  action: describeEvent(e, name, projectName, undefined, (id) => merged.has(id)),
+                })}
                 {title && e.entity !== 'project' && (
                   <> {e.entity === 'comment' ? t('on', { context: 'comment' }) : '·'}{' '}
                     <button type="button" className="text-muted underline decoration-dotted" onClick={() => e.taskId && openTask.request(e.taskId)}>

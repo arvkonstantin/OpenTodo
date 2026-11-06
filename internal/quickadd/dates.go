@@ -337,6 +337,9 @@ func matchByTimeAt(tokens []token, i int, ctx *dateCtx) *timeMatch {
 }
 
 func matchDateAt(tokens []token, i int, ctx *dateCtx) *dateMatch {
+	if russianNightAt(tokens, i, ctx) != nil {
+		return nil
+	}
 	if tok(tokens, i) == nil {
 		return nil
 	}
@@ -685,6 +688,12 @@ func numericDateAt(tokens []token, j int, ctx *dateCtx) (string, int, bool) {
 // ---- times ----
 
 func matchTimeAt(tokens []token, i int, ctx *dateCtx) *timeMatch {
+	if night := russianNightAt(tokens, i, ctx); night != nil {
+		if night.time == "" {
+			return nil
+		}
+		return &timeMatch{from: i, to: night.to, time: night.time}
+	}
 	if tok(tokens, i) == nil {
 		return nil
 	}
@@ -741,6 +750,63 @@ var (
 	hhRE    = regexp.MustCompile(`^(\d{1,2})h(\d{2})?$`)
 	hRE     = regexp.MustCompile(`^(\d{1,2})$`)
 )
+
+type nightMatch struct {
+	to   int
+	time string // empty means the whole clock phrase stays literal
+}
+
+// russianNightAt implements the contributor-approved night-hour rule (D3b).
+func russianNightAt(tokens []token, i int, ctx *dateCtx) *nightMatch {
+	for _, v := range ctx.vocabs {
+		if v.Code != "ru" {
+			continue
+		}
+		at := 0
+		for _, cue := range ctx.vocabs {
+			at = max(at, phraseAt(tokens, i, cue.AtWords), phraseAt(tokens, i, cue.ByWords))
+		}
+		j := i + at
+		t := tok(tokens, j)
+		if t == nil {
+			return nil
+		}
+		m := hRE.FindStringSubmatch(t.norm)
+		if m == nil {
+			m = hmRE.FindStringSubmatch(t.norm)
+		}
+		if m == nil {
+			m = hdotmRE.FindStringSubmatch(t.norm)
+		}
+		if m == nil || (len(m) > 3 && m[3] != "") {
+			return nil
+		}
+		hw := phraseAt(tokens, j+1, v.HourWords)
+		night := phraseAt(tokens, j+1+hw, []string{"ночи"})
+		if night == 0 {
+			return nil
+		}
+		h, _ := strconv.Atoi(m[1])
+		minute := 0
+		if len(m) > 2 {
+			minute, _ = strconv.Atoi(m[2])
+		}
+		out := &nightMatch{to: j + 1 + hw + night}
+		if minute > 59 || h < 1 || h > 12 || (h >= 7 && h <= 9) {
+			return out
+		}
+		out.time = clock(to24(h, h >= 10 && h < 12), minute)
+		return out
+	}
+	return nil
+}
+
+func literalNightEndAt(tokens []token, i int, ctx *dateCtx) int {
+	if night := russianNightAt(tokens, i, ctx); night != nil && night.time == "" {
+		return night.to
+	}
+	return 0
+}
 
 func meridiem(tokens []token, k int, v *Vocab) (n int, pm, ok bool) {
 	hw := 0
